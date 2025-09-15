@@ -16,16 +16,16 @@ Key components:
 5. **Prompts**: Templates that guide the input to the LLMs for specific tasks or outputs.
 
 Other Important Components:
-1. **Text**: The natural language way to interact with LLMs
-2. **Chat Messages**: Chat messages refer to the communication exchanged between the user and the AI model.
+## 1. **Text**: The natural language way to interact with LLMs
+## 2. **Chat Messages**: Chat messages refer to the communication exchanged between the user and the AI model.
     - System: Helpful background context that tell the AI what to do
     - Human: Messages that are intented to represent the user
     - Messages: that show what the AI responded with
-3. **Document**: An object that holds a piece of text and metadata (id, source, time)
-4. **Function Calling Modles**: Function calling models enable LLMs to invoke external tools.
+## 3. **Document**: An object that holds a piece of text and metadata (id, source, time)
+## 4. **Function Calling Modles**: Function calling models enable LLMs to invoke external tools.
     - from langchain.llms import OpenAI
     - llm = OpenAI(model_name="text-ada-001", openai_api_key=openai_api_key)
-5. **Embedding Models**: Embedding models convert text (or other data) into vector representations.
+## 5. **Embedding Models**: Embedding models convert text (or other data) into vector representations.
   - **OpenAI embeddings** -> text-embedding-ada-002.
   - **Hugging Face Embeddings** -> BERT, DistilBERT, RoBERTa.
     - from langchain.embeddings import OpenAIEmbeddings 
@@ -33,7 +33,7 @@ Other Important Components:
     - sentence_transformer_embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
     - embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
     - text_embedding = embeddings.embed_query(text)
-7. **Example Selectors**: Example selectors are used to choose or filter specific examples from a dataset or set of documents.
+## 7. **Example Selectors**: Example selectors are used to choose or filter specific examples from a dataset or set of documents.
 
 | **Example Selector**                               | **Description**                                                                 | **Use Case**                                                                                     | **Example**                                                                                                      |
 |----------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -42,7 +42,7 @@ Other Important Components:
 | **`ContextualExampleSelector`**                    | Selects examples based on **semantic similarity** along with additional **contextual information** (e.g., metadata). | Useful when you have additional metadata or contextual information that should influence example selection. | Using contextual metadata (e.g., source, author) to filter or prioritize examples along with their semantic relevance. |
 | **`RandomExampleSelector`**                        | Randomly selects a few examples from the pool.                                    | When you need random sampling or want to avoid bias in selecting examples for testing or evaluation. | Selecting random examples from a pool for A/B testing, evaluation, or diversity in training.                   |
 
-8. **Memoy**: the ability of the system to remember and maintain information across multiple interactions or queries.
+## 8. **Memoy**: the ability of the system to remember and maintain information across multiple interactions or queries.
 
 
 | **Memory Type**                         | **Description**                                                                 | **Use Case**                                                                                   | **Example**                                                                                                      |
@@ -54,7 +54,7 @@ Other Important Components:
 | **`ChatMessageHistory`**                | Stores individual **chat messages** for detailed history tracking.               | Tracking message history in systems requiring granular access to conversation details.         | Debugging conversations, or systems requiring detailed inspection of message exchanges.                         |
 | **`VectorStoreMemory`**                 | Integrates with a **vector store** (e.g., FAISS) to store and retrieve vectors (embeddings) of the conversation. | Tasks requiring semantic memory and retrieval, such as RAG (retrieval-augmented generation) applications. | Semantic search-based chatbot that fetches relevant documents or contexts for accurate response generation.      |
 
-9. **Chain**:  A sequence of components that are linked together to process input data, often resulting in a final output.
+## 9. **Chain**:  A sequence of components that are linked together to process input data, often resulting in a final output.
 
 | **Chain Type**               | **Description**                                                                 | **Use Case**                                                                                  | **Example**                                                                                                      |
 |------------------------------|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +66,7 @@ Other Important Components:
 | **`RetrievalQAChain`**        | Combines a retriever with a language model for question answering, often used for RAG (retrieval-augmented generation). | Question answering over large datasets, using document retrieval for context.                  | Answering questions using information retrieved from a vector database or document corpus.                      |
 | **`AgentExecutorChain`**      | Allows the creation of autonomous agents that decide on which actions to take next based on logic. | Autonomous decision-making, AI assistants, and dynamic workflows requiring multiple actions.    | An AI agent querying multiple sources or making decisions to execute tasks like data retrieval or interaction.   |
 
-10. **Agent**: Dynamically select which tool model has to use to achieve a goal.
+## 10. **Agent**: Dynamically select which tool model has to use to achieve a goal.
   - Decision-making: Make decisions based on the inputs they receive. These decisions are typically made by querying an LLM (Language Model) that helps decide the next action or step.
   - Actions: Perform actions based on the context provided. These actions can involve calling external APIs, interacting with databases, querying memory, or running other LangChain components (like chains).
   - Tools: Use various tools such as external APIs, databases, LLMs, or vector stores to gather information and perform actions that lead them closer to the goal.
