@@ -1,2 +1,0 @@
-# NOTES
-Note Section
