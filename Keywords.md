@@ -7,7 +7,7 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 ## 📌 Basic Terms
 
 - **[Tokenization](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)**
-  Splitting text into individual units like words, subwords, or characters.
+  Splitting text into individual units like words, subwords, or characters.... POINT: 7
 
 - **Stop Words**  
   Common words (e.g., *the*, *is*, *and*) often removed from text during preprocessing due to low semantic value.
@@ -20,8 +20,8 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 
 ---
 
-## 🧠 Embeddings & Representations
-
+## 🧠 [Embeddings & Representations](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)
+- point 10
 - **Word Embedding**  
   Vector representation of words capturing semantic meaning (e.g., Word2Vec, GloVe).
 
@@ -73,19 +73,20 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 - **Language Model (LM)**  
   Predicts the next word/token in a sequence (e.g., GPT, BERT).
 
-- **Transformer**  
+- **[Transformer](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)**  
   Architecture using self-attention to process input in parallel (replacing RNNs/LSTMs).
 
-- **RNN (Recurrent Neural Network)**  
-  Processes sequences one element at a time; struggles with long-term dependencies.
+- **[RNN (Recurrent Neural Network)](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)**  
+  Processes sequences one element at a time; struggles with long-term dependencies.......POINT:8
 
-- **LSTM (Long Short-Term Memory)**  
-  A type of RNN that uses gates to better capture long-range dependencies.
+- **[LSTM (Long Short-Term Memory)](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)**  
+  A type of RNN that uses gates to better capture long-range dependencies..........POINT:8
 
 ---
 
-## ✨ Attention Mechanisms
+## ✨ [Attention Mechanisms](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)
 
+- POINT: 3
 - **Attention**  
   Focuses on relevant parts of input when generating output.
 
@@ -97,9 +98,9 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 
 ---
 
-## 🧪 Evaluation Metrics
+## 🧪 [Evaluation Metrics](https://github.com/AK-5999/NOTES/blob/main/DeepLearning.md)
 
-### ➤ Classification
+### ➤ Classification ..... POINT 7
 
 - **Accuracy**  
   Ratio of correct predictions to total predictions.
@@ -113,7 +114,7 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 - **F1 Score**  
   Harmonic mean of precision and recall.
 
-### ➤ Text Generation
+### ➤ Text Generation .... POINT 8
 
 - **BLEU (Bilingual Evaluation Understudy)**  
   Measures n-gram overlap with reference translations.
@@ -137,7 +138,7 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 - **Pretraining**  
   Training on large generic data to learn general language understanding.
 
-- **Fine-Tuning**  
+- **[Fine-Tuning](https://github.com/AK-5999/NOTES/blob/main/Finetuning.md)**  
   Further training a pretrained model on a specific task.
 
 - **Transfer Learning**  
