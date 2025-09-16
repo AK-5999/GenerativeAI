@@ -72,3 +72,9 @@ LlamaIndex allows you to define custom workflows, or pipelines, to automate the 
 | **Use Case Suitability**          | Best for applications embedded within LlamaIndex, where simplicity and integration are key. | Best for research, ML/NLP tasks, and cases requiring high-performance vector search. | Best for production applications requiring managed, scalable, and fast vector search capabilities. |
 
 ---
+
+### ServiceContext
+- Configuration manager which bundle all key services and setting that will be use during indexing and query.
+- Components: Llm predictor, embedding model, prompt helper, node or chunk parser
+- it centralized all at single place which makes this reusable.
+- from * import ServiceContext, LLMPredictor
