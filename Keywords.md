@@ -6,7 +6,7 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 
 ## 📌 Basic Terms
 
-- **Tokenization**  
+- **[Tokenization](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)**
   Splitting text into individual units like words, subwords, or characters.
 
 - **Stop Words**  
