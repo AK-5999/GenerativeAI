@@ -181,4 +181,19 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 
 ---
 
-📘 *This glossary is regularly updated. You can contribute or suggest edits to keep it fresh!*
+## Cloud
+- How would you deploy a generative AI model using AWS services? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#4-how-would-you-deploy-a-generative-ai-model-using-aws-services)
+- How does Amazon Bedrock simplify the use of foundation models? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#5-how-does-amazon-bedrock-simplify-the-use-of-foundation-models)
+- Compare SageMaker with Bedrock. When would you use one over the other? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#6-compare-sagemaker-with-bedrock-when-would-you-use-one-over-the-other)
+- How do you optimize cost and performance when training LLMs on AWS? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#7-how-do-you-optimize-cost-and-performance-when-training-llms-on-aws)
+- Which instance types are suitable for GenAI on AWS? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#8-which-instance-types-are-suitable-for-genai-on-aws)
+- How would you set up distributed training for large models in SageMaker? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#9-how-would-you-set-up-distributed-training-for-large-models-in-sagemaker)
+- What are the key security considerations for GenAI on AWS? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#10-what-are-the-key-security-considerations-for-genai-on-aws)
+- How do you ensure data privacy and compliance in Bedrock or SageMaker? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#11-how-do-you-ensure-data-privacy-and-compliance-in-bedrock-or-sagemaker)
+- Suppose your client wants a chatbot powered by GenAI that can access private enterprise documents. How would you design and deploy it on AWS? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#12-suppose-your-client-wants-a-chatbot-powered-by-genai-that-can-access-private-enterprise-documents-how-would-you-design-and-deploy-it-on-aws)
+- How would you fine-tune an open-source LLM on AWS? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#13-how-would-you-fine-tune-an-open-source-llm-on-aws)
+- How do you handle prompt engineering in Bedrock and check output quality? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#14-how-do-you-handle-prompt-engineering-in-bedrock-and-check-output-quality)
+- How would you implement CI/CD for GenAI with SageMaker? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#15-how-would-you-implement-cicd-for-genai-with-sagemaker)
+- What are the limitations of GenAI, and how does AWS help? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#16-what-are-the-limitations-of-genai-and-how-does-aws-help)
+- What is RAG, and how do you implement it on AWS? [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#17-what-is-rag-and-how-do-you-implement-it-on-aws)
+- Services [Answer](https://github.com/AK-5999/NOTES/blob/main/Cloud.md#18-service-of-aws)
