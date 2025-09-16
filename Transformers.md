@@ -172,7 +172,7 @@ The attention mechanism in the Transformer model helps determine the importance 
 
 ---
 
-## **Bi-encoders vs Cross-encoders Comparison**
+## **6. Bi-encoders vs Cross-encoders Comparison**
 
 | **Attribute**               | **Bi-Encoder**                                                        | **Cross-Encoder**                                                     |
 |-----------------------------|------------------------------------------------------------------------|----------------------------------------------------------------------|
@@ -203,7 +203,7 @@ The attention mechanism in the Transformer model helps determine the importance 
 
 ---
 
-## **Tokenization Methods Comparison**
+## **7. Tokenization Methods Comparison**
 
 | **Tokenization Method**          | **Description**                                                                                          | **Pros**                                                               | **Cons**                                                                | **Use Cases**                                                             |
 |----------------------------------|----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------|
@@ -219,7 +219,7 @@ The attention mechanism in the Transformer model helps determine the importance 
 
 ---
 
-# LSTM vs RNN
+### **8. LSTM vs RNN**
 
 Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks are both types of neural networks used for sequence prediction tasks, such as time-series forecasting, language modeling, and speech recognition. However, LSTM networks are specifically designed to address some of the limitations of traditional RNNs, especially in handling long-term dependencies in sequences.
 
@@ -275,7 +275,7 @@ Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks are 
 
 
 
-# Transformers vs LSTM/RNN
+### **9. Transformers vs LSTM/RNN**
 
 The **Transformer** architecture has become the go-to model for many Natural Language Processing (NLP) tasks, outperforming traditional models like **LSTM** (Long Short-Term Memory) and **RNN** (Recurrent Neural Networks) in many aspects. Below is a comparison highlighting why **Transformers** are considered superior for most sequence-based tasks.
 
@@ -327,7 +327,7 @@ The **Transformer** architecture has become the go-to model for many Natural Lan
 
 Feature extraction methods are essential in transforming raw data (especially text) into numerical representations suitable for machine learning models. Here is a detailed comparison of popular feature extraction techniques commonly used in Natural Language Processing (NLP).
 
-## **Feature Extraction Methods Comparison**
+## **10. Feature Extraction Methods Comparison**
 
 | **Method**               | **Description**                                                                                       | **Advantages**                                                       | **Disadvantages**                                                    | **Use Cases**                                                         |
 |--------------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
