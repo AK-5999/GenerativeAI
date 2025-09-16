@@ -6,7 +6,7 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 
 ## 📌 Basic Terms
 
-- **[Tokenization](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)**
+- **[Tokenization](https://github.com/AK-5999/NOTES/blob/main/Transformers.md#7-tokenization-methods-comparison)**
   Splitting text into individual units like words, subwords, or characters.... POINT: 7
 
 - **Stop Words**  
@@ -20,7 +20,7 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 
 ---
 
-## 🧠 [Embeddings & Representations](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)
+## 🧠 [Embeddings & Representations](https://github.com/AK-5999/NOTES/blob/main/Transformers.md#10-feature-extraction-methods-comparison)
 - point 10
 - **Word Embedding**  
   Vector representation of words capturing semantic meaning (e.g., Word2Vec, GloVe).
@@ -76,15 +76,15 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 - **[Transformer](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)**  
   Architecture using self-attention to process input in parallel (replacing RNNs/LSTMs).
 
-- **[RNN (Recurrent Neural Network)](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)**  
+- **[RNN (Recurrent Neural Network)](https://github.com/AK-5999/NOTES/blob/main/Transformers.md#8-lstm-vs-rnn)**  
   Processes sequences one element at a time; struggles with long-term dependencies.......POINT:8
 
-- **[LSTM (Long Short-Term Memory)](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)**  
+- **[LSTM (Long Short-Term Memory)](https://github.com/AK-5999/NOTES/blob/main/Transformers.md#8-lstm-vs-rnn)**  
   A type of RNN that uses gates to better capture long-range dependencies..........POINT:8
 
 ---
 
-## ✨ [Attention Mechanisms](https://github.com/AK-5999/NOTES/blob/main/Transformers.md)
+## ✨ [Attention Mechanisms](https://github.com/AK-5999/NOTES/blob/main/Transformers.md#3-attention-mechanisms-in-transformers)
 
 - POINT: 3
 - **Attention**  
@@ -98,9 +98,9 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 
 ---
 
-## 🧪 [Evaluation Metrics](https://github.com/AK-5999/NOTES/blob/main/DeepLearning.md)
+## 🧪 Evaluation Metrics
 
-### ➤ Classification ..... POINT 7
+### ➤ [Classification](https://github.com/AK-5999/NOTES/blob/main/DeepLearning.md#7-evaluation-metrics-for-categorical-classification)
 
 - **Accuracy**  
   Ratio of correct predictions to total predictions.
@@ -114,7 +114,7 @@ A curated list of important terms in Natural Language Processing (NLP), along wi
 - **F1 Score**  
   Harmonic mean of precision and recall.
 
-### ➤ Text Generation .... POINT 8
+### ➤ [Text Generation](https://github.com/AK-5999/NOTES/blob/main/DeepLearning.md#8-evaluation-metrics-for-text-generation)
 
 - **BLEU (Bilingual Evaluation Understudy)**  
   Measures n-gram overlap with reference translations.
