@@ -64,7 +64,7 @@ The gradient is calculated for each layer, starting from the output layer and pr
 | **ReLU**                  | \( \text{ReLU}(x) = \max(0, x) \)  | \( [0, \infty) \)   | Efficient, less prone to vanishing gradients.        | Can suffer from "dying ReLU" problem.                          | Hidden layers in deep networks.   |
 | **Leaky ReLU**            | \( \text{LeakyReLU}(x) = \max(0.01x, x) \) | \( (-\infty, \infty) \) | Prevents dying ReLU by allowing small negative slope. | Hard to determine optimal negative slope.                      | Used when ReLU fails in deep networks. |
 | **GELU**                  | \( \text{GELU}(x) = 0.5x[1 + \text{tanh}(\sqrt{2/\pi}(x + 0.044715x^3))] \) | \( (-\infty, \infty) \) | Smooth, differentiable, often outperforms ReLU in some cases. | More computationally expensive than ReLU.                      | Transformer models, language models. |
-| **Swish**                 | \( \text{Swish}(x) = x \cdot \sigma(x) \) | \( (-\infty, \infty) \) | Smooth, self-gated activation, performs well in deep networks. | Computationally more expensive than ReLU.                     | Used in deep models for complex tasks. |
+| **Swish**                 |f(x) = x*sigmoid(x) | \( (-\infty, \infty) \) | Smooth, self-gated activation, performs well in deep networks. | Computationally more expensive than ReLU.                     | Used in deep models for complex tasks. |
 
 ---
 
