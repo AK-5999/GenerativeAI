@@ -181,3 +181,5 @@ end_time = time.time()
 print("\n--- Training Complete ---")
 print(f"Total training time for {NUM_EPOCHS} epochs: {end_time - start_time:.2f} seconds.")
 ```
+### Training Loss:
+<img width="1073" height="403" alt="Screenshot 2025-09-28 154607" src="https://github.com/user-attachments/assets/18fbe2f3-fc31-480c-96bb-edea2eede10b" />
