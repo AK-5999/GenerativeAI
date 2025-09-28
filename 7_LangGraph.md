@@ -232,7 +232,7 @@ LangGraph’s memory + checkpointing = robust, fault-tolerant agents that can pa
 	5. Human-in-the-Loop (HITL)**: {
 		- **Mechanism**: **Use LangGraph's interrupt feature for human intervention.**,
 		- **Implementation**: **Pause the graph after a set number of iterations or a critical failure, allowing a human to review the state and manually redirect the flow or terminate.
-3. DEADLOCKS:
+2. DEADLOCKS:
 - Cause:
 	- Circular Wait: Two or more nodes are waiting for each other’s output before proceeding.
 	- Mismatched Dependencies: A downstream node expects an upstream node to finish, but the upstream never gets triggered.
