@@ -28,11 +28,13 @@ Other Important Components:
 ## 5. **Embedding Models**: Embedding models convert text (or other data) into vector representations.
   - **OpenAI embeddings** -> text-embedding-ada-002.
   - **Hugging Face Embeddings** -> BERT, DistilBERT, RoBERTa.
-    - from langchain.embeddings import OpenAIEmbeddings 
-    - huggingface_embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-    - sentence_transformer_embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-    - embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-    - text_embedding = embeddings.embed_query(text)
+    ```
+    from langchain.embeddings import OpenAIEmbeddings 
+    huggingface_embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    sentence_transformer_embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+    text_embedding = embeddings.embed_query(text)
+    ```
 ## 7. **Example Selectors**: Example selectors are used to choose or filter specific examples from a dataset or set of documents.
 
 | **Example Selector**                               | **Description**                                                                 | **Use Case**                                                                                     | **Example**                                                                                                      |
