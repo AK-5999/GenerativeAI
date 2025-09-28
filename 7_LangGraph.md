@@ -208,30 +208,31 @@ LangGraph’s memory + checkpointing = robust, fault-tolerant agents that can pa
         - With LangGraph → resumes at Step 2 using checkpoint.
 ---
 ## CHALLENGE: 
+
 1. INFINITE LOOPS:
-		- Cause:
-			- **Tool-Calling Loop: LLM keeps calling the same tool with the same input, as the output doesn't change the state enough to prompt a different decision (e.g., 'Final Answer').**,
-			- **Generative Loop: Self-correction or critique nodes lead to a repetitive cycle of generating, critiquing, and revising without convergence.**,
-			- **Ambiguous State/Transition: Conditional edges are based on a state variable that never correctly updates to the defined 'END' state.**
-		- SOLUTIONS =
-			1. State-Based Iteration Counter**:
-				- **Mechanism**: **Add an integer counter (`max_iterations`) to the graph's state.**,
-				- **Implementation**: **Increment the counter in a key looping node (e.g., the LLM/Decision node).**,
-				- **Termination**: **Use a conditional edge: IF counter >= MAX_LIMIT, route flow to the 'END' node or an 'Error' handler.**
-			2. Guardrails on State or History**: {
-				- **Mechanism**: **Make the agent 'self-aware' of recent history stored in memory.**,
-				- **Implementation**: **Check for repeated sequences (e.g., same tool + same input) in the last N steps. If detected, force the agent to choose an alternative action or terminate.**,
-				- **Alternative**: **Check if the *state* (e.g., 'messages') hasn't changed significantly after a full loop.**
-			3. LLM Prompt Constraint**: {
-				- **Mechanism**: **Explicitly instruct the LLM on loop prevention.**,
-				- **Implementation**: **System Prompt: 'If you have attempted an action more than 3 times without success, you MUST output a Final Answer explaining the failure.' (Used for ReAct-style agents).**,
-			4. Time Limits / Execution Timeouts**: {
-				- **Mechanism**: **Impose constraints on execution time.**,
-				- **Implementation**: **Set a global maximum execution time for the entire graph or a timeout for individual blocking nodes (e.g., tool execution).**
-			5. Human-in-the-Loop (HITL)**: {
-				- **Mechanism**: **Use LangGraph's interrupt feature for human intervention.**,
-				- **Implementation**: **Pause the graph after a set number of iterations or a critical failure, allowing a human to review the state and manually redirect the flow or terminate.
-2. DEADLOCKS:
+- Cause:
+	- **Tool-Calling Loop: LLM keeps calling the same tool with the same input, as the output doesn't change the state enough to prompt a different decision (e.g., 'Final Answer').**,
+	- **Generative Loop: Self-correction or critique nodes lead to a repetitive cycle of generating, critiquing, and revising without convergence.**,
+	- **Ambiguous State/Transition: Conditional edges are based on a state variable that never correctly updates to the defined 'END' state.**
+- SOLUTIONS =
+	1. State-Based Iteration Counter**:
+		- **Mechanism**: **Add an integer counter (`max_iterations`) to the graph's state.**,
+		- **Implementation**: **Increment the counter in a key looping node (e.g., the LLM/Decision node).**,
+		- **Termination**: **Use a conditional edge: IF counter >= MAX_LIMIT, route flow to the 'END' node or an 'Error' handler.**
+	2. Guardrails on State or History**: {
+		- **Mechanism**: **Make the agent 'self-aware' of recent history stored in memory.**,
+		- **Implementation**: **Check for repeated sequences (e.g., same tool + same input) in the last N steps. If detected, force the agent to choose an alternative action or terminate.**,
+		- **Alternative**: **Check if the *state* (e.g., 'messages') hasn't changed significantly after a full loop.**
+	3. LLM Prompt Constraint**: {
+		- **Mechanism**: **Explicitly instruct the LLM on loop prevention.**,
+		- **Implementation**: **System Prompt: 'If you have attempted an action more than 3 times without success, you MUST output a Final Answer explaining the failure.' (Used for ReAct-style agents).**,
+	4. Time Limits / Execution Timeouts**: {
+		- **Mechanism**: **Impose constraints on execution time.**,
+		- **Implementation**: **Set a global maximum execution time for the entire graph or a timeout for individual blocking nodes (e.g., tool execution).**
+	5. Human-in-the-Loop (HITL)**: {
+		- **Mechanism**: **Use LangGraph's interrupt feature for human intervention.**,
+		- **Implementation**: **Pause the graph after a set number of iterations or a critical failure, allowing a human to review the state and manually redirect the flow or terminate.
+3. DEADLOCKS:
 - Cause:
 	- Circular Wait: Two or more nodes are waiting for each other’s output before proceeding.
 	- Mismatched Dependencies: A downstream node expects an upstream node to finish, but the upstream never gets triggered.
