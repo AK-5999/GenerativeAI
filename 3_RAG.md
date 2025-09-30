@@ -219,3 +219,156 @@ Evaluating RAG involves assessing three key components:
 | **BERTopic**       | Topic-based evaluation (optional)      |
 | **OpenAI GPT / Claude** | LLM-based evaluators (quality, helpfulness) |
 
+# 🔁 End-to-End RAG Pipeline with LlamaIndex + FAISS
+
+This pipeline outlines the full flow of a Retrieval-Augmented Generation (RAG) system using LlamaIndex and an optional vector store like FAISS.
+
+---
+
+## 🔄 Pipeline Steps
+
+### 1. 📥 Load Textual Data
+- Use `DocumentLoaders` (e.g., for `.txt`, `.pdf`, `.docx`, web pages).
+- Normalize the text if needed (remove headers, page numbers, etc.).
+
+```python
+from llama_index.readers import SimpleDirectoryReader
+documents = SimpleDirectoryReader("data/").load_data()
+```
+
+---
+
+### 2. ✂️ Chunk the Data
+- Choose a **chunking method** (Fixed-size, Recursive, Sentence Window, etc.).
+- Configure `chunk_size` and `chunk_overlap` as needed.
+
+```python
+from llama_index.text_splitter import SentenceSplitter
+splitter = SentenceSplitter(chunk_size=512, chunk_overlap=64)
+chunks = splitter.split_documents(documents)
+```
+
+---
+
+### 3. 🧠 Generate Embeddings
+- Convert chunks into vector representations using an embedding model (e.g., OpenAI, HuggingFace, etc.).
+
+```python
+from llama_index.embeddings import HuggingFaceEmbedding
+embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
+```
+
+---
+
+### 4. 🗃️ Store Chunks in a Vector Store
+- Choose between **Internal Datastore** or **External Vector Store** like FAISS.
+- Apply appropriate **indexing strategy** (FLAT, IVF, HNSW, etc.).
+
+```python
+from llama_index.vector_stores.faiss import FaissVectorStore
+vector_store = FaissVectorStore()
+index = VectorStoreIndex.from_documents(chunks, vector_store=vector_store)
+```
+
+---
+
+### 5. 📨 Receive User Query
+- Capture user query from UI, API, or CLI.
+
+```python
+query = "What is retrieval-augmented generation?"
+```
+
+---
+
+### 6. 🔡 Convert Query into Embedding
+- Use the same embedding model as above to convert query into vector format.
+
+```python
+query_embedding = embed_model.get_query_embedding(query)
+```
+
+---
+
+### 7. 📤 Retrieve Relevant Chunks
+- Use similarity search to fetch top-N matching chunks from the vector store.
+
+```python
+retriever = index.as_retriever(similarity_top_k=10)
+retrieved_nodes = retriever.retrieve(query)
+```
+
+---
+
+### 8. 🏅 Re-rank Chunks (Optional)
+- Use a **cross-encoder** or **reranking model** to improve ranking accuracy.
+- Models: `ms-marco`, `bge-reranker`, `cross-encoder/ms-marco-MiniLM-L-6-v2`, etc.
+
+```python
+from llama_index.retrievers import ReRanker
+reranker = ReRanker(model="cross-encoder/ms-marco-MiniLM-L-6-v2")
+reranked_nodes = reranker.rerank(query, retrieved_nodes)
+```
+
+---
+
+### 9. 🎯 Select Top-k Chunks
+- Select top-K reranked chunks to feed into the LLM.
+
+```python
+top_chunks = reranked_nodes[:5]
+```
+
+---
+
+### 10. 🧩 Augment Query with Chunks
+- Combine the original query and top chunks to create a **context-rich prompt**.
+
+```python
+from llama_index.prompts import PromptHelper
+context = "\n".join([node.get_content() for node in top_chunks])
+final_prompt = f"Answer the question using the following context:\n\n{context}\n\nQ: {query}\nA:"
+```
+
+---
+
+### 11. 🤖 Generate Final Answer
+- Use an LLM (OpenAI, Llama 2, Mistral, etc.) to generate the final response.
+
+```python
+from llama_index.llms import OpenAI
+llm = OpenAI()
+response = llm.complete(final_prompt)
+print(response)
+```
+
+---
+
+## ✅ Summary Flow
+
+```mermaid
+graph TD
+  A[Load Data] --> B[Chunk Documents]
+  B --> C[Generate Embeddings]
+  C --> D[Store in FAISS/Vector Store]
+  E[User Query] --> F[Query Embedding]
+  D --> G[Retrieve Chunks]
+  F --> G
+  G --> H[Re-rank Chunks]
+  H --> I[Select Top K]
+  I --> J[Augment Query]
+  J --> K[Generate Response]
+```
+
+---
+
+## 📘 Notes
+
+- Use consistent embedding models for both document and query vectors.
+- FAISS indexing (IVF, HNSW, etc.) impacts both speed and accuracy.
+- Re-ranking improves precision, especially when top-k similarity search returns noisy results.
+- Choose chunking and indexing methods based on your data size and use case.
+
+---
+
+Happy building your RAG pipeline! ⚙️
