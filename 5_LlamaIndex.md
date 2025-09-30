@@ -78,3 +78,120 @@ LlamaIndex allows you to define custom workflows, or pipelines, to automate the 
 - Components: Llm predictor, embedding model, prompt helper, node or chunk parser
 - it centralized all at single place which makes this reusable.
 - from * import ServiceContext, LLMPredictor
+
+
+## 🔍 FAISS Indexing Methods Overview
+
+FAISS (Facebook AI Similarity Search) provides multiple indexing strategies for fast and efficient vector similarity search. Here's a comparison of the most commonly used indexing methods:
+
+### 📊 Indexing Methods Comparison
+
+| Index Type | Description | Accuracy | Speed | Memory Usage | Scalability | Best Use Case | Tunable Parameters |
+|------------|-------------|----------|-------|---------------|-------------|----------------|----------------------|
+| **FLAT** | Brute-force exact search. Compares query with all stored vectors. | ✅ Exact | 🟡 Medium | 🔴 High | ❌ Low | Small datasets, testing | None |
+| **IVF** (Inverted File Index) | Vectors are clustered using k-means. Query searches within selected clusters only. | ⚠️ Approximate (depends on `nprobe`) | ✅ Fast | 🟢 Efficient | ✅ Scalable | Medium-large datasets | `nlist`, `nprobe` |
+| **HNSW** (Graph-based) | Vectors form a multi-layered proximity graph. Query traverses graph for nearest neighbors. | ✅ High | ✅ Very Fast | 🟡 Medium-High | ✅ Scalable | Real-time, high-accuracy apps | `M`, `efSearch`, `efConstruction` |
+| **PQ** (Product Quantization) | Compresses vectors into low-bit codes for memory efficiency. Searches in compressed space. | 🔴 Lower (due to compression) | ✅ Fast | ✅ Very Low | ✅ Highly scalable | Billion-scale search, low-memory environments | `m`, `nbits` |
+
+---
+
+### 🔧 Key Parameter Tips
+
+- `nprobe` (IVF): Number of clusters to search → higher means better accuracy but slower.
+- `M` (HNSW): Number of edges per node → more edges = more accuracy, more memory.
+- `efSearch` (HNSW): Number of nodes explored during query → higher = better recall.
+- `m`, `nbits` (PQ): Controls compression rate → smaller `nbits` = more compression, less accuracy.
+
+---
+
+### ✅ Choosing the Right Index
+
+| Use Case | Recommended Index |
+|----------|-------------------|
+| Small dataset with high accuracy needed | `IndexFlatL2` (FLAT) |
+| Large dataset with good speed and accuracy balance | `IndexIVFFlat` or `IndexIVFPQ` |
+| Real-time app with very fast queries | `IndexHNSWFlat` |
+| Memory-limited environments with huge datasets | `IndexPQ` or `IndexIVFPQ` |
+
+---
+
+### 📘 Notes
+
+- FLAT search is always exact but becomes very slow for large datasets.
+- IVF is scalable but needs tuning (`nlist`, `nprobe`) for better recall.
+- HNSW gives high performance and accuracy out-of-the-box, great for production.
+- PQ is perfect when storage and memory are limited, but comes at an accuracy cost.
+
+---
+
+## ✂️ Chunking Methods for LLM Context Preparation
+
+When working with large documents, it’s essential to split text into smaller, manageable **chunks** that LLMs can understand and process. Below is a comparison of commonly used chunking methods, especially in frameworks like **LlamaIndex**.
+
+---
+
+### 📊 Chunking Methods Comparison
+
+| Chunking Method | Basis | Context Retention | Speed | Chunk Size Control | Best For | Overlapping Support |
+|------------------|-------|--------------------|-------|---------------------|----------|----------------------|
+| **Fixed-size Chunking** | Characters or tokens | ❌ Low | ✅ Very Fast | ✅ Yes | Prototyping, small apps | ✅ Optional |
+| **Recursive Text Splitting** | Structure (headings, paragraphs, sentences) | ✅ Medium-High | ⚠️ Medium | ⚠️ Limited | Structured documents (blogs, reports) | ✅ Yes |
+| **Sentence Window Chunking** | Sentences in overlapping windows | ✅ High | ⚠️ Medium | ❌ Less precise | QA systems, summarization | ✅ Built-in |
+| **Token Overlap Chunking** | Tokens with fixed overlap | ✅ High | ⚠️ Medium | ✅ Yes | LLM pipelines, dense data | ✅ Built-in |
+| **Markdown-aware Chunking** | Markdown structure (headings, lists) | ✅ Medium | ⚠️ Medium | ⚠️ Moderate | Docs, technical content | ✅ Yes |
+| **Semantic Chunking** | Meaning-based segmentation (via embeddings/LLMs) | ✅✅ Very High | ❌ Slow | ❌ No | High-accuracy RAG, semantic search | ⚠️ Experimental |
+
+---
+
+### 🔧 Key Concepts
+
+- **Chunk Size:** Usually defined in terms of **tokens** (e.g., 512 tokens per chunk).
+- **Chunk Overlap:** Helps maintain context between chunks, avoids loss at chunk boundaries.
+- **Structure-aware Splitting:** Maintains natural document flow by splitting at logical points (e.g., after a paragraph or heading).
+- **Semantic Splitting:** Uses LLMs or embeddings to split text at meaningful boundaries — highest quality but computationally expensive.
+
+---
+
+### ✅ Choosing the Right Chunking Method
+
+| Use Case | Recommended Chunking |
+|----------|----------------------|
+| Quick experiments / simple apps | `Fixed-size Chunking` |
+| Blogs, articles, structured docs | `Recursive Text Splitting` |
+| QA or RAG pipelines with LLMs | `Sentence Window` or `Token Overlap` |
+| Markdown-heavy content | `Markdown-aware Chunking` |
+| Precision-critical semantic tasks | `Semantic Chunking` (if compute allows) |
+
+---
+
+### 🧠 Tips for Effective Chunking
+
+- Always balance **chunk size** and **overlap** to avoid token limits and loss of context.
+- Overlap is especially important in **conversational AI**, **summarization**, or **semantic search**.
+- For most use-cases, a **chunk size of 512–1024 tokens** with **20–100 token overlap** is a good starting point.
+- Use `TextSplitter` classes in libraries like LlamaIndex or LangChain to customize chunking.
+
+---
+
+### 📘 Example: RecursiveTextSplitter (LlamaIndex)
+
+```python
+from llama_index.text_splitter import SentenceSplitter
+
+splitter = SentenceSplitter(
+    chunk_size=512,
+    chunk_overlap=64,
+    separator=" "
+)
+
+chunks = splitter.split_text(long_text)
+```
+
+---
+
+Feel free to modify chunking logic based on:
+- Your model’s token limit (e.g., 4096, 8192, 32k)
+- Document structure and formatting
+- Latency/throughput requirements
+
+---
