@@ -1,3 +1,180 @@
+# QLoRA: Theoretical Understanding
+## 1. The Foundation: LoRA (Low-Rank Adaptation)
+Basic Idea: Instead of updating all weights during fine-tuning, we add small "adapter" matrices.
+
+```
+Original Weight Matrix W (frozen):  [768 × 768] = 589,824 parameters
+
+LoRA Decomposition:
+W' = W + ΔW = W + (B × A)
+where:
+- B: [768 × r]  (r = rank, e.g., 8)
+- A: [r × 768]
+- ΔW = B × A: [768 × 768]
+
+Trainable parameters: 768×8 + 8×768 = 12,288 (only 2% of original!)
+```
+
+## 2. The Innovation: Adding Quantization
+QLoRA = Quantization + LoRA
+```
+Process Flow:
+Step 1: Original Model (FP16/32)
+         ↓
+Step 2: Quantize to 4-bit (NF4)
+         ↓
+Step 3: Add LoRA adapters (FP16)
+         ↓
+Step 4: Train only LoRA parameters
+```
+
+## 3. How Quantization Works
+4-bit NF4 (Normal Float 4) Quantization:
+```
+# Let's say we have 8 weights from a layer
+original_weights = [-0.5, 0.2, 1.3, -0.8, 0.1, -0.3, 1.1, 0.7]
+# Each stored as FP16 (16 bits) or FP32 (32 bits)Original weights: [-0.5, 0.2, 1.3, -0.8, ...]  # 16/32 bits each
+
+Quantization process:
+1. Find min/max & range values:
+    min_weight = -0.8
+    max_weight = 1.3
+    range = max_weight - min_weight = 2.1
+2. Create 16 bins (4-bit = 2^4 values)
+    # Simplified uniform bins for illustration
+    bin_width = range / 16 = 2.1 / 16 = 0.13125
+
+    Bins:
+    Bin 0:  [-0.8    to -0.669]  → Representative: -0.735
+    Bin 1:  [-0.669  to -0.538]  → Representative: -0.603
+    Bin 2:  [-0.538  to -0.406]  → Representative: -0.472
+    Bin 3:  [-0.406  to -0.275]  → Representative: -0.341
+    Bin 4:  [-0.275  to -0.144]  → Representative: -0.209
+    Bin 5:  [-0.144  to -0.013]  → Representative: -0.078
+    Bin 6:  [-0.013  to  0.119]  → Representative:  0.053
+    Bin 7:  [ 0.119  to  0.250]  → Representative:  0.184
+    Bin 8:  [ 0.250  to  0.381]  → Representative:  0.316
+    Bin 9:  [ 0.381  to  0.513]  → Representative:  0.447
+    Bin 10: [ 0.513  to  0.644]  → Representative:  0.578
+    Bin 11: [ 0.644  to  0.775]  → Representative:  0.710
+    Bin 12: [ 0.775  to  0.906]  → Representative:  0.841
+    Bin 13: [ 0.906  to  1.038]  → Representative:  0.972
+    Bin 14: [ 1.038  to  1.169]  → Representative:  1.103
+    Bin 15: [ 1.169  to  1.300]  → Representative:  1.235
+3. Map each weight to nearest bin
+    Original → Bin Assignment:
+    -0.5   → Falls in Bin 2  [-0.538 to -0.406]  → Index: 2
+     0.2   → Falls in Bin 7  [0.119  to  0.250]  → Index: 7
+     1.3   → Falls in Bin 15 [1.169  to  1.300]  → Index: 15
+    -0.8   → Falls in Bin 0  [-0.8    to -0.669]  → Index: 0
+     0.1   → Falls in Bin 6  [-0.013 to  0.119]  → Index: 6
+    -0.3   → Falls in Bin 3  [-0.406 to -0.275]  → Index: 3
+     1.1   → Falls in Bin 14 [1.038  to  1.169]  → Index: 14
+     0.7   → Falls in Bin 11 [0.644  to  0.775]  → Index: 11
+4. Store bin index (4 bits) + scaling factor + offset
+    # Storage format
+    quantized_indices = [2, 7, 15, 0, 6, 3, 14, 11]  # Each index uses only 4 bits
+    scale_factor = 0.13125  # Store once for the entire tensor
+    offset = -0.8  # Minimum value
+
+# Memory usage:
+# Original: 8 weights × 16 bits = 128 bits
+# Quantized: 8 weights × 4 bits + 32 bits (scale) + 32 bits (offset) = 96 bits
+# Savings: 25% (in practice, more with larger tensors)
+Quantized: [bin_3, bin_7, bin_15, bin_2, ...] + scale_factor
+
+5. DeQuantization:
+    # To reconstruct (approximate) original values:
+    def dequantize(index, scale_factor, offset):
+        return offset + (index * scale_factor)
+
+    # Reconstruction:
+    Index 2  → -0.8 + (2 × 0.13125)  = -0.538  (original: -0.5)
+    Index 7  → -0.8 + (7 × 0.13125)  = 0.119   (original: 0.2)
+    Index 15 → -0.8 + (15 × 0.13125) = 1.169   (original: 1.3)
+    # etc...
+
+Overall Visual Representation:
+Original (FP16):  [-0.5] [0.2] [1.3] [-0.8] [0.1] [-0.3] [1.1] [0.7]
+                    16b   16b   16b    16b    16b    16b    16b   16b  = 128 bits
+
+                              ↓ Quantization
+
+Quantized (4-bit): [0010][0111][1111][0000][0110][0011][1110][1011] + scale + offset
+                     4b    4b    4b    4b    4b    4b    4b    4b      32b     32b = 96 bits
+
+Binary representation:
+0010 = 2 (decimal)
+0111 = 7 (decimal)
+1111 = 15 (decimal)
+etc...
+
+Note: NF4 Specific Optimization:
+        NF4 doesn't use uniform bins. Instead, it uses bins optimized for normal distribution:
+        # NF4 bin values (pre-computed for optimal normal distribution coverage)
+        nf4_values = [-1.0, -0.6962, -0.5251, -0.3949, -0.2844, -0.1848, -0.0911, 0.0, 
+              0.0796, 0.1609, 0.2461, 0.3379, 0.4407, 0.5626, 0.7230, 1.0]
+
+        # These values are chosen to minimize quantization error for normally distributed weights
+```
+## 4. The Training Process
+- Forward Pass:
+    1. Input → 
+    2. Dequantize 4-bit weights to FP16 →
+    3. Compute: Output = (W_quantized + B×A) × Input →
+    4. Loss calculation
+- Backward Pass:
+    1. Compute gradients →
+    2. Update ONLY LoRA weights (B, A) →
+    3. Base model W stays frozen and quantized
+
+## 5. Mathematical Representation
+- For each layer:
+    - y = (W_q + ΔW) × x = (Dequantize(W_4bit) + B×A) × x
+    - where:
+        - W_q: Quantized base weights (frozen)
+        - B×A: LoRA adaptation (trainable)
+        - x: Input
+        - y: Output
+## 6. Memory Savings Breakdown
+- Standard Fine-tuning (Mistral 7B):
+    - Model: 7B × 2 bytes (FP16) = 14GB
+    - Gradients: 14GB
+    - Optimizer states: 28GB (Adam)
+    - Total: ~56GB
+
+- QLoRA Fine-tuning:
+    - Quantized Model: 7B × 0.5 bytes = 3.5GB
+    - LoRA parameters: ~50M × 2 bytes = 0.1GB
+    - Gradients (LoRA only): 0.1GB
+    - Optimizer states (LoRA only): 0.2GB
+    - Total: ~4GB
+## 7. Why It Works
+1. Information Preservation: 4-bit quantization preserves most important information
+2. Low-Rank Hypothesis: Fine-tuning changes are low-rank in nature
+3. Separate Precision: Adapters in high precision capture task-specific nuances
+## 8. Visual Flow Diagram
+```
+Input Text
+    ↓
+[Embedding Layer]
+    ↓
+[Transformer Block 1]
+    ├─ Attention
+    │   ├─ Q: W_q^Q (4-bit) + B_Q×A_Q (FP16)
+    │   ├─ K: W_q^K (4-bit) + B_K×A_K (FP16)
+    │   └─ V: W_q^V (4-bit) + B_V×A_V (FP16)
+    ↓
+[Continue through layers...]
+    ↓
+Output (NER predictions)
+```
+## Key Takeaways:
+- Base model stays frozen: Never update quantized weights
+- LoRA captures adaptation: All task-specific learning in small matrices
+- Mixed precision: Computation in FP16, storage in 4-bit
+- Efficient backprop: Gradients only for <1% of parameters
+---
 # Fine-tuning Mistral 7B with QLoRA for Medical Entity Extraction
 
 ## Project Overview
