@@ -114,35 +114,60 @@ print(tokenized_datasets['train'][0])  # Print the first example of the train da
 ### Step 3. Training with QLoRA
 I will fine-tune Mistral 7B using QLoRA to adapt the model with low-rank matrices, which helps reduce GPU memory consumption during training.
 ```python
-from peft import LoraConfig, get_peft_model
-from transformers import Trainer, TrainingArguments,MistralForTokenClassification
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+from transformers import Trainer, TrainingArguments, AutoModelForTokenClassification, BitsAndBytesConfig
+import torch
 
-# Load Mistral 7B model for token classification (NER)
-model = MistralForTokenClassification.from_pretrained('mistralai/mistral-7b-instruct')
-
-# Configure QLoRA
-lora_config = LoraConfig(
-    r=8,  # rank (can experiment with different values)
-    lora_alpha=16,  # Scaling factor
-    target_modules=['query', 'value'],  # Target attention modules
+# Configure quantization for QLoRA
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_use_double_quant=True,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_compute_dtype=torch.bfloat16
 )
 
-# Wrap the model with QLoRA
-peft_model = get_peft_model(model, lora_config)
+# Load model with quantization (this makes it QLoRA)
+model = AutoModelForTokenClassification.from_pretrained(
+    'mistralai/Mistral-7B-Instruct-v0.1',
+    quantization_config=bnb_config,  # This enables quantization
+    device_map="auto",
+    trust_remote_code=True,
+    num_labels=len(label_list)  # Set your number of NER labels
+)
 
-# Training Arguments
-# Define training arguments
+# Prepare model for k-bit training
+model = prepare_model_for_kbit_training(model)
+
+# Configure LoRA (same as before, but now applied to quantized model)
+lora_config = LoraConfig(
+    r=8,  # rank
+    lora_alpha=16,
+    target_modules=["q_proj", "v_proj", "k_proj", "o_proj"],  # Mistral uses these names
+    lora_dropout=0.1,
+    bias="none",
+    task_type="TOKEN_CLASSIFICATION"
+)
+
+# Apply LoRA to quantized model (making it QLoRA)
+peft_model = get_peft_model(model, lora_config)
+peft_model.print_trainable_parameters()
+
+# Training Arguments remain the same
 training_args = TrainingArguments(
-    output_dir="./results",  # Where to save the model and logs
-    evaluation_strategy="epoch",  # Evaluate after every epoch
-    learning_rate=2e-5,  # Learning rate for fine-tuning
-    per_device_train_batch_size=8,  # Adjust based on GPU memory
-    per_device_eval_batch_size=8,
-    num_train_epochs=5,  # Number of training epochs
+    output_dir="./results",
+    evaluation_strategy="epoch",
+    learning_rate=2e-4,  # Often needs to be slightly higher for QLoRA
+    per_device_train_batch_size=4,  # May need to reduce due to quantization overhead
+    per_device_eval_batch_size=4,
+    num_train_epochs=5,
     weight_decay=0.01,
     logging_dir='./logs',
+    gradient_checkpointing=True,  # Helps save memory
+    fp16=True,  # Mixed precision training
+    save_strategy="epoch",
 )
 
+# Trainer setup
 trainer = Trainer(
     model=peft_model,
     args=training_args,
