@@ -311,7 +311,25 @@ model = AutoModelForTokenClassification.from_pretrained(
     trust_remote_code=True,
     num_labels=len(label_list)  # Set your number of NER labels
 )
+```
+#### 🔧 Importance of `prepare_model_for_kbit_training(model)`
+This line is **essential when using quantized models (4-bit / 8-bit)** with LoRA or QLoRA fine-tuning.
 
+##### ✅ What it does:
+- Ensures **gradient flow** from inputs to LoRA layers (needed for learning).
+- Converts sensitive layers (like LayerNorm) to **float32** for stability.
+- Prepares the model for **adapter-based training** (e.g., LoRA).
+- Makes the quantized model compatible with **PEFT (Parameter-Efficient Fine-Tuning)**.
+
+##### 🤔 Why it's important:
+- Without this line, **LoRA layers may not get updated** (no learning).
+- Training may become **unstable or ineffective**.
+- Essential step to make quantized models **trainable**.
+
+##### 📌 When to use it:
+- After loading a model in **4-bit / 8-bit precision** using `BitsAndBytesConfig`.
+- Before applying **LoRA adapters** using `get_peft_model()`.
+```python
 # Prepare model for k-bit training
 model = prepare_model_for_kbit_training(model)
 
