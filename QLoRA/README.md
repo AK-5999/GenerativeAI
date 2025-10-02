@@ -181,7 +181,7 @@ The model shows strong generalization after only 3–5 epochs of training on a s
   title={LoRA Fine-Tuned Mistral-7B for NER},
   author={Aman Kumar},
   year={2025},
-  url={https://huggingface.co/your-model-name}
+  url={[https://huggingface.co/Aghori/mistral-medical-ner-qlora](https://huggingface.co/Aghori/mistral-medical-ner-qlora)}
 }
 ```
 
