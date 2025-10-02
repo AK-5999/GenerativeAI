@@ -237,7 +237,7 @@ I need to structure your dataset in a format that includes both the medical text
 I am using HuggingFace's datasets library to load the dataset and preprocess it for NER tasks. Tokenize the dataset so that each token has an associated label.
 ```python
 from datasets import load_dataset
-from transformers import MistralTokenizer
+from transformers import AutoTokenizer
 
 # Load the dataset (ensure you have your dataset in the correct format)
 dataset = load_dataset('json', data_files='TrainingData.json')
@@ -251,41 +251,65 @@ train_dataset = train_dataset['train']
 validation_dataset = val_test_dataset['train']
 test_dataset = val_test_dataset['test']
 
+# ----- ADD THIS LABEL MAPPING DICTIONARY -----
+label2id = {
+    "O": 0,
+    "B-Disease": 1,
+    "I-Disease": 2,
+    "B-Medication": 3,
+    "I-Medication": 4,
+    "B-Person": 5,
+    "I-Person": 6,
+    "B-Location": 7,
+    "I-Location": 8,
+}
+
 # Initialize the tokenizer for Mistral 7B
-tokenizer = MistralTokenizer.from_pretrained('mistralai/mistral-7b-instruct')
+tokenizer = AutoTokenizer.from_pretrained(
+    "mistralai/Mistral-7B-Instruct-v0.1",
+    use_fast=True  # Optional, but usually better performance
+)
+# Fix: set pad_token
+tokenizer.pad_token = tokenizer.eos_token
 
 # Tokenization function that also aligns labels
 def tokenize_and_align_labels(examples):
-    # Tokenize the input texts
-    tokenized_inputs = tokenizer(examples['text'], padding="max_length", truncation=True, is_split_into_words=True)
-    labels = examples['labels']
+    tokenized_inputs = tokenizer(
+        [ [label['word'] for label in labels] for labels in examples['labels'] ], 
+        is_split_into_words=True,
+        padding="max_length",
+        truncation=True,
+        max_length=16
+    )
 
-    # Create the labels for NER task
-    new_labels = []
-    for i, label in enumerate(labels):
-        word_ids = tokenized_inputs.word_ids(batch_index=i)  # Map tokens to words
+    all_labels = []
+
+    for i, labels in enumerate(examples['labels']):
+        word_ids = tokenized_inputs.word_ids(batch_index=i)
         label_ids = []
-
-        # For each token, check the corresponding word and assign the label
         for word_id in word_ids:
             if word_id is None:
-                # Padding token, assign -100
                 label_ids.append(-100)
             else:
-                # Get the entity label for the corresponding word_id (word token)
-                label_ids.append(label[word_id]['entity'])
+                entity_label = labels[word_id]['entity']
+                label_ids.append(label2id.get(entity_label, 0))
+        all_labels.append(label_ids)
 
-        new_labels.append(label_ids)
-    
-    # Add the new 'labels' to the tokenized input
-    tokenized_inputs['labels'] = new_labels
+    tokenized_inputs["labels"] = all_labels
     return tokenized_inputs
 
 # Apply the tokenization and label alignment to the entire dataset
 tokenized_datasets = dataset.map(tokenize_and_align_labels, batched=True)
-
 # You can check if everything is correct by inspecting a sample
 print(tokenized_datasets['train'][0])  # Print the first example of the train dataset
+
+# Apply tokenization and label alignment to dataset splits
+train_dataset = train_dataset.map(tokenize_and_align_labels, batched=True)
+validation_dataset = validation_dataset.map(tokenize_and_align_labels, batched=True)
+test_dataset = test_dataset.map(tokenize_and_align_labels, batched=True)
+
+# Optional: inspect one sample to verify
+print(train_dataset[0])
 
 ```
 ### Step 3. Training with QLoRA
@@ -300,7 +324,7 @@ bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_use_double_quant=True,
     bnb_4bit_quant_type="nf4",
-    bnb_4bit_compute_dtype=torch.bfloat16
+    bnb_4bit_compute_dtype=torch.float16  # fallback to float16 for broader support
 )
 
 # Load model with quantization (this makes it QLoRA)
@@ -309,7 +333,7 @@ model = AutoModelForTokenClassification.from_pretrained(
     quantization_config=bnb_config,  # This enables quantization
     device_map="auto",
     trust_remote_code=True,
-    num_labels=len(label_list)  # Set your number of NER labels
+    num_labels=len(label2id )  # Set your number of NER labels
 )
 ```
 #### 🔧 Importance of `prepare_model_for_kbit_training(model)`
@@ -340,7 +364,7 @@ lora_config = LoraConfig(
     target_modules=["q_proj", "v_proj", "k_proj", "o_proj"],  # Mistral uses these names
     lora_dropout=0.1,
     bias="none",
-    task_type="TOKEN_CLASSIFICATION"
+    task_type="TOKEN_CLS"
 )
 
 # Apply LoRA to quantized model (making it QLoRA)
@@ -350,7 +374,6 @@ peft_model.print_trainable_parameters()
 # Training Arguments remain the same
 training_args = TrainingArguments(
     output_dir="./results",
-    evaluation_strategy="epoch",
     learning_rate=2e-4,  # Often needs to be slightly higher for QLoRA
     per_device_train_batch_size=4,  # May need to reduce due to quantization overhead
     per_device_eval_batch_size=4,
@@ -367,7 +390,7 @@ trainer = Trainer(
     model=peft_model,
     args=training_args,
     train_dataset=tokenized_datasets['train'],
-    eval_dataset=tokenized_datasets['validation'],
+    eval_dataset=validation_dataset,
 )
 
 # Start training
@@ -393,14 +416,27 @@ Key Hyperparameters:
 from sklearn.metrics import precision_recall_fscore_support
 
 # Get predictions on the test set
-predictions = trainer.predict(tokenized_datasets['test'])
+predictions = trainer.predict(test_dataset)
 
-# Calculate precision, recall, and F1 score
-y_true = predictions.label_ids
+# Get the predicted and true labels
 y_pred = predictions.predictions.argmax(axis=-1)
+y_true = predictions.label_ids
 
-precision, recall, f1, _ = precision_recall_fscore_support(y_true, y_pred, average='weighted')
+# Flatten predictions and labels, skipping padding tokens (-100)
+true_labels = []
+pred_labels = []
+
+for pred, true in zip(y_pred, y_true):
+    for p, t in zip(pred, true):
+        if t != -100:
+            true_labels.append(t)
+            pred_labels.append(p)
+
+# Compute precision, recall, and F1
+precision, recall, f1, _ = precision_recall_fscore_support(true_labels, pred_labels, average='weighted')
+
 print(f"Precision: {precision:.4f}, Recall: {recall:.4f}, F1: {f1:.4f}")
+
 ```
 
 ### Step 6: Final Model Evaluation
