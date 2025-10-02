@@ -1,0 +1,766 @@
+[
+  {
+    "text": "The patient was diagnosed with type 2 diabetes and prescribed metformin.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "patient", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "diagnosed", "entity": "O"},
+      {"word": "with", "entity": "O"},
+      {"word": "type", "entity": "B-Disease"},
+      {"word": "2", "entity": "I-Disease"},
+      {"word": "diabetes", "entity": "I-Disease"},
+      {"word": "and", "entity": "O"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "metformin", "entity": "B-Medication"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "She takes aspirin daily for heart disease.",
+    "labels": [
+      {"word": "She", "entity": "O"},
+      {"word": "takes", "entity": "O"},
+      {"word": "aspirin", "entity": "B-Medication"},
+      {"word": "daily", "entity": "O"},
+      {"word": "for", "entity": "O"},
+      {"word": "heart", "entity": "B-Disease"},
+      {"word": "disease", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "John Smith visited the hospital for pneumonia treatment.",
+    "labels": [
+      {"word": "John", "entity": "B-Person"},
+      {"word": "Smith", "entity": "I-Person"},
+      {"word": "visited", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "hospital", "entity": "B-Location"},
+      {"word": "for", "entity": "O"},
+      {"word": "pneumonia", "entity": "B-Disease"},
+      {"word": "treatment", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "He was given ibuprofen to reduce inflammation.",
+    "labels": [
+      {"word": "He", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "given", "entity": "O"},
+      {"word": "ibuprofen", "entity": "B-Medication"},
+      {"word": "to", "entity": "O"},
+      {"word": "reduce", "entity": "O"},
+      {"word": "inflammation", "entity": "B-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Dr. Emily Taylor prescribed insulin for diabetes.",
+    "labels": [
+      {"word": "Dr.", "entity": "B-Person"},
+      {"word": "Emily", "entity": "I-Person"},
+      {"word": "Taylor", "entity": "I-Person"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "insulin", "entity": "B-Medication"},
+      {"word": "for", "entity": "O"},
+      {"word": "diabetes", "entity": "B-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The child was diagnosed with asthma and given an inhaler.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "child", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "diagnosed", "entity": "O"},
+      {"word": "with", "entity": "O"},
+      {"word": "asthma", "entity": "B-Disease"},
+      {"word": "and", "entity": "O"},
+      {"word": "given", "entity": "O"},
+      {"word": "an", "entity": "O"},
+      {"word": "inhaler", "entity": "B-Medication"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Lisinopril was prescribed for high blood pressure.",
+    "labels": [
+      {"word": "Lisinopril", "entity": "B-Medication"},
+      {"word": "was", "entity": "O"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "for", "entity": "O"},
+      {"word": "high", "entity": "B-Disease"},
+      {"word": "blood", "entity": "I-Disease"},
+      {"word": "pressure", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Maria Gonzalez had surgery at Boston General Hospital.",
+    "labels": [
+      {"word": "Maria", "entity": "B-Person"},
+      {"word": "Gonzalez", "entity": "I-Person"},
+      {"word": "had", "entity": "O"},
+      {"word": "surgery", "entity": "O"},
+      {"word": "at", "entity": "O"},
+      {"word": "Boston", "entity": "B-Location"},
+      {"word": "General", "entity": "I-Location"},
+      {"word": "Hospital", "entity": "I-Location"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The nurse administered a dose of amoxicillin.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "nurse", "entity": "O"},
+      {"word": "administered", "entity": "O"},
+      {"word": "a", "entity": "O"},
+      {"word": "dose", "entity": "O"},
+      {"word": "of", "entity": "O"},
+      {"word": "amoxicillin", "entity": "B-Medication"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "He suffers from chronic back pain.",
+    "labels": [
+      {"word": "He", "entity": "O"},
+      {"word": "suffers", "entity": "O"},
+      {"word": "from", "entity": "O"},
+      {"word": "chronic", "entity": "B-Disease"},
+      {"word": "back", "entity": "I-Disease"},
+      {"word": "pain", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Naproxen was given to relieve arthritis symptoms.",
+    "labels": [
+      {"word": "Naproxen", "entity": "B-Medication"},
+      {"word": "was", "entity": "O"},
+      {"word": "given", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "relieve", "entity": "O"},
+      {"word": "arthritis", "entity": "B-Disease"},
+      {"word": "symptoms", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The appointment with Dr. Sarah Lee was at 10 AM.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "appointment", "entity": "O"},
+      {"word": "with", "entity": "O"},
+      {"word": "Dr.", "entity": "B-Person"},
+      {"word": "Sarah", "entity": "I-Person"},
+      {"word": "Lee", "entity": "I-Person"},
+      {"word": "was", "entity": "O"},
+      {"word": "at", "entity": "O"},
+      {"word": "10", "entity": "O"},
+      {"word": "AM", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "She was hospitalized for severe migraine.",
+    "labels": [
+      {"word": "She", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "hospitalized", "entity": "O"},
+      {"word": "for", "entity": "O"},
+      {"word": "severe", "entity": "B-Disease"},
+      {"word": "migraine", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+    
+  {
+    "text": "The patient was diagnosed with type 2 diabetes and prescribed metformin.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "patient", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "diagnosed", "entity": "O"},
+      {"word": "with", "entity": "O"},
+      {"word": "type", "entity": "B-Disease"},
+      {"word": "2", "entity": "I-Disease"},
+      {"word": "diabetes", "entity": "I-Disease"},
+      {"word": "and", "entity": "O"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "metformin", "entity": "B-Medication"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "She takes aspirin daily for heart disease.",
+    "labels": [
+      {"word": "She", "entity": "O"},
+      {"word": "takes", "entity": "O"},
+      {"word": "aspirin", "entity": "B-Medication"},
+      {"word": "daily", "entity": "O"},
+      {"word": "for", "entity": "O"},
+      {"word": "heart", "entity": "B-Disease"},
+      {"word": "disease", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "John Smith visited the hospital for pneumonia treatment.",
+    "labels": [
+      {"word": "John", "entity": "B-Person"},
+      {"word": "Smith", "entity": "I-Person"},
+      {"word": "visited", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "hospital", "entity": "B-Location"},
+      {"word": "for", "entity": "O"},
+      {"word": "pneumonia", "entity": "B-Disease"},
+      {"word": "treatment", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "He was given ibuprofen to reduce inflammation.",
+    "labels": [
+      {"word": "He", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "given", "entity": "O"},
+      {"word": "ibuprofen", "entity": "B-Medication"},
+      {"word": "to", "entity": "O"},
+      {"word": "reduce", "entity": "O"},
+      {"word": "inflammation", "entity": "B-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Dr. Emily Taylor prescribed insulin for diabetes.",
+    "labels": [
+      {"word": "Dr.", "entity": "B-Person"},
+      {"word": "Emily", "entity": "I-Person"},
+      {"word": "Taylor", "entity": "I-Person"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "insulin", "entity": "B-Medication"},
+      {"word": "for", "entity": "O"},
+      {"word": "diabetes", "entity": "B-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The child was diagnosed with asthma and given an inhaler.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "child", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "diagnosed", "entity": "O"},
+      {"word": "with", "entity": "O"},
+      {"word": "asthma", "entity": "B-Disease"},
+      {"word": "and", "entity": "O"},
+      {"word": "given", "entity": "O"},
+      {"word": "an", "entity": "O"},
+      {"word": "inhaler", "entity": "B-Medication"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Lisinopril was prescribed for high blood pressure.",
+    "labels": [
+      {"word": "Lisinopril", "entity": "B-Medication"},
+      {"word": "was", "entity": "O"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "for", "entity": "O"},
+      {"word": "high", "entity": "B-Disease"},
+      {"word": "blood", "entity": "I-Disease"},
+      {"word": "pressure", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Maria Gonzalez had surgery at Boston General Hospital.",
+    "labels": [
+      {"word": "Maria", "entity": "B-Person"},
+      {"word": "Gonzalez", "entity": "I-Person"},
+      {"word": "had", "entity": "O"},
+      {"word": "surgery", "entity": "O"},
+      {"word": "at", "entity": "O"},
+      {"word": "Boston", "entity": "B-Location"},
+      {"word": "General", "entity": "I-Location"},
+      {"word": "Hospital", "entity": "I-Location"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The nurse administered a dose of amoxicillin.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "nurse", "entity": "O"},
+      {"word": "administered", "entity": "O"},
+      {"word": "a", "entity": "O"},
+      {"word": "dose", "entity": "O"},
+      {"word": "of", "entity": "O"},
+      {"word": "amoxicillin", "entity": "B-Medication"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Dr. Mark Johnson advised the patient to take ibuprofen for arthritis.",
+    "labels": [
+      {"word": "Dr.", "entity": "B-Person"},
+      {"word": "Mark", "entity": "I-Person"},
+      {"word": "Johnson", "entity": "I-Person"},
+      {"word": "advised", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "patient", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "take", "entity": "O"},
+      {"word": "ibuprofen", "entity": "B-Medication"},
+      {"word": "for", "entity": "O"},
+      {"word": "arthritis", "entity": "B-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Amoxicillin was prescribed to treat the bacterial infection.",
+    "labels": [
+      {"word": "Amoxicillin", "entity": "B-Medication"},
+      {"word": "was", "entity": "O"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "treat", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "bacterial", "entity": "B-Disease"},
+      {"word": "infection", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Emily Davis was admitted to New York City Hospital after a stroke.",
+    "labels": [
+      {"word": "Emily", "entity": "B-Person"},
+      {"word": "Davis", "entity": "I-Person"},
+      {"word": "was", "entity": "O"},
+      {"word": "admitted", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "New", "entity": "B-Location"},
+      {"word": "York", "entity": "I-Location"},
+      {"word": "City", "entity": "I-Location"},
+      {"word": "Hospital", "entity": "I-Location"},
+      {"word": "after", "entity": "O"},
+      {"word": "a", "entity": "O"},
+      {"word": "stroke", "entity": "B-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "She is allergic to penicillin and was prescribed acetaminophen instead.",
+    "labels": [
+      {"word": "She", "entity": "O"},
+      {"word": "is", "entity": "O"},
+      {"word": "allergic", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "penicillin", "entity": "B-Medication"},
+      {"word": "and", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "acetaminophen", "entity": "B-Medication"},
+      {"word": "instead", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Michael Brown experienced severe headaches due to hypertension.",
+    "labels": [
+      {"word": "Michael", "entity": "B-Person"},
+      {"word": "Brown", "entity": "I-Person"},
+      {"word": "experienced", "entity": "O"},
+      {"word": "severe", "entity": "O"},
+      {"word": "headaches", "entity": "O"},
+      {"word": "due", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "hypertension", "entity": "B-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The surgery took place at St. Mary’s Hospital last Monday.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "surgery", "entity": "O"},
+      {"word": "took", "entity": "O"},
+      {"word": "place", "entity": "O"},
+      {"word": "at", "entity": "O"},
+      {"word": "St.", "entity": "B-Location"},
+      {"word": "Mary’s", "entity": "I-Location"},
+      {"word": "Hospital", "entity": "I-Location"},
+      {"word": "last", "entity": "O"},
+      {"word": "Monday", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "She was prescribed prednisone for her autoimmune disorder.",
+    "labels": [
+      {"word": "She", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "prednisone", "entity": "B-Medication"},
+      {"word": "for", "entity": "O"},
+      {"word": "her", "entity": "O"},
+      {"word": "autoimmune", "entity": "B-Disease"},
+      {"word": "disorder", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Dr. Anna Lee reviewed the CT scan results with the patient.",
+    "labels": [
+      {"word": "Dr.", "entity": "B-Person"},
+      {"word": "Anna", "entity": "I-Person"},
+      {"word": "Lee", "entity": "I-Person"},
+      {"word": "reviewed", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "CT", "entity": "O"},
+      {"word": "scan", "entity": "O"},
+      {"word": "results", "entity": "O"},
+      {"word": "with", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "patient", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The patient was started on metoprolol for blood pressure management.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "patient", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "started", "entity": "O"},
+      {"word": "on", "entity": "O"},
+      {"word": "metoprolol", "entity": "B-Medication"},
+      {"word": "for", "entity": "O"},
+      {"word": "blood", "entity": "B-Disease"},
+      {"word": "pressure", "entity": "I-Disease"},
+      {"word": "management", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "John was diagnosed with chronic bronchitis and advised to quit smoking.",
+    "labels": [
+      {"word": "John", "entity": "B-Person"},
+      {"word": "was", "entity": "O"},
+      {"word": "diagnosed", "entity": "O"},
+      {"word": "with", "entity": "O"},
+      {"word": "chronic", "entity": "B-Disease"},
+      {"word": "bronchitis", "entity": "I-Disease"},
+      {"word": "and", "entity": "O"},
+      {"word": "advised", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "quit", "entity": "O"},
+      {"word": "smoking", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  }
+,
+  {
+    "text": "The patient reported feeling dizziness after taking lorazepam.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "patient", "entity": "O"},
+      {"word": "reported", "entity": "O"},
+      {"word": "feeling", "entity": "O"},
+      {"word": "dizziness", "entity": "B-Disease"},
+      {"word": "after", "entity": "O"},
+      {"word": "taking", "entity": "O"},
+      {"word": "lorazepam", "entity": "B-Medication"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Dr. Sophia Kim prescribed amlodipine for hypertension management.",
+    "labels": [
+      {"word": "Dr.", "entity": "B-Person"},
+      {"word": "Sophia", "entity": "I-Person"},
+      {"word": "Kim", "entity": "I-Person"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "amlodipine", "entity": "B-Medication"},
+      {"word": "for", "entity": "O"},
+      {"word": "hypertension", "entity": "B-Disease"},
+      {"word": "management", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Jessica White was admitted with severe abdominal pain.",
+    "labels": [
+      {"word": "Jessica", "entity": "B-Person"},
+      {"word": "White", "entity": "I-Person"},
+      {"word": "was", "entity": "O"},
+      {"word": "admitted", "entity": "O"},
+      {"word": "with", "entity": "O"},
+      {"word": "severe", "entity": "O"},
+      {"word": "abdominal", "entity": "B-Disease"},
+      {"word": "pain", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "He was treated with metformin to control his blood sugar levels.",
+    "labels": [
+      {"word": "He", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "treated", "entity": "O"},
+      {"word": "with", "entity": "O"},
+      {"word": "metformin", "entity": "B-Medication"},
+      {"word": "to", "entity": "O"},
+      {"word": "control", "entity": "O"},
+      {"word": "his", "entity": "O"},
+      {"word": "blood", "entity": "B-Disease"},
+      {"word": "sugar", "entity": "I-Disease"},
+      {"word": "levels", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The cardiologist diagnosed atrial fibrillation in the patient.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "cardiologist", "entity": "O"},
+      {"word": "diagnosed", "entity": "O"},
+      {"word": "atrial", "entity": "B-Disease"},
+      {"word": "fibrillation", "entity": "I-Disease"},
+      {"word": "in", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "patient", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Paracetamol was given to relieve her headache symptoms.",
+    "labels": [
+      {"word": "Paracetamol", "entity": "B-Medication"},
+      {"word": "was", "entity": "O"},
+      {"word": "given", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "relieve", "entity": "O"},
+      {"word": "her", "entity": "O"},
+      {"word": "headache", "entity": "B-Disease"},
+      {"word": "symptoms", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Dr. Robert Green examined the wound for signs of infection.",
+    "labels": [
+      {"word": "Dr.", "entity": "B-Person"},
+      {"word": "Robert", "entity": "I-Person"},
+      {"word": "Green", "entity": "I-Person"},
+      {"word": "examined", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "wound", "entity": "O"},
+      {"word": "for", "entity": "O"},
+      {"word": "signs", "entity": "O"},
+      {"word": "of", "entity": "O"},
+      {"word": "infection", "entity": "B-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "She reported no allergies to any medications.",
+    "labels": [
+      {"word": "She", "entity": "O"},
+      {"word": "reported", "entity": "O"},
+      {"word": "no", "entity": "O"},
+      {"word": "allergies", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "any", "entity": "O"},
+      {"word": "medications", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "He was discharged after successful appendectomy surgery.",
+    "labels": [
+      {"word": "He", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "discharged", "entity": "O"},
+      {"word": "after", "entity": "O"},
+      {"word": "successful", "entity": "O"},
+      {"word": "appendectomy", "entity": "B-Disease"},
+      {"word": "surgery", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Penicillin was prescribed to the patient for bacterial infection.",
+    "labels": [
+      {"word": "Penicillin", "entity": "B-Medication"},
+      {"word": "was", "entity": "O"},
+      {"word": "prescribed", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "patient", "entity": "O"},
+      {"word": "for", "entity": "O"},
+      {"word": "bacterial", "entity": "B-Disease"},
+      {"word": "infection", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "She complained of persistent cough and was tested for tuberculosis.",
+    "labels": [
+      {"word": "She", "entity": "O"},
+      {"word": "complained", "entity": "O"},
+      {"word": "of", "entity": "O"},
+      {"word": "persistent", "entity": "O"},
+      {"word": "cough", "entity": "B-Disease"},
+      {"word": "and", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "tested", "entity": "O"},
+      {"word": "for", "entity": "O"},
+      {"word": "tuberculosis", "entity": "B-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Dr. William Harris monitored the patient's vital signs carefully.",
+    "labels": [
+      {"word": "Dr.", "entity": "B-Person"},
+      {"word": "William", "entity": "I-Person"},
+      {"word": "Harris", "entity": "I-Person"},
+      {"word": "monitored", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "patient's", "entity": "O"},
+      {"word": "vital", "entity": "O"},
+      {"word": "signs", "entity": "O"},
+      {"word": "carefully", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The patient was advised to stop smoking to improve lung health.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "patient", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "advised", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "stop", "entity": "O"},
+      {"word": "smoking", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "improve", "entity": "O"},
+      {"word": "lung", "entity": "B-Disease"},
+      {"word": "health", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Ibuprofen was recommended to reduce the inflammation.",
+    "labels": [
+      {"word": "Ibuprofen", "entity": "B-Medication"},
+      {"word": "was", "entity": "O"},
+      {"word": "recommended", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "reduce", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "inflammation", "entity": "B-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Mary Johnson was admitted to Chicago Medical Center for surgery.",
+    "labels": [
+      {"word": "Mary", "entity": "B-Person"},
+      {"word": "Johnson", "entity": "I-Person"},
+      {"word": "was", "entity": "O"},
+      {"word": "admitted", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "Chicago", "entity": "B-Location"},
+      {"word": "Medical", "entity": "I-Location"},
+      {"word": "Center", "entity": "I-Location"},
+      {"word": "for", "entity": "O"},
+      {"word": "surgery", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The patient experienced nausea and vomiting after the medication.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "patient", "entity": "O"},
+      {"word": "experienced", "entity": "O"},
+      {"word": "nausea", "entity": "B-Disease"},
+      {"word": "and", "entity": "O"},
+      {"word": "vomiting", "entity": "B-Disease"},
+      {"word": "after", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "medication", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Dr. Linda Nguyen administered the influenza vaccine yesterday.",
+    "labels": [
+      {"word": "Dr.", "entity": "B-Person"},
+      {"word": "Linda", "entity": "I-Person"},
+      {"word": "Nguyen", "entity": "I-Person"},
+      {"word": "administered", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "influenza", "entity": "B-Disease"},
+      {"word": "vaccine", "entity": "O"},
+      {"word": "yesterday", "entity": "O"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "Amoxicillin was started to treat the bacterial infection.",
+    "labels": [
+      {"word": "Amoxicillin", "entity": "B-Medication"},
+      {"word": "was", "entity": "O"},
+      {"word": "started", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "treat", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "bacterial", "entity": "B-Disease"},
+      {"word": "infection", "entity": "I-Disease"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "The nurse documented the patient's allergy to sulfa drugs.",
+    "labels": [
+      {"word": "The", "entity": "O"},
+      {"word": "nurse", "entity": "O"},
+      {"word": "documented", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "patient's", "entity": "O"},
+      {"word": "allergy", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "sulfa", "entity": "B-Medication"},
+      {"word": "drugs", "entity": "I-Medication"},
+      {"word": ".", "entity": "O"}
+    ]
+  },
+  {
+    "text": "He complained of chest pain and was rushed to the emergency room.",
+    "labels": [
+      {"word": "He", "entity": "O"},
+      {"word": "complained", "entity": "O"},
+      {"word": "of", "entity": "O"},
+      {"word": "chest", "entity": "B-Disease"},
+      {"word": "pain", "entity": "I-Disease"},
+      {"word": "and", "entity": "O"},
+      {"word": "was", "entity": "O"},
+      {"word": "rushed", "entity": "O"},
+      {"word": "to", "entity": "O"},
+      {"word": "the", "entity": "O"},
+      {"word": "emergency", "entity": "B-Location"},
+      {"word": "room", "entity": "I-Location"},
+      {"word": ".", "entity": "O"}
+    ]
+  }
+
+  ]
