@@ -122,11 +122,11 @@ Feedback Loop: Accept/Request Alternatives/Start Over
 - Preference tracking across conversation turns
 
 ### 🚀 **Implementation Steps**
-Step 1: Data Ingestion
-Step 2: Query Handling
-Step 3: LLM Integration
-Step 4: Conversation Memory
-Step 5: Web Interface
+- Step 1: Data Ingestion
+- Step 2: Query Handling
+- Step 3: LLM Integration
+- Step 4: Conversation Memory
+- Step 5: Web Interface
 
 ### 🎨 **User Interface**
 **Streamlit Web Application Features**
@@ -237,6 +237,7 @@ Solution:
 
 ### 📈 **Performance Metrics**
 1. System Performance
+
 | **Metric**          | **Value**    | **Description**                |
 | ------------------- | ------------ | ------------------------------ |
 | Query Response Time | `<2 seconds` | End-to-end response generation |
@@ -245,6 +246,7 @@ Solution:
 | Retrieval Accuracy  | `95%+`       | Relevant results in top-5      |
 
 2. User Experience Metrices
+
 | **Aspect**          | **Performance**                      |
 | ------------------- | ------------------------------------ |
 | Query Understanding | Handles 5+ query patterns            |
