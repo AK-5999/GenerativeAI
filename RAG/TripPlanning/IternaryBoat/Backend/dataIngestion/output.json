@@ -1,0 +1,4300 @@
+{
+  "Agra": {
+    "BestFor": [
+      "history",
+      "architecture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Taj Mahal at sunrise",
+        "Afternoon": "Explore Agra Fort",
+        "Evening": "Mehtab Bagh for sunset views of the Taj"
+      },
+      "2": {
+        "Morning": "Visit Fatehpur Sikri",
+        "Afternoon": "Explore the Tomb of Itimad-ud-Daulah (Baby Taj)",
+        "Evening": "Shopping for local handicrafts"
+      }
+    }
+  },
+  "Jaipur": {
+    "BestFor": [
+      "history",
+      "culture",
+      "shopping"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore City Palace",
+        "Afternoon": "Visit Jantar Mantar",
+        "Evening": "Shopping at Johari Bazaar"
+      },
+      "2": {
+        "Morning": "Visit Amer Fort",
+        "Afternoon": "Explore Jaigarh Fort",
+        "Evening": "Enjoy a traditional Rajasthani dinner"
+      },
+      "3": {
+        "Morning": "Visit Hawa Mahal and Nahargarh Fort",
+        "Afternoon": "Block printing workshop",
+        "Evening": "Relax at a rooftop cafe"
+      }
+    }
+  },
+  "Goa": {
+    "BestFor": [
+      "beach",
+      "nightlife",
+      "watersports"
+    ],
+    "State": "N/A",
+    "Duration": 4.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Relax at Calangute Beach",
+        "Afternoon": "Watersports at Baga Beach",
+        "Evening": "Party at Tito's Lane"
+      },
+      "2": {
+        "Morning": "Explore Old Goa churches",
+        "Afternoon": "Visit a spice plantation",
+        "Evening": "Sunset cruise on the Mandovi River"
+      },
+      "3": {
+        "Morning": "Dolphin spotting trip",
+        "Afternoon": "Relax at Anjuna Beach",
+        "Evening": "Anjuna Flea Market"
+      },
+      "4": {
+        "Morning": "Visit Dudhsagar Falls",
+        "Afternoon": "Explore the peaceful beaches of South Goa",
+        "Evening": "Dinner at a beach shack"
+      }
+    }
+  },
+  "Delhi": {
+    "BestFor": [
+      "history",
+      "food",
+      "culture"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore Old Delhi: Jama Masjid, Chandni Chowk",
+        "Afternoon": "Visit Red Fort",
+        "Evening": "Light and sound show at Red Fort"
+      },
+      "2": {
+        "Morning": "Visit Humayun's Tomb and Qutub Minar",
+        "Afternoon": "Explore Lodhi Garden",
+        "Evening": "Dine at a fine dining restaurant"
+      },
+      "3": {
+        "Morning": "Visit India Gate and Rashtrapati Bhavan",
+        "Afternoon": "Explore Connaught Place for shopping",
+        "Evening": "Food tour in a local market"
+      }
+    }
+  },
+  "Mumbai": {
+    "BestFor": [
+      "city life",
+      "food",
+      "bollywood"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Gateway of India and take a ferry to Elephanta Caves",
+        "Afternoon": "Explore Colaba Causeway for shopping",
+        "Evening": "Walk along Marine Drive"
+      },
+      "2": {
+        "Morning": "Dharavi slum tour",
+        "Afternoon": "Visit Haji Ali Dargah and Mahalaxmi Temple",
+        "Evening": "Watch a Bollywood movie at a classic cinema"
+      },
+      "3": {
+        "Morning": "Explore Bandra-Worli Sea Link and Bandstand",
+        "Afternoon": "Visit Film City",
+        "Evening": "Enjoy the nightlife in Bandra"
+      }
+    }
+  },
+  "Varanasi": {
+    "BestFor": [
+      "spirituality",
+      "culture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Sunrise boat ride on the Ganges",
+        "Afternoon": "Explore the ghats and temples",
+        "Evening": "Witness the Ganga Aarti ceremony"
+      },
+      "2": {
+        "Morning": "Visit Sarnath",
+        "Afternoon": "Walking tour of the old city",
+        "Evening": "Attend a classical music concert"
+      }
+    }
+  },
+  "Udaipur": {
+    "BestFor": [
+      "culture",
+      "nature"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "City Palace tour",
+        "Afternoon": "Boat ride on Lake Pichola",
+        "Evening": "Cultural show at Bagore Ki Haveli"
+      },
+      "2": {
+        "Morning": "Visit Jagdish Temple and Saheliyon Ki Bari",
+        "Afternoon": "Explore the vintage car museum",
+        "Evening": "Sunset at Monsoon Palace"
+      },
+      "3": {
+        "Morning": "Day trip to Kumbhalgarh Fort",
+        "Afternoon": "Explore the fort",
+        "Evening": "Relax by the lake"
+      }
+    }
+  },
+  "Jodhpur": {
+    "BestFor": [
+      "history",
+      "architecture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore Mehrangarh Fort",
+        "Afternoon": "Visit Jaswant Thada",
+        "Evening": "Explore the blue city and its markets"
+      },
+      "2": {
+        "Morning": "Visit Umaid Bhawan Palace Museum",
+        "Afternoon": "Shopping for local handicrafts",
+        "Evening": "Enjoy a traditional Rajasthani thali"
+      }
+    }
+  },
+  "Rishikesh": {
+    "BestFor": [
+      "adventure",
+      "spirituality",
+      "yoga"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "River rafting on the Ganges",
+        "Afternoon": "Visit Lakshman Jhula and Ram Jhula",
+        "Evening": "Attend the Ganga Aarti at Triveni Ghat"
+      },
+      "2": {
+        "Morning": "Yoga and meditation session",
+        "Afternoon": "Hike to a waterfall",
+        "Evening": "Explore the local cafes"
+      },
+      "3": {
+        "Morning": "Bungee jumping or zip-lining",
+        "Afternoon": "Visit the Beatles Ashram",
+        "Evening": "Relax by the river"
+      }
+    }
+  },
+  "Shimla": {
+    "BestFor": [
+      "nature",
+      "colonial architecture"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Walk along the Mall Road",
+        "Afternoon": "Visit the Viceregal Lodge",
+        "Evening": "Enjoy views from the Ridge"
+      },
+      "2": {
+        "Morning": "Toy train ride to Kalka",
+        "Afternoon": "Visit Jakhoo Temple",
+        "Evening": "Explore the local markets"
+      },
+      "3": {
+        "Morning": "Day trip to Kufri",
+        "Afternoon": "Enjoy horse riding and other activities",
+        "Evening": "Relax and enjoy the cool weather"
+      }
+    }
+  },
+  "Manali": {
+    "BestFor": [
+      "adventure",
+      "nature",
+      "honeymoon"
+    ],
+    "State": "N/A",
+    "Duration": 4.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore Manali town",
+        "Afternoon": "Visit Hadimba Temple",
+        "Evening": "Relax by the Beas River"
+      },
+      "2": {
+        "Morning": "Day trip to Solang Valley",
+        "Afternoon": "Paragliding and other adventure sports",
+        "Evening": "Bonfire and music"
+      },
+      "3": {
+        "Morning": "Day trip to Rohtang Pass",
+        "Afternoon": "Enjoy the snow and stunning views",
+        "Evening": "Explore the Mall Road"
+      },
+      "4": {
+        "Morning": "Visit Old Manali",
+        "Afternoon": "Explore the cafes and chill",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Darjeeling": {
+    "BestFor": [
+      "tea plantations",
+      "nature",
+      "mountains"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Sunrise at Tiger Hill",
+        "Afternoon": "Visit a tea estate and factory",
+        "Evening": "Stroll around Chowrasta Mall"
+      },
+      "2": {
+        "Morning": "Darjeeling Himalayan Railway (Toy Train) ride",
+        "Afternoon": "Visit the Himalayan Mountaineering Institute and Zoo",
+        "Evening": "Explore the local markets"
+      },
+      "3": {
+        "Morning": "Visit the Peace Pagoda",
+        "Afternoon": "Explore the Rock Garden and Ganga Maya Park",
+        "Evening": "Enjoy a traditional Tibetan meal"
+      }
+    }
+  },
+  "Munnar": {
+    "BestFor": [
+      "nature",
+      "tea plantations",
+      "wildlife"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit a tea museum",
+        "Afternoon": "Explore the tea gardens",
+        "Evening": "Relax and enjoy the serene environment"
+      },
+      "2": {
+        "Morning": "Visit Eravikulam National Park",
+        "Afternoon": "Explore Mattupetty Dam and Echo Point",
+        "Evening": "Boating in Kundala Lake"
+      },
+      "3": {
+        "Morning": "Visit Top Station for panoramic views",
+        "Afternoon": "Explore the local market for spices",
+        "Evening": "Enjoy a quiet evening amidst nature"
+      }
+    }
+  },
+  "Alleppey (Alappuzha)": {
+    "BestFor": [
+      "backwaters",
+      "houseboat",
+      "relaxation"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Check into a houseboat",
+        "Afternoon": "Cruise through the backwaters",
+        "Evening": "Enjoy a traditional Kerala meal on the houseboat"
+      },
+      "2": {
+        "Morning": "Explore the local villages and paddy fields",
+        "Afternoon": "Relax on the houseboat",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Kochi (Cochin)": {
+    "BestFor": [
+      "history",
+      "culture",
+      "food"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore Fort Kochi: Chinese Fishing Nets, St. Francis Church",
+        "Afternoon": "Visit the Dutch Palace and Jewish Synagogue",
+        "Evening": "Watch a Kathakali performance"
+      },
+      "2": {
+        "Morning": "Explore Mattancherry",
+        "Afternoon": "Shopping for spices and antiques",
+        "Evening": "Enjoy seafood at a local restaurant"
+      }
+    }
+  },
+  "Hampi": {
+    "BestFor": [
+      "history",
+      "ruins",
+      "bouldering"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the Virupaksha Temple and Hampi Bazaar",
+        "Afternoon": "Visit the Vittala Temple Complex (Stone Chariot)",
+        "Evening": "Sunset from Matanga Hill"
+      },
+      "2": {
+        "Morning": "Explore the Royal Enclosure",
+        "Afternoon": "Visit the Zenana Enclosure and Elephant Stables",
+        "Evening": "Coracle ride on the Tungabhadra River"
+      },
+      "3": {
+        "Morning": "Explore the other side of the river (Anegundi)",
+        "Afternoon": "Bouldering and exploring the hippie culture",
+        "Evening": "Relax at a cafe"
+      }
+    }
+  },
+  "Mysore": {
+    "BestFor": [
+      "history",
+      "palaces",
+      "culture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Mysore Palace",
+        "Afternoon": "Explore Devaraja Market",
+        "Evening": "Witness the illumination of Mysore Palace"
+      },
+      "2": {
+        "Morning": "Visit Chamundi Hills and Chamundeshwari Temple",
+        "Afternoon": "Explore the Jaganmohan Palace and Art Gallery",
+        "Evening": "Enjoy a traditional Mysore Pak"
+      }
+    }
+  },
+  "Amritsar": {
+    "BestFor": [
+      "spirituality",
+      "history",
+      "food"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Golden Temple",
+        "Afternoon": "Explore Jallianwala Bagh",
+        "Evening": "Witness the Palki Sahib ceremony at the Golden Temple"
+      },
+      "2": {
+        "Morning": "Visit the Wagah Border for the Beating Retreat ceremony",
+        "Afternoon": "Explore the local markets",
+        "Evening": "Enjoy a traditional Punjabi meal"
+      }
+    }
+  },
+  "Leh-Ladakh": {
+    "BestFor": [
+      "adventure",
+      "mountains",
+      "monasteries"
+    ],
+    "State": "N/A",
+    "Duration": 7.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Leh and acclimatize",
+        "Afternoon": "Rest",
+        "Evening": "Explore Leh market"
+      },
+      "2": {
+        "Morning": "Visit Leh Palace and Shanti Stupa",
+        "Afternoon": "Explore local monasteries: Hemis, Thiksey, Shey",
+        "Evening": "Relax"
+      },
+      "3": {
+        "Morning": "Drive to Nubra Valley via Khardung La",
+        "Afternoon": "Camel safari in Hunder sand dunes",
+        "Evening": "Stay overnight in Nubra"
+      },
+      "4": {
+        "Morning": "Visit Diskit Monastery",
+        "Afternoon": "Drive back to Leh",
+        "Evening": "Relax"
+      },
+      "5": {
+        "Morning": "Drive to Pangong Tso",
+        "Afternoon": "Enjoy the beauty of the lake",
+        "Evening": "Stay overnight near Pangong"
+      },
+      "6": {
+        "Morning": "Drive back to Leh",
+        "Afternoon": "Explore local markets",
+        "Evening": "Farewell dinner"
+      },
+      "7": {
+        "Morning": "Departure from Leh",
+        "Afternoon": "temp",
+        "Evening": "temp"
+      }
+    }
+  },
+  "Srinagar": {
+    "BestFor": [
+      "nature",
+      "lakes",
+      "gardens"
+    ],
+    "State": "N/A",
+    "Duration": 4.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Srinagar and check into a houseboat",
+        "Afternoon": "Shikara ride on Dal Lake",
+        "Evening": "Explore the floating markets"
+      },
+      "2": {
+        "Morning": "Visit Mughal Gardens: Nishat Bagh, Shalimar Bagh",
+        "Afternoon": "Explore Shankaracharya Temple",
+        "Evening": "Relax on the houseboat"
+      },
+      "3": {
+        "Morning": "Day trip to Gulmarg",
+        "Afternoon": "Enjoy the gondola ride",
+        "Evening": "Return to Srinagar"
+      },
+      "4": {
+        "Morning": "Day trip to Pahalgam",
+        "Afternoon": "Explore the beautiful valleys",
+        "Evening": "Return to Srinagar"
+      }
+    }
+  },
+  "Jaisalmer": {
+    "BestFor": [
+      "desert",
+      "forts",
+      "culture"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore Jaisalmer Fort",
+        "Afternoon": "Visit Patwon Ki Haveli",
+        "Evening": "Enjoy sunset views from the fort"
+      },
+      "2": {
+        "Morning": "Visit Gadisar Lake",
+        "Afternoon": "Camel safari to the sand dunes",
+        "Evening": "Cultural program and dinner at a desert camp"
+      },
+      "3": {
+        "Morning": "Explore the desert camp",
+        "Afternoon": "Return to Jaisalmer and explore local markets",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Khajuraho": {
+    "BestFor": [
+      "temples",
+      "sculptures",
+      "history"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the Western Group of Temples",
+        "Afternoon": "Visit the Eastern Group of Temples",
+        "Evening": "Light and sound show"
+      },
+      "2": {
+        "Morning": "Explore the Southern Group of Temples",
+        "Afternoon": "Visit the Raneh Falls",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Aurangabad (Ajanta & Ellora Caves)": {
+    "BestFor": [
+      "caves",
+      "history",
+      "architecture"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Day trip to Ajanta Caves",
+        "Afternoon": "Explore the caves",
+        "Evening": "Return to Aurangabad"
+      },
+      "2": {
+        "Morning": "Day trip to Ellora Caves",
+        "Afternoon": "Explore the caves and Kailasa Temple",
+        "Evening": "Return to Aurangabad"
+      },
+      "3": {
+        "Morning": "Visit Bibi Ka Maqbara and Daulatabad Fort",
+        "Afternoon": "Explore Aurangabad city",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Kolkata": {
+    "BestFor": [
+      "culture",
+      "history",
+      "food"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Victoria Memorial",
+        "Afternoon": "Explore St. Paul's Cathedral and the Maidan",
+        "Evening": "Take a tram ride"
+      },
+      "2": {
+        "Morning": "Explore North Kolkata: Kumortuli, Marble Palace",
+        "Afternoon": "Visit the Howrah Bridge and Flower Market",
+        "Evening": "Enjoy Bengali cuisine"
+      },
+      "3": {
+        "Morning": "Visit the Indian Museum",
+        "Afternoon": "Explore Park Street",
+        "Evening": "Food tour"
+      }
+    }
+  },
+  "Chennai": {
+    "BestFor": [
+      "temples",
+      "beaches",
+      "culture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Kapaleeshwarar Temple",
+        "Afternoon": "Explore Marina Beach",
+        "Evening": "Enjoy the local cuisine"
+      },
+      "2": {
+        "Morning": "Day trip to Mahabalipuram",
+        "Afternoon": "Explore the shore temples and rock-cut sculptures",
+        "Evening": "Return to Chennai"
+      }
+    }
+  },
+  "Madurai": {
+    "BestFor": [
+      "temples",
+      "history",
+      "culture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Meenakshi Amman Temple",
+        "Afternoon": "Explore Thirumalai Nayakkar Palace",
+        "Evening": "Witness the night ceremony at Meenakshi Temple"
+      },
+      "2": {
+        "Morning": "Visit Gandhi Memorial Museum",
+        "Afternoon": "Explore the local markets",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Ranthambore National Park": {
+    "BestFor": [
+      "wildlife",
+      "safari",
+      "nature"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Morning safari",
+        "Afternoon": "Relax at the resort",
+        "Evening": "Evening safari"
+      },
+      "2": {
+        "Morning": "Morning safari",
+        "Afternoon": "Visit Ranthambore Fort",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Jim Corbett National Park": {
+    "BestFor": [
+      "wildlife",
+      "safari",
+      "nature"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Morning safari",
+        "Afternoon": "Nature walk along the Kosi River",
+        "Evening": "Evening safari"
+      },
+      "2": {
+        "Morning": "Morning safari",
+        "Afternoon": "Visit Corbett Museum",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Kaziranga National Park": {
+    "BestFor": [
+      "wildlife",
+      "safari",
+      "nature"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Elephant safari",
+        "Afternoon": "Jeep safari",
+        "Evening": "Cultural show"
+      },
+      "2": {
+        "Morning": "Jeep safari in another range",
+        "Afternoon": "Visit a tea garden",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Sundarbans National Park": {
+    "BestFor": [
+      "wildlife",
+      "mangroves",
+      "boating"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel to the Sundarbans",
+        "Afternoon": "Boat cruise through the mangroves",
+        "Evening": "Stay at a jungle resort"
+      },
+      "2": {
+        "Morning": "Visit a watchtower for wildlife viewing",
+        "Afternoon": "Explore the local villages",
+        "Evening": "Cultural program"
+      },
+      "3": {
+        "Morning": "Boat safari",
+        "Afternoon": "Return to Kolkata",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Pondicherry": {
+    "BestFor": [
+      "french culture",
+      "beaches",
+      "spirituality"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the French Quarter",
+        "Afternoon": "Visit Aurobindo Ashram",
+        "Evening": "Stroll along the Promenade Beach"
+      },
+      "2": {
+        "Morning": "Day trip to Auroville",
+        "Afternoon": "Visit Matrimandir",
+        "Evening": "Relax at a cafe in Auroville"
+      },
+      "3": {
+        "Morning": "Explore the beaches: Paradise Beach, Serenity Beach",
+        "Afternoon": "Shopping for local handicrafts",
+        "Evening": "Enjoy French cuisine"
+      }
+    }
+  },
+  "Ooty": {
+    "BestFor": [
+      "nature",
+      "tea plantations",
+      "hills"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Toy train ride from Mettupalayam to Ooty",
+        "Afternoon": "Visit Ooty Lake",
+        "Evening": "Explore the local market"
+      },
+      "2": {
+        "Morning": "Visit the Botanical Gardens",
+        "Afternoon": "Explore Doddabetta Peak",
+        "Evening": "Visit a tea factory"
+      },
+      "3": {
+        "Morning": "Day trip to Coonoor",
+        "Afternoon": "Explore Sim's Park and Dolphin's Nose",
+        "Evening": "Return to Ooty"
+      }
+    }
+  },
+  "Kodaikanal": {
+    "BestFor": [
+      "nature",
+      "lakes",
+      "hills"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Boating in Kodaikanal Lake",
+        "Afternoon": "Explore Coaker's Walk",
+        "Evening": "Enjoy the views from Bryant Park"
+      },
+      "2": {
+        "Morning": "Visit Pillar Rocks and Green Valley View",
+        "Afternoon": "Explore Bear Shola Falls",
+        "Evening": "Visit the Kodai Astrophysical Observatory"
+      },
+      "3": {
+        "Morning": "Trekking in the hills",
+        "Afternoon": "Explore the local markets for homemade chocolates",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Mahabaleshwar": {
+    "BestFor": [
+      "nature",
+      "viewpoints",
+      "strawberries"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Arthur's Seat and other viewpoints",
+        "Afternoon": "Boating in Venna Lake",
+        "Evening": "Explore the market and enjoy strawberry with cream"
+      },
+      "2": {
+        "Morning": "Visit Pratapgad Fort",
+        "Afternoon": "Explore the strawberry farms",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Lonavala": {
+    "BestFor": [
+      "hills",
+      "forts",
+      "caves"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Karla and Bhaja Caves",
+        "Afternoon": "Explore Lohagad Fort",
+        "Evening": "Enjoy the views from Tiger Point"
+      },
+      "2": {
+        "Morning": "Visit Bushi Dam",
+        "Afternoon": "Explore Lonavala Lake",
+        "Evening": "Enjoy chikki and fudge"
+      }
+    }
+  },
+  "Mount Abu": {
+    "BestFor": [
+      "temples",
+      "nature",
+      "relaxation"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Dilwara Temples",
+        "Afternoon": "Boating in Nakki Lake",
+        "Evening": "Sunset at Sunset Point"
+      },
+      "2": {
+        "Morning": "Visit Guru Shikhar",
+        "Afternoon": "Explore Achalgarh Fort",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Nainital": {
+    "BestFor": [
+      "lakes",
+      "nature",
+      "hills"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Boating in Naini Lake",
+        "Afternoon": "Visit Naina Devi Temple",
+        "Evening": "Stroll along the Mall Road"
+      },
+      "2": {
+        "Morning": "Cable car ride to Snow View Point",
+        "Afternoon": "Visit the Nainital Zoo",
+        "Evening": "Explore the Tibetan Market"
+      },
+      "3": {
+        "Morning": "Day trip to Bhimtal, Sattal, and Naukuchiatal",
+        "Afternoon": "Enjoy the beauty of the lakes",
+        "Evening": "Return to Nainital"
+      }
+    }
+  },
+  "Mussoorie": {
+    "BestFor": [
+      "hills",
+      "nature",
+      "waterfalls"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Kempty Falls",
+        "Afternoon": "Cable car ride to Gun Hill",
+        "Evening": "Stroll along the Mall Road"
+      },
+      "2": {
+        "Morning": "Visit Landour and St. Paul's Church",
+        "Afternoon": "Explore Lal Tibba",
+        "Evening": "Enjoy the sunset views"
+      },
+      "3": {
+        "Morning": "Day trip to Dhanaulti",
+        "Afternoon": "Explore the Eco Park",
+        "Evening": "Return to Mussoorie"
+      }
+    }
+  },
+  "Gangtok": {
+    "BestFor": [
+      "mountains",
+      "monasteries",
+      "nature"
+    ],
+    "State": "N/A",
+    "Duration": 4.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Gangtok and relax",
+        "Afternoon": "Explore MG Marg",
+        "Evening": "Enjoy local cuisine"
+      },
+      "2": {
+        "Morning": "Day trip to Tsomgo Lake and Baba Mandir",
+        "Afternoon": "Enjoy the scenic beauty",
+        "Evening": "Return to Gangtok"
+      },
+      "3": {
+        "Morning": "Visit Rumtek Monastery",
+        "Afternoon": "Explore the Namgyal Institute of Tibetology",
+        "Evening": "Ropeway ride"
+      },
+      "4": {
+        "Morning": "Visit Enchey Monastery and Ganesh Tok",
+        "Afternoon": "Explore the flower exhibition centre",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Shillong": {
+    "BestFor": [
+      "nature",
+      "waterfalls",
+      "caves"
+    ],
+    "State": "N/A",
+    "Duration": 4.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Shillong and visit Umiam Lake",
+        "Afternoon": "Explore Ward's Lake and Lady Hydari Park",
+        "Evening": "Stroll around Police Bazaar"
+      },
+      "2": {
+        "Morning": "Day trip to Cherrapunji",
+        "Afternoon": "Visit Nohkalikai Falls and Mawsmai Cave",
+        "Evening": "Return to Shillong"
+      },
+      "3": {
+        "Morning": "Visit Shillong Peak and Elephant Falls",
+        "Afternoon": "Explore the Don Bosco Museum",
+        "Evening": "Enjoy the nightlife"
+      },
+      "4": {
+        "Morning": "Day trip to Mawlynnong (Asia's cleanest village)",
+        "Afternoon": "Visit the Living Root Bridge",
+        "Evening": "Return to Shillong"
+      }
+    }
+  },
+  "Tawang": {
+    "BestFor": [
+      "monasteries",
+      "mountains",
+      "history"
+    ],
+    "State": "N/A",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel to Tawang from Guwahati/Tezpur",
+        "Afternoon": "Stop at Sela Pass",
+        "Evening": "Arrive in Tawang and relax"
+      },
+      "2": {
+        "Morning": "Visit Tawang Monastery",
+        "Afternoon": "Explore the Giant Buddha Statue",
+        "Evening": "Visit the Tawang War Memorial"
+      },
+      "3": {
+        "Morning": "Day trip to Bum La Pass and Madhuri Lake",
+        "Afternoon": "Enjoy the scenic beauty",
+        "Evening": "Return to Tawang"
+      },
+      "4": {
+        "Morning": "Visit Urgelling Monastery and Ani Gompa",
+        "Afternoon": "Explore the local markets",
+        "Evening": "Relax"
+      },
+      "5": {
+        "Morning": "Travel back to Guwahati/Tezpur",
+        "Afternoon": "temp",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Puri": {
+    "BestFor": [
+      "temples",
+      "beaches",
+      "spirituality"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Jagannath Temple",
+        "Afternoon": "Relax on Puri Beach",
+        "Evening": "Explore the local markets"
+      },
+      "2": {
+        "Morning": "Day trip to Konark Sun Temple",
+        "Afternoon": "Visit Chandrabhaga Beach",
+        "Evening": "Return to Puri"
+      },
+      "3": {
+        "Morning": "Visit Raghurajpur heritage village",
+        "Afternoon": "Explore the Chilika Lake",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Konark": {
+    "BestFor": [
+      "temples",
+      "architecture"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Konark Sun Temple",
+        "Afternoon": "Explore the Archaeological Survey of India Museum",
+        "Evening": "Visit Chandrabhaga Beach"
+      }
+    }
+  },
+  "Rameshwaram": {
+    "BestFor": [
+      "temples",
+      "spirituality",
+      "history"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Ramanathaswamy Temple and take a holy dip in Agnitheertham",
+        "Afternoon": "Explore Dhanushkodi",
+        "Evening": "Visit APJ Abdul Kalam Memorial"
+      },
+      "2": {
+        "Morning": "Visit the five-faced Hanuman temple",
+        "Afternoon": "Explore Pamban Bridge",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Kanyakumari": {
+    "BestFor": [
+      "beaches",
+      "spirituality",
+      "sunsets"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Vivekananda Rock Memorial and Thiruvalluvar Statue",
+        "Afternoon": "Explore Kanyakumari Temple",
+        "Evening": "Witness the sunset at the Triveni Sangam"
+      },
+      "2": {
+        "Morning": "Witness the sunrise",
+        "Afternoon": "Visit the Gandhi Memorial Mandapam",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Tirupati": {
+    "BestFor": [
+      "temples",
+      "pilgrimage",
+      "spirituality"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Sri Venkateswara Temple in Tirumala",
+        "Afternoon": "Explore other temples in Tirumala",
+        "Evening": "Return to Tirupati"
+      },
+      "2": {
+        "Morning": "Visit Sri Govindarajaswamy Temple and Sri Padmavathi Ammavari Temple",
+        "Afternoon": "Explore the local markets",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Vaishno Devi": {
+    "BestFor": [
+      "pilgrimage",
+      "trekking",
+      "spirituality"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Katra and start the trek to Vaishno Devi Bhawan",
+        "Afternoon": "Continue the trek",
+        "Evening": "Reach Bhawan and have darshan"
+      },
+      "2": {
+        "Morning": "Visit Bhairon Nath Temple",
+        "Afternoon": "Trek back to Katra",
+        "Evening": "Rest in Katra"
+      },
+      "3": {
+        "Morning": "Explore Katra",
+        "Afternoon": "Departure",
+        "Evening": "temp"
+      }
+    }
+  },
+  "Haridwar": {
+    "BestFor": [
+      "spirituality",
+      "temples",
+      "ganga river"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Take a holy dip in the Ganges at Har Ki Pauri",
+        "Afternoon": "Visit Mansa Devi Temple and Chandi Devi Temple",
+        "Evening": "Witness the Ganga Aarti"
+      },
+      "2": {
+        "Morning": "Visit various ashrams and temples",
+        "Afternoon": "Explore the local markets",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Mathura-Vrindavan": {
+    "BestFor": [
+      "temples",
+      "spirituality",
+      "history"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Krishna Janmabhoomi Temple in Mathura",
+        "Afternoon": "Explore Dwarkadheesh Temple and Vishram Ghat",
+        "Evening": "Travel to Vrindavan"
+      },
+      "2": {
+        "Morning": "Visit Banke Bihari Temple and ISKCON Temple in Vrindavan",
+        "Afternoon": "Explore Prem Mandir and other temples",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Bodh Gaya": {
+    "BestFor": [
+      "buddhism",
+      "spirituality",
+      "history"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Mahabodhi Temple and the Bodhi Tree",
+        "Afternoon": "Explore various monasteries built by different countries",
+        "Evening": "Meditation session"
+      },
+      "2": {
+        "Morning": "Visit the Great Buddha Statue",
+        "Afternoon": "Explore the archaeological museum",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Pushkar": {
+    "BestFor": [
+      "Spiritual",
+      "Culture",
+      "Shopping"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Brahma Temple, the only one in the world",
+        "Afternoon": "Explore the Pushkar Lake and its 52 bathing ghats",
+        "Evening": "Walk through the main Pushkar market for shopping"
+      },
+      "2": {
+        "Morning": "Hike to Savitri Temple for panoramic views",
+        "Afternoon": "Camel ride in the nearby desert landscape",
+        "Evening": "Attend the evening aarti at the ghats"
+      }
+    }
+  },
+  "Spiti Valley": {
+    "BestFor": [
+      "Adventure",
+      "Nature",
+      "Photography",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 8.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel from Manali to Kaza",
+        "Afternoon": "Acclimatize in Kaza",
+        "Evening": "Explore Kaza market"
+      },
+      "2": {
+        "Morning": "Visit the iconic Key Monastery",
+        "Afternoon": "Explore the villages of Kibber and Chicham",
+        "Evening": "Stargazing in Kaza"
+      },
+      "3": {
+        "Morning": "Drive to Langza, famous for its Buddha statue",
+        "Afternoon": "Visit Hikkim, home to the world's highest post office",
+        "Evening": "Homestay experience in Komic, one of the world's highest villages"
+      },
+      "4": {
+        "Morning": "Travel to Tabo",
+        "Afternoon": "Explore Tabo Monastery, a UNESCO World Heritage site",
+        "Evening": "Relax in Tabo"
+      },
+      "5": {
+        "Morning": "Visit Dhankar Monastery, perched on a cliff",
+        "Afternoon": "Hike to Dhankar Lake",
+        "Evening": "Return to Kaza"
+      },
+      "6": {
+        "Morning": "Explore the Pin Valley National Park",
+        "Afternoon": "Visit the village of Mudh",
+        "Evening": "Cultural interaction with locals"
+      },
+      "7": {
+        "Morning": "Drive towards Chandratal Lake",
+        "Afternoon": "Camping near Chandratal Lake",
+        "Evening": "Enjoy the pristine beauty of the lake"
+      },
+      "8": {
+        "Morning": "Travel back to Manali via Rohtang Pass",
+        "Afternoon": "Journey back",
+        "Evening": "Arrive in Manali"
+      }
+    }
+  },
+  "Dharamshala & Mcleodganj": {
+    "BestFor": [
+      "Spiritual",
+      "Nature",
+      "Culture",
+      "Food"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore Mcleodganj main square and visit the Dalai Lama Temple (Tsuglagkhang Complex)",
+        "Afternoon": "Walk to Bhagsu Nag Temple and waterfall",
+        "Evening": "Enjoy dinner at a Tibetan restaurant"
+      },
+      "2": {
+        "Morning": "Trek to Triund (9km, 4-5 hours)",
+        "Afternoon": "Enjoy the stunning views of the Dhauladhar range",
+        "Evening": "Camping under the stars at Triund"
+      },
+      "3": {
+        "Morning": "Trek down from Triund",
+        "Afternoon": "Visit the Norbulingka Institute and Dharamshala Cricket Stadium",
+        "Evening": "Explore the cafes of Dharamkot"
+      }
+    }
+  },
+  "Gokarna": {
+    "BestFor": [
+      "Beach",
+      "Nature",
+      "Spiritual",
+      "Adventure"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Gokarna and check into a beach hut",
+        "Afternoon": "Relax at the main Gokarna Beach",
+        "Evening": "Visit Mahabaleshwar Temple"
+      },
+      "2": {
+        "Morning": "Beach trek from Kudle Beach to Om Beach",
+        "Afternoon": "Continue trek to Half Moon Beach and Paradise Beach",
+        "Evening": "Enjoy the sunset from a cliff-side cafe at Om Beach"
+      },
+      "3": {
+        "Morning": "Try surfing or other water sports",
+        "Afternoon": "Explore the local market",
+        "Evening": "Relax and enjoy the coastal vibe"
+      }
+    }
+  },
+  "Coorg (Kodagu)": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Food",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Madikeri and visit Raja's Seat for panoramic views",
+        "Afternoon": "Explore Abbey Falls",
+        "Evening": "Walk through a coffee plantation"
+      },
+      "2": {
+        "Morning": "Visit the Dubare Elephant Camp for an elephant interaction",
+        "Afternoon": "Explore the Namdroling Monastery (Golden Temple) in Bylakuppe",
+        "Evening": "Enjoy traditional Kodava cuisine"
+      },
+      "3": {
+        "Morning": "Drive to Talakaveri, the source of the river Kaveri",
+        "Afternoon": "Visit Mandalpatti viewpoint for breathtaking views",
+        "Evening": "Shopping for local spices and coffee"
+      }
+    }
+  },
+  "Hyderabad": {
+    "BestFor": [
+      "History",
+      "Food",
+      "Shopping",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the iconic Charminar and the bustling Laad Bazaar",
+        "Afternoon": "Visit the grand Chowmahalla Palace",
+        "Evening": "Enjoy authentic Hyderabadi Biryani for dinner"
+      },
+      "2": {
+        "Morning": "Visit the magnificent Golconda Fort",
+        "Afternoon": "Explore the Qutb Shahi Tombs",
+        "Evening": "Light and Sound show at Golconda Fort"
+      },
+      "3": {
+        "Morning": "Visit the Salar Jung Museum",
+        "Afternoon": "Relax at Hussain Sagar Lake and see the Buddha statue",
+        "Evening": "Explore the modern side of Hyderabad: HITEC City and GVK One Mall"
+      }
+    }
+  },
+  "Ahmedabad": {
+    "BestFor": [
+      "History",
+      "Culture",
+      "Food"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Take a heritage walk through the old city's Pols",
+        "Afternoon": "Visit the Sabarmati Ashram",
+        "Evening": "Explore the night market at Manek Chowk"
+      },
+      "2": {
+        "Morning": "Visit the Adalaj Stepwell",
+        "Afternoon": "Explore the Calico Museum of Textiles",
+        "Evening": "Enjoy the riverfront at Sabarmati Riverfront"
+      }
+    }
+  },
+  "Port Blair": {
+    "BestFor": [
+      "History",
+      "Beach",
+      "Nature"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive and check in, visit Corbyn's Cove Beach",
+        "Afternoon": "Explore the Cellular Jail (Kala Pani)",
+        "Evening": "Attend the Sound and Light Show at the Cellular Jail"
+      },
+      "2": {
+        "Morning": "Ferry to Ross Island to see British-era ruins",
+        "Afternoon": "Ferry to North Bay Island for snorkeling and coral viewing",
+        "Evening": "Shopping for souvenirs at Aberdeen Bazaar"
+      },
+      "3": {
+        "Morning": "Visit Chidiya Tapu for bird watching and sunset views",
+        "Afternoon": "Explore the Samudrika Naval Marine Museum",
+        "Evening": "Relax and prepare for departure"
+      }
+    }
+  },
+  "Havelock Island (Swaraj Dweep)": {
+    "BestFor": [
+      "Beach",
+      "Adventure",
+      "Photography",
+      "Nature"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive by ferry from Port Blair",
+        "Afternoon": "Check in and relax at your resort",
+        "Evening": "Visit Radhanagar Beach (Beach No. 7) for a spectacular sunset"
+      },
+      "2": {
+        "Morning": "Scuba diving or sea walking at Elephant Beach",
+        "Afternoon": "Snorkeling and exploring the corals at Elephant Beach",
+        "Evening": "Dinner at a seaside restaurant"
+      },
+      "3": {
+        "Morning": "Visit Kalapathar Beach for sunrise",
+        "Afternoon": "Kayaking through the mangroves",
+        "Evening": "Relax on the beach before departing the next day"
+      }
+    }
+  },
+  "Auli": {
+    "BestFor": [
+      "Adventure",
+      "Nature",
+      "Photography",
+      "Winter Sports"
+    ],
+    "State": "N/A",
+    "Duration": 4.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel from Rishikesh/Haridwar to Joshimath",
+        "Afternoon": "Rest in Joshimath",
+        "Evening": "Explore Joshimath town"
+      },
+      "2": {
+        "Morning": "Take the cable car (gondola) from Joshimath to Auli",
+        "Afternoon": "Check in and enjoy the panoramic views of Himalayan peaks like Nanda Devi",
+        "Evening": "Stroll around Auli's meadows"
+      },
+      "3": {
+        "Morning": "Skiing lessons and practice on the slopes",
+        "Afternoon": "Trek to Gorson Bugyal for even better views",
+        "Evening": "Bonfire and dinner"
+      },
+      "4": {
+        "Morning": "Visit Auli Artificial Lake",
+        "Afternoon": "Take the cable car back to Joshimath",
+        "Evening": "Begin return journey"
+      }
+    }
+  },
+  "Thekkady (Periyar National Park)": {
+    "BestFor": [
+      "Nature",
+      "Wildlife",
+      "Adventure",
+      "Food"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Thekkady (Kumily) and check in",
+        "Afternoon": "Boat safari on Periyar Lake to spot wildlife",
+        "Evening": "Watch a traditional Kathakali or Kalaripayattu performance"
+      },
+      "2": {
+        "Morning": "Go for a guided jungle trek or nature walk",
+        "Afternoon": "Visit a spice plantation and learn about local spices",
+        "Evening": "Shopping for spices and local handicrafts"
+      }
+    }
+  },
+  "Varkala": {
+    "BestFor": [
+      "Beach",
+      "Spiritual",
+      "Food",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Varkala, check in to a cliff-side hotel",
+        "Afternoon": "Descend to Varkala Beach (Papanasam Beach)",
+        "Evening": "Explore the shops and cafes along the North Cliff"
+      },
+      "2": {
+        "Morning": "Visit the 2000-year-old Janardanaswamy Temple",
+        "Afternoon": "Take a dip in the holy waters of the beach",
+        "Evening": "Enjoy a fresh seafood dinner watching the sunset from the cliff"
+      },
+      "3": {
+        "Morning": "Yoga or Ayurveda session",
+        "Afternoon": "Visit Kappil Beach and Backwaters",
+        "Evening": "Relax and enjoy the bohemian vibe"
+      }
+    }
+  },
+  "Lucknow": {
+    "BestFor": [
+      "History",
+      "Food",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore Bara Imambara and its Bhulbhulaiya (labyrinth)",
+        "Afternoon": "Visit the Chota Imambara",
+        "Evening": "Food walk in the old city for kebabs and biryani"
+      },
+      "2": {
+        "Morning": "Visit the British Residency, a key site of the 1857 revolt",
+        "Afternoon": "Explore Hazratganj for shopping and modern Lucknow",
+        "Evening": "Enjoy a cup of famous Lucknowi tea and street food"
+      }
+    }
+  },
+  "Orchha": {
+    "BestFor": [
+      "History",
+      "Architecture",
+      "Photography",
+      "Spiritual"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the Orchha Fort complex, including Jahangir Mahal and Raja Mahal",
+        "Afternoon": "Visit the Chaturbhuj Temple",
+        "Evening": "Watch the sunset over the cenotaphs (Chhatris) by the Betwa River"
+      },
+      "2": {
+        "Morning": "Visit the Ram Raja Temple, where Rama is worshipped as a king",
+        "Afternoon": "Explore the Laxminarayan Temple, known for its murals",
+        "Evening": "Enjoy the tranquil riverside ambiance"
+      }
+    }
+  },
+  "Pune": {
+    "BestFor": [
+      "History",
+      "Food",
+      "Nightlife",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the Shaniwar Wada, the seat of the Peshwas",
+        "Afternoon": "Visit the Aga Khan Palace, where Mahatma Gandhi was imprisoned",
+        "Evening": "Explore the vibrant nightlife and food scene in Koregaon Park"
+      },
+      "2": {
+        "Morning": "Hike to Sinhagad Fort for history and panoramic views",
+        "Afternoon": "Visit the Dagdusheth Halwai Ganpati Temple",
+        "Evening": "Food tour on FC Road and JM Road"
+      }
+    }
+  },
+  "Great Rann of Kutch": {
+    "BestFor": [
+      "Nature",
+      "Culture",
+      "Photography",
+      "Shopping"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Bhuj, explore Aina Mahal and Prag Mahal",
+        "Afternoon": "Travel to a tent city or resort near the White Rann",
+        "Evening": "Witness the sunset over the salt desert"
+      },
+      "2": {
+        "Morning": "Experience the sunrise at the White Rann",
+        "Afternoon": "Visit Kalo Dungar (Black Hill) for a panoramic view of the Rann",
+        "Evening": "Enjoy a cultural program with folk music and dance"
+      },
+      "3": {
+        "Morning": "Visit nearby handicraft villages like Nirona (Rogan Art) and Hodka",
+        "Afternoon": "Shopping for local crafts in Bhuj",
+        "Evening": "Departure from Bhuj"
+      }
+    }
+  },
+  "Mahabalipuram": {
+    "BestFor": [
+      "History",
+      "Architecture",
+      "Beach",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the Shore Temple, a UNESCO World Heritage site",
+        "Afternoon": "Visit the Pancha Rathas (Five Rathas)",
+        "Evening": "Relax at Mahabalipuram Beach"
+      },
+      "2": {
+        "Morning": "Explore Arjuna's Penance and Krishna's Butterball",
+        "Afternoon": "Visit the various cave temples and the lighthouse",
+        "Evening": "Shopping for stone sculptures and local crafts"
+      }
+    }
+  },
+  "Wayanad": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Photography",
+      "History"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Wayanad, visit Pookode Lake for boating",
+        "Afternoon": "Explore the Lakkidi View Point",
+        "Evening": "Check into a treehouse resort"
+      },
+      "2": {
+        "Morning": "Trek to Chembra Peak (heart-shaped lake on the way)",
+        "Afternoon": "Visit Soochipara Falls",
+        "Evening": "Relax and enjoy the natural surroundings"
+      },
+      "3": {
+        "Morning": "Explore the Edakkal Caves with ancient petroglyphs",
+        "Afternoon": "Visit the Wayanad Heritage Museum",
+        "Evening": "Drive to Banasura Sagar Dam, the largest earthen dam in India"
+      }
+    }
+  },
+  "Kasol": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Food",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Kasol, check in and relax",
+        "Afternoon": "Take a walk along the Parvati River",
+        "Evening": "Explore the cafes of Kasol and try Israeli food"
+      },
+      "2": {
+        "Morning": "Trek to the village of Chalal",
+        "Afternoon": "Continue the trek to Katagla",
+        "Evening": "Bonfire and music by the river"
+      },
+      "3": {
+        "Morning": "Day trip to Manikaran Sahib Gurudwara and its hot springs",
+        "Afternoon": "Explore the village of Tosh",
+        "Evening": "Return to Kasol for departure"
+      }
+    }
+  },
+  "Ziro Valley": {
+    "BestFor": [
+      "Culture",
+      "Nature",
+      "Photography",
+      "Music"
+    ],
+    "State": "N/A",
+    "Duration": 4.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel from Guwahati/Itanagar to Ziro",
+        "Afternoon": "Check in and acclimatize",
+        "Evening": "Stroll through the local market in Hapoli"
+      },
+      "2": {
+        "Morning": "Explore the villages of the Apatani tribe, like Hong and Hari",
+        "Afternoon": "Learn about the unique Apatani culture and see the facial tattoos",
+        "Evening": "Interact with the local community"
+      },
+      "3": {
+        "Morning": "Visit the Talley Valley Wildlife Sanctuary",
+        "Afternoon": "Explore the vast paddy-cum-fish farms",
+        "Evening": "Enjoy local cuisine and rice beer"
+      },
+      "4": {
+        "Morning": "Visit the Shiv Linga at Kardo Forest",
+        "Afternoon": "Photography walk through the pine groves",
+        "Evening": "Relax before the journey back"
+      }
+    }
+  },
+  "Cherrapunji (Sohra)": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel from Shillong to Cherrapunji",
+        "Afternoon": "Visit the Nohkalikai Falls, the tallest plunge waterfall in India",
+        "Evening": "Explore the Mawsmai Caves"
+      },
+      "2": {
+        "Morning": "Trek to the Double Decker Living Root Bridge in Nongriat village",
+        "Afternoon": "Swim in the natural pools near the bridge",
+        "Evening": "Hike back up or stay overnight in Nongriat"
+      },
+      "3": {
+        "Morning": "Visit the Seven Sisters Falls and Dainthlen Falls",
+        "Afternoon": "Explore the Arwah Caves",
+        "Evening": "Return to Shillong or Guwahati"
+      }
+    }
+  },
+  "Gulmarg": {
+    "BestFor": [
+      "Adventure",
+      "Nature",
+      "Photography",
+      "Winter Sports"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive from Srinagar and check in",
+        "Afternoon": "Take the Gulmarg Gondola (Phase 1) to Kongdoori",
+        "Evening": "Walk through the meadows and explore the local market"
+      },
+      "2": {
+        "Morning": "Take the Gondola (Phase 2) to Apharwat Peak for stunning views",
+        "Afternoon": "Skiing/snowboarding in winter or hiking in summer",
+        "Evening": "Relax and enjoy the alpine atmosphere"
+      },
+      "3": {
+        "Morning": "Visit St. Mary's Church and the Maharani Temple",
+        "Afternoon": "Enjoy a round of golf at the highest golf course in the world (in summer)",
+        "Evening": "Departure for Srinagar"
+      }
+    }
+  },
+  "Bikaner": {
+    "BestFor": [
+      "History",
+      "Culture",
+      "Food"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the magnificent Junagarh Fort",
+        "Afternoon": "Visit the Lalgarh Palace and Museum",
+        "Evening": "Walk through the old city and try local snacks like Bikaneri Bhujia"
+      },
+      "2": {
+        "Morning": "Visit the Karni Mata Temple (Rat Temple) in Deshnoke",
+        "Afternoon": "Explore the National Research Centre on Camel",
+        "Evening": "Enjoy a traditional Rajasthani dinner"
+      }
+    }
+  },
+  "Gwalior": {
+    "BestFor": [
+      "History",
+      "Architecture",
+      "Music"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the massive Gwalior Fort",
+        "Afternoon": "Visit Man Singh Palace, Gujari Mahal, and Saas Bahu Temples within the fort",
+        "Evening": "Attend the Sound and Light show at the fort"
+      },
+      "2": {
+        "Morning": "Visit Jai Vilas Palace Museum, known for its opulent Durbar Hall",
+        "Afternoon": "Explore the tomb of Tansen, the legendary musician",
+        "Evening": "Listen to a classical music performance if available"
+      }
+    }
+  },
+  "Bhopal": {
+    "BestFor": [
+      "History",
+      "Nature",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the Upper Lake and Lower Lake",
+        "Afternoon": "Visit Taj-ul-Masajid, one of the largest mosques in India",
+        "Evening": "Walk through the old city's bazaars"
+      },
+      "2": {
+        "Morning": "Day trip to the Sanchi Stupas, a UNESCO World Heritage site",
+        "Afternoon": "Explore the Buddhist monuments and the museum",
+        "Evening": "Return to Bhopal"
+      },
+      "3": {
+        "Morning": "Day trip to Bhimbetka Rock Shelters, another UNESCO site with prehistoric paintings",
+        "Afternoon": "Explore the ancient rock art",
+        "Evening": "Relax by the lake in Bhopal"
+      }
+    }
+  },
+  "Nashik": {
+    "BestFor": [
+      "Spiritual",
+      "Food",
+      "Nature"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the temples and ghats along the Godavari River, like Ramkund",
+        "Afternoon": "Explore the Pandavleni Caves",
+        "Evening": "Visit a vineyard like Sula or York for a wine tasting tour"
+      },
+      "2": {
+        "Morning": "Visit the Trimbakeshwar Shiva Temple, one of the 12 Jyotirlingas",
+        "Afternoon": "Explore the area around Trimbakeshwar",
+        "Evening": "Enjoy the sunset from a vineyard restaurant"
+      }
+    }
+  },
+  "Dwarka": {
+    "BestFor": [
+      "Spiritual",
+      "History",
+      "Beach"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the main Dwarkadhish Temple (Jagat Mandir)",
+        "Afternoon": "Take a holy dip in the Gomti River at Gomti Ghat",
+        "Evening": "Attend the evening aarti at Dwarkadhish Temple"
+      },
+      "2": {
+        "Morning": "Take a ferry to Bet Dwarka island to visit more temples",
+        "Afternoon": "Visit the Nageshwar Jyotirlinga Temple on the way back",
+        "Evening": "Relax at Dwarka Beach"
+      }
+    }
+  },
+  "Somnath": {
+    "BestFor": [
+      "Spiritual",
+      "History",
+      "Beach"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Somnath Temple, the first of the 12 Jyotirlingas",
+        "Afternoon": "Explore the nearby Bhalka Tirth, where Lord Krishna is said to have left his mortal form",
+        "Evening": "Attend the evening Sound and Light Show at Somnath Temple and watch the sunset"
+      }
+    }
+  },
+  "Kohima": {
+    "BestFor": [
+      "Culture",
+      "History",
+      "Nature"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Kohima, visit the Kohima War Cemetery",
+        "Afternoon": "Explore the Nagaland State Museum to understand Naga culture",
+        "Evening": "Walk through the local market"
+      },
+      "2": {
+        "Morning": "Day trip to Khonoma Green Village, known for its conservation efforts",
+        "Afternoon": "Learn about the history and culture of the Angami tribe",
+        "Evening": "Return to Kohima"
+      },
+      "3": {
+        "Morning": "Day trip to Kisama Heritage Village, the venue for the Hornbill Festival",
+        "Afternoon": "Hike to the top of Japfu Peak (if time and fitness permit)",
+        "Evening": "Enjoy a traditional Naga meal"
+      }
+    }
+  },
+  "Lakshadweep": {
+    "BestFor": [
+      "Beach",
+      "Adventure",
+      "Nature",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Fly to Agatti Island from Kochi",
+        "Afternoon": "Transfer to your resort and relax",
+        "Evening": "Enjoy the pristine beach and sunset"
+      },
+      "2": {
+        "Morning": "Water sports: kayaking, sailing, or glass-bottom boat tour",
+        "Afternoon": "Explore Agatti island on a scooter",
+        "Evening": "Stargazing on the beach"
+      },
+      "3": {
+        "Morning": "Day trip to Bangaram Island",
+        "Afternoon": "Snorkeling in the crystal-clear lagoon",
+        "Evening": "Return to Agatti"
+      },
+      "4": {
+        "Morning": "Scuba diving for certified divers or a discover scuba session for beginners",
+        "Afternoon": "Relax on the beach, read a book",
+        "Evening": "Farewell dinner with local seafood"
+      },
+      "5": {
+        "Morning": "Last swim in the lagoon",
+        "Afternoon": "Fly back to Kochi",
+        "Evening": "temp"
+      }
+    }
+  },
+  "Visakhapatnam (Vizag)": {
+    "BestFor": [
+      "Beach",
+      "Nature",
+      "History",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore RK Beach and visit the Submarine Museum (INS Kursura)",
+        "Afternoon": "Visit the Kailasagiri hill park for panoramic city views",
+        "Evening": "Enjoy the evening breeze at Tenneti Park"
+      },
+      "2": {
+        "Morning": "Drive along the scenic beach road to Bheemili",
+        "Afternoon": "Explore the tranquil Rushikonda Beach",
+        "Evening": "Relax at a beachside cafe"
+      },
+      "3": {
+        "Morning": "Day trip to the Araku Valley (can be done by a scenic train journey)",
+        "Afternoon": "Visit the Borra Caves",
+        "Evening": "Return to Visakhapatnam"
+      }
+    }
+  },
+  "Thanjavur (Tanjore)": {
+    "BestFor": [
+      "History",
+      "Architecture",
+      "Spiritual",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Brihadeeswarar Temple, a magnificent UNESCO World Heritage site",
+        "Afternoon": "Explore the Thanjavur Maratha Palace and its art gallery",
+        "Evening": "Witness the evening rituals at the temple"
+      },
+      "2": {
+        "Morning": "Visit the Saraswathi Mahal Library, one of the oldest libraries in Asia",
+        "Afternoon": "Explore the local market to see Tanjore paintings and bronze statues being made",
+        "Evening": "Enjoy traditional Chettinad cuisine"
+      }
+    }
+  },
+  "Dawki": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel from Shillong to Dawki",
+        "Afternoon": "Boating on the crystal-clear Umngot River",
+        "Evening": "Camping by the riverside"
+      },
+      "2": {
+        "Morning": "Visit the India-Bangladesh border at Tamabil",
+        "Afternoon": "Explore the nearby Shnongpdeng village for more adventure activities like kayaking and zip-lining",
+        "Evening": "Return journey to Shillong"
+      }
+    }
+  },
+  "Chikmagalur": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive and check into a coffee estate homestay",
+        "Afternoon": "Hike to Mullayanagiri, the highest peak in Karnataka",
+        "Evening": "Enjoy the sunset and relax amidst the plantations"
+      },
+      "2": {
+        "Morning": "Visit Jhari Waterfalls and Baba Budangiri",
+        "Afternoon": "Explore Hebbe Falls (requires a jeep ride)",
+        "Evening": "Coffee tasting session and departure"
+      }
+    }
+  },
+  "Badami": {
+    "BestFor": [
+      "History",
+      "Architecture",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the Badami Cave Temples, a set of four rock-cut temples",
+        "Afternoon": "Walk around the Agastya Lake and visit the Bhutanatha group of temples",
+        "Evening": "Climb up to the fort for sunset views"
+      },
+      "2": {
+        "Morning": "Day trip to the UNESCO World Heritage sites of Pattadakal",
+        "Afternoon": "Explore the ancient temple town of Aihole, the cradle of Indian temple architecture",
+        "Evening": "Return to Badami for departure"
+      }
+    }
+  },
+  "Tarkarli": {
+    "BestFor": [
+      "Beach",
+      "Adventure",
+      "Food"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive and check into a beachside resort",
+        "Afternoon": "Relax on Tarkarli Beach",
+        "Evening": "Enjoy fresh Malvani seafood"
+      },
+      "2": {
+        "Morning": "Scuba diving and snorkeling at Tsunami Island",
+        "Afternoon": "Enjoy various water sports like jet ski, banana boat ride",
+        "Evening": "Visit the Sindhudurg Fort, a historic sea fort"
+      },
+      "3": {
+        "Morning": "Boat ride in the Karli River backwaters",
+        "Afternoon": "Visit the Rock Garden",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Alappuzha (Alleppey) - Extended": {
+    "BestFor": [
+      "Nature",
+      "Beach",
+      "Food",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive and check into a houseboat by noon",
+        "Afternoon": "Cruise through the serene backwaters of Vembanad Lake",
+        "Evening": "Enjoy an authentic Kerala meal and overnight stay on the houseboat"
+      },
+      "2": {
+        "Morning": "After breakfast, check out from the houseboat. Take a canoe ride through narrower canals.",
+        "Afternoon": "Check into a backwater resort. Explore the local village life on foot.",
+        "Evening": "Watch the sunset over the paddy fields"
+      },
+      "3": {
+        "Morning": "Visit Alleppey Beach and the old lighthouse",
+        "Afternoon": "Explore the Revi Karunakaran Museum",
+        "Evening": "Enjoy a seafood dinner at a beachside cafe"
+      }
+    }
+  },
+  "Kanchipuram": {
+    "BestFor": [
+      "Spiritual",
+      "History",
+      "Shopping"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Kailasanathar Temple and Ekambareswarar Temple",
+        "Afternoon": "Explore Varadharaja Perumal Temple and Kamakshi Amman Temple",
+        "Evening": "Shopping for world-famous Kanchipuram silk sarees"
+      }
+    }
+  },
+  "Sanchi": {
+    "BestFor": [
+      "History",
+      "Spiritual",
+      "Architecture"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the Great Stupa (Stupa No. 1) and its intricately carved gateways (Toranas)",
+        "Afternoon": "Visit Stupa No. 2 and Stupa No. 3, and the Ashokan pillar",
+        "Evening": "Explore the ASI museum at the base of the hill"
+      }
+    }
+  },
+  "Diu": {
+    "BestFor": [
+      "Beach",
+      "History",
+      "Nightlife"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the massive Diu Fort and Panikota Fort",
+        "Afternoon": "Visit St. Paul's Church and the Diu Museum",
+        "Evening": "Relax at Jallandhar Beach or Chakratirth Beach"
+      },
+      "2": {
+        "Morning": "Relax and enjoy water sports at the beautiful Nagoa Beach",
+        "Afternoon": "Explore the Naida Caves",
+        "Evening": "Enjoy the relaxed nightlife with affordable drinks"
+      }
+    }
+  },
+  "Imphal": {
+    "BestFor": [
+      "Culture",
+      "Nature",
+      "History"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Imphal. Visit the Kangla Fort.",
+        "Afternoon": "Explore the Ima Keithel (Mother's Market), run entirely by women.",
+        "Evening": "Relax and try Manipuri cuisine"
+      },
+      "2": {
+        "Morning": "Day trip to Loktak Lake, the largest freshwater lake in Northeast India",
+        "Afternoon": "Visit Keibul Lamjao National Park, the world's only floating national park, home to the Sangai deer",
+        "Evening": "Return to Imphal"
+      },
+      "3": {
+        "Morning": "Visit the INA Memorial Complex in Moirang",
+        "Afternoon": "Explore the Andro Cultural Village",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Aizawl": {
+    "BestFor": [
+      "Culture",
+      "Nature",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Aizawl. Visit the Mizoram State Museum.",
+        "Afternoon": "Hike to Durtlang Hills for a panoramic view of the city.",
+        "Evening": "Explore Bara Bazaar, the main shopping hub."
+      },
+      "2": {
+        "Morning": "Day trip to Reiek Tlang (Reiek Peak) for trekking and nature views.",
+        "Afternoon": "Explore the model Mizo village at the foot of the peak.",
+        "Evening": "Enjoy a quiet evening and local food."
+      }
+    }
+  },
+  "Agartala": {
+    "BestFor": [
+      "History",
+      "Culture",
+      "Nature"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Ujjayanta Palace, the former royal palace of Tripura.",
+        "Afternoon": "Explore the Neermahal Water Palace.",
+        "Evening": "Visit the Jagannath Temple."
+      },
+      "2": {
+        "Morning": "Day trip to Sepahijala Wildlife Sanctuary.",
+        "Afternoon": "Explore the ancient rock carvings and murals at Unakoti.",
+        "Evening": "Return to Agartala and shop for bamboo handicrafts."
+      }
+    }
+  },
+  "Neil Island (Shaheed Dweep)": {
+    "BestFor": [
+      "Beach",
+      "Nature",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive by ferry from Port Blair or Havelock.",
+        "Afternoon": "Visit Bharatpur Beach for swimming and snorkeling.",
+        "Evening": "Witness the sunset at Laxmanpur Beach."
+      },
+      "2": {
+        "Morning": "Visit the Natural Bridge formation at low tide.",
+        "Afternoon": "Relax at Sitapur Beach and watch the sunrise.",
+        "Evening": "Enjoy the tranquil island life before departure."
+      }
+    }
+  },
+  "Tiruchirappalli (Trichy)": {
+    "BestFor": [
+      "Spiritual",
+      "History",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Climb the Rockfort Temple for panoramic city views.",
+        "Afternoon": "Visit the Sri Ranganathaswamy Temple in Srirangam, one of the largest temple complexes in the world.",
+        "Evening": "Explore the temple town of Srirangam."
+      },
+      "2": {
+        "Morning": "Visit the Jambukeswarar Temple (Thiruvanaikaval).",
+        "Afternoon": "Explore St. Joseph's Church and the local markets.",
+        "Evening": "Enjoy local Tamil cuisine."
+      }
+    }
+  },
+  "Alwar": {
+    "BestFor": [
+      "History",
+      "Nature",
+      "Adventure"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the haunted Bhangarh Fort.",
+        "Afternoon": "Explore the Bala Quila (Alwar Fort).",
+        "Evening": "Enjoy boating at Siliserh Lake."
+      },
+      "2": {
+        "Morning": "Go on a safari in Sariska Tiger Reserve.",
+        "Afternoon": "Visit Moosi Maharani Ki Chhatri and the City Palace.",
+        "Evening": "Try the famous Alwar 'milk cake' (Kalakand)."
+      }
+    }
+  },
+  "Valley of Flowers National Park": {
+    "BestFor": [
+      "Nature",
+      "Trekking",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel from Rishikesh/Haridwar to Joshimath.",
+        "Afternoon": "Rest and acclimatize.",
+        "Evening": "temp"
+      },
+      "2": {
+        "Morning": "Drive from Joshimath to Govindghat, then trek to Ghangaria.",
+        "Afternoon": "Continue the trek.",
+        "Evening": "Overnight stay in Ghangaria."
+      },
+      "3": {
+        "Morning": "Trek to the Valley of Flowers.",
+        "Afternoon": "Explore the valley and its diverse flora.",
+        "Evening": "Trek back to Ghangaria."
+      },
+      "4": {
+        "Morning": "Trek to Hemkund Sahib, a high-altitude Sikh pilgrimage site.",
+        "Afternoon": "Visit the lake and Gurudwara.",
+        "Evening": "Trek back down to Ghangaria."
+      },
+      "5": {
+        "Morning": "Trek back from Ghangaria to Govindghat.",
+        "Afternoon": "Drive back to Joshimath.",
+        "Evening": "Relax."
+      },
+      "6": {
+        "Morning": "Drive back to Rishikesh/Haridwar.",
+        "Afternoon": "temp",
+        "Evening": "temp"
+      }
+    }
+  },
+  "Amritsar - Extended": {
+    "BestFor": [
+      "Spiritual",
+      "History",
+      "Food",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Golden Temple. Spend time in serene reflection.",
+        "Afternoon": "Partake in the 'Langar' (community kitchen).",
+        "Evening": "Explore the Golden Temple complex, beautifully lit up at night."
+      },
+      "2": {
+        "Morning": "Visit Jallianwala Bagh.",
+        "Afternoon": "Travel to the Wagah Border for the evening Beating Retreat ceremony.",
+        "Evening": "Dinner at a traditional Punjabi dhaba."
+      },
+      "3": {
+        "Morning": "Explore the Partition Museum.",
+        "Afternoon": "Go on a food tour to taste Amritsari Kulcha, Lassi, and Jalebi.",
+        "Evening": "Shopping for Phulkari dupattas and Juttis in the local market."
+      }
+    }
+  },
+  "Meghalaya - Offbeat": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Photography",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Shillong, drive to Mawphlang Sacred Forest.",
+        "Afternoon": "Guided walk through the sacred grove.",
+        "Evening": "Drive to Cherrapunji (Sohra) and check in."
+      },
+      "2": {
+        "Morning": "Trek to the Double Decker Living Root Bridge in Nongriat.",
+        "Afternoon": "Continue hike to Rainbow Falls.",
+        "Evening": "Overnight stay in a Nongriat homestay."
+      },
+      "3": {
+        "Morning": "Trek back up from Nongriat.",
+        "Afternoon": "Drive to Mawlynnong, Asia's Cleanest Village.",
+        "Evening": "Stay in a homestay in Mawlynnong."
+      },
+      "4": {
+        "Morning": "Visit the Living Root Bridge in Riwai village.",
+        "Afternoon": "Drive to Dawki and enjoy boating on the Umngot River.",
+        "Evening": "Drive back to Shillong."
+      },
+      "5": {
+        "Morning": "Explore Shillong's cafes and markets.",
+        "Afternoon": "Visit Elephant Falls.",
+        "Evening": "Departure."
+      }
+    }
+  },
+  "Chittorgarh": {
+    "BestFor": [
+      "History",
+      "Photography",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the vast Chittorgarh Fort, a UNESCO World Heritage Site",
+        "Afternoon": "Visit Vijay Stambha (Victory Tower) and Kirti Stambha (Tower of Fame)",
+        "Evening": "Visit the Padmini's Palace and witness the Sound and Light show at the fort"
+      }
+    }
+  },
+  "Mandu (Mandavgarh)": {
+    "BestFor": [
+      "History",
+      "Architecture",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Explore the Royal Enclave: Jahaz Mahal (Ship Palace) and Hindola Mahal (Swing Palace)",
+        "Afternoon": "Visit Hoshang Shah's Tomb, an inspiration for the Taj Mahal",
+        "Evening": "Enjoy the sunset from Rani Roopmati's Pavilion"
+      },
+      "2": {
+        "Morning": "Visit the Jami Masjid and Ashrafi Mahal",
+        "Afternoon": "Explore the Rewa Kund group of monuments, including Baz Bahadur's Palace",
+        "Evening": "Relax and enjoy the historical ambiance of the abandoned city"
+      }
+    }
+  },
+  "Shekhawati (Mandawa)": {
+    "BestFor": [
+      "Culture",
+      "History",
+      "Photography",
+      "Art"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Mandawa and explore its frescoed havelis like the Mandawa Fort and Hanuman Prasad Goenka Haveli",
+        "Afternoon": "Walk through the town to discover more painted mansions",
+        "Evening": "Enjoy a traditional Rajasthani dinner at a heritage hotel"
+      },
+      "2": {
+        "Morning": "Drive to nearby towns like Nawalgarh or Fatehpur to see more elaborate havelis",
+        "Afternoon": "Visit the Podar Haveli Museum in Nawalgarh",
+        "Evening": "Shop for local handicrafts"
+      }
+    }
+  },
+  "Bharatpur (Keoladeo National Park)": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Wildlife"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Bharatpur, check-in, and have lunch",
+        "Afternoon": "Go for an evening bird-watching session inside Keoladeo National Park on a cycle rickshaw",
+        "Evening": "Relax at the lodge"
+      },
+      "2": {
+        "Morning": "Early morning bird-watching walk or boat ride (seasonal) in the park to see migratory birds",
+        "Afternoon": "Visit the Lohagarh Fort and Ganga Mandir in Bharatpur town",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Dehradun": {
+    "BestFor": [
+      "Nature",
+      "Food",
+      "Spiritual"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit Robber's Cave (Guchu Pani), a natural river cave formation",
+        "Afternoon": "Explore the Forest Research Institute (FRI) with its grand colonial architecture",
+        "Evening": "Visit the Tibetan Buddhist Temple in Clement Town"
+      },
+      "2": {
+        "Morning": "Visit Sahastradhara, known for its waterfalls and sulphur springs",
+        "Afternoon": "Explore Paltan Bazaar for shopping and local snacks",
+        "Evening": "Enjoy dinner at one of the city's popular cafes"
+      }
+    }
+  },
+  "Pahalgam": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Adventure"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Pahalgam, check in and relax by the Lidder River",
+        "Afternoon": "Explore the main Pahalgam market",
+        "Evening": "Enjoy a leisurely walk in the meadows"
+      },
+      "2": {
+        "Morning": "Hire a local taxi to visit Betaab Valley",
+        "Afternoon": "Continue to Chandanwari, the starting point of the Amarnath Yatra",
+        "Evening": "Return to Pahalgam and relax"
+      },
+      "3": {
+        "Morning": "Go for a pony ride to Baisaran Valley, also known as 'Mini Switzerland'",
+        "Afternoon": "Visit Aru Valley for its scenic beauty",
+        "Evening": "Enjoy a final Kashmiri meal before departure"
+      }
+    }
+  },
+  "Sonamarg": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel from Srinagar to Sonamarg, enjoying the scenic drive",
+        "Afternoon": "Take a pony ride to Thajiwas Glacier",
+        "Evening": "Walk along the Sindh River"
+      },
+      "2": {
+        "Morning": "Drive to Zoji La pass for breathtaking mountain views",
+        "Afternoon": "Explore the local meadows and enjoy the pristine environment",
+        "Evening": "Travel back towards Srinagar or onwards to Ladakh"
+      }
+    }
+  },
+  "Chopta": {
+    "BestFor": [
+      "Adventure",
+      "Nature",
+      "Spiritual",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel from Rishikesh/Haridwar to Chopta",
+        "Afternoon": "Check into a campsite and acclimatize",
+        "Evening": "Enjoy the sunset and starry sky"
+      },
+      "2": {
+        "Morning": "Early morning trek to Tungnath Temple, the highest Shiva temple in the world",
+        "Afternoon": "Continue the trek to Chandrashila Peak for a 360-degree Himalayan view",
+        "Evening": "Trek back down to Chopta and relax around a bonfire"
+      },
+      "3": {
+        "Morning": "Visit Deoria Tal, a beautiful high-altitude lake",
+        "Afternoon": "Explore the meadows and wildlife in the region",
+        "Evening": "Begin the return journey"
+      }
+    }
+  },
+  "Kausani": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Relaxation"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Kausani and check in. Marvel at the panoramic view of the Himalayas",
+        "Afternoon": "Visit the Anasakti Ashram (Gandhi Ashram)",
+        "Evening": "Watch the spectacular sunset over the Himalayan peaks"
+      },
+      "2": {
+        "Morning": "Visit a local tea estate and the Kausani Shawl Factory",
+        "Afternoon": "Take a nature walk through the pine forests",
+        "Evening": "Enjoy a quiet evening stargazing"
+      }
+    }
+  },
+  "Pelling": {
+    "BestFor": [
+      "Nature",
+      "Spiritual",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Pelling and enjoy the magnificent view of Mt. Kanchenjunga",
+        "Afternoon": "Visit the Pemayangtse Monastery",
+        "Evening": "Explore the local market"
+      },
+      "2": {
+        "Morning": "Visit the Rabdentse Ruins, the former capital of Sikkim",
+        "Afternoon": "Walk on the Pelling Skywalk and visit the giant Chenrezig statue",
+        "Evening": "Relax and enjoy the mountain views"
+      },
+      "3": {
+        "Morning": "Visit the Kanchenjunga Falls and Khecheopalri Lake",
+        "Afternoon": "Explore the Singshore Bridge, one of the highest bridges in Asia",
+        "Evening": "Departure"
+      }
+    }
+  },
+  "Majuli": {
+    "BestFor": [
+      "Culture",
+      "Nature",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Take a ferry from Jorhat to Majuli island",
+        "Afternoon": "Check into a traditional bamboo cottage and visit the Auniati Satra",
+        "Evening": "Witness a cultural performance at a Satra"
+      },
+      "2": {
+        "Morning": "Visit Samaguri Satra to see the traditional mask-making craft",
+        "Afternoon": "Explore the island on a scooter, visiting local Mishing tribe villages",
+        "Evening": "Enjoy the sunset over the Brahmaputra river before taking the ferry back"
+      }
+    }
+  },
+  "Nalanda and Rajgir": {
+    "BestFor": [
+      "History",
+      "Spiritual",
+      "Culture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel to Nalanda. Explore the ruins of Nalanda University, a UNESCO World Heritage site",
+        "Afternoon": "Visit the Nalanda Archaeological Museum and the Xuan Zang Memorial Hall",
+        "Evening": "Travel to nearby Rajgir and check in"
+      },
+      "2": {
+        "Morning": "In Rajgir, take the ropeway to Vishwa Shanti Stupa on Ratnagiri Hill",
+        "Afternoon": "Visit Gridhakuta (Vulture's Peak) and the hot springs (Brahmakund)",
+        "Evening": "Explore other sites like the Cyclopean Wall and Bimbisara's Jail"
+      }
+    }
+  },
+  "Bishnupur": {
+    "BestFor": [
+      "History",
+      "Art",
+      "Culture",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Bishnupur. Visit the Rasmancha pavilion.",
+        "Afternoon": "Explore the Jor-Bangla Temple and Pancha Ratna Temple",
+        "Evening": "Shop for Baluchari sarees and terracotta handicrafts"
+      },
+      "2": {
+        "Morning": "Visit the Madanmohan Temple and Shyam Rai Temple",
+        "Afternoon": "Explore the Bishnupur Museum (Acharya Jogesh Chandra Purakriti Bhawan)",
+        "Evening": "Enjoy the rustic charm of the town"
+      }
+    }
+  },
+  "Shantiniketan": {
+    "BestFor": [
+      "Culture",
+      "History",
+      "Art"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive and explore the Visva-Bharati University campus",
+        "Afternoon": "Visit the Uttarayan Complex where Rabindranath Tagore lived",
+        "Evening": "Attend a local Baul music performance if available"
+      },
+      "2": {
+        "Morning": "Visit the Kala Bhavana (Art College) and Sangeet Bhavana (Music College)",
+        "Afternoon": "Explore the Kopai River and the Sonajhuri forest, especially during the Saturday market (haat)",
+        "Evening": "Shop for local handicrafts"
+      }
+    }
+  },
+  "Gandikota": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Adventure",
+      "History"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive and explore the Gandikota Fort",
+        "Afternoon": "Visit the Juma Masjid and Ranganatha Swamy Temple inside the fort. Marvel at the Penna River gorge ('Grand Canyon of India')",
+        "Evening": "Camping and kayaking near the gorge, or stay at the local Haritha hotel"
+      }
+    }
+  },
+  "Lepakshi": {
+    "BestFor": [
+      "History",
+      "Spiritual",
+      "Photography",
+      "Art"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Lepakshi. Visit the Veerabhadra Temple.",
+        "Afternoon": "Marvel at the architectural wonders like the 'Hanging Pillar' and intricate carvings.",
+        "Evening": "Visit the giant monolithic Nandi statue, one of the largest in the world."
+      }
+    }
+  },
+  "Yercaud": {
+    "BestFor": [
+      "Nature",
+      "Relaxation",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Yercaud. Go for boating in the Emerald Lake (Yercaud Lake).",
+        "Afternoon": "Visit the Lady's Seat viewpoint for panoramic views of the ghats",
+        "Evening": "Explore the Rose Garden and Anna Park"
+      },
+      "2": {
+        "Morning": "Drive up to the Pagoda Point and Karadiyur View Point",
+        "Afternoon": "Visit the Kiliyur Falls (best after monsoon)",
+        "Evening": "Walk through a coffee plantation and relax"
+      }
+    }
+  },
+  "Dhanushkodi": {
+    "BestFor": [
+      "History",
+      "Photography",
+      "Beach",
+      "Spiritual"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel from Rameshwaram to Dhanushkodi by jeep.",
+        "Afternoon": "Explore the ruins of the ghost town (church, railway station, etc.).",
+        "Evening": "Visit the Land's End (Arichal Munai) where the Bay of Bengal and Indian Ocean meet."
+      }
+    }
+  },
+  "Murudeshwar": {
+    "BestFor": [
+      "Spiritual",
+      "Beach",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Murudeshwar Temple and the towering 123-feet Shiva statue.",
+        "Afternoon": "Take the elevator up the temple's gopuram for a panoramic view of the statue and the sea.",
+        "Evening": "Relax at Murudeshwar Beach and try some water sports."
+      }
+    }
+  },
+  "Udupi": {
+    "BestFor": [
+      "Spiritual",
+      "Food",
+      "Beach"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the famous Udupi Sri Krishna Matha.",
+        "Afternoon": "Explore the nearby Malpe Beach and take a boat to St. Mary's Island to see the columnar basaltic lava formations.",
+        "Evening": "Savour authentic Udupi cuisine at a local restaurant."
+      },
+      "2": {
+        "Morning": "Visit Kaup Beach and its lighthouse.",
+        "Afternoon": "Explore the tranquil Delta Beach (Kodi Bengre) where the river meets the sea.",
+        "Evening": "Relax and enjoy the coastal atmosphere."
+      }
+    }
+  },
+  "Dandeli": {
+    "BestFor": [
+      "Adventure",
+      "Nature",
+      "Wildlife"
+    ],
+    "State": "N/A",
+    "Duration": 3.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Dandeli and check into a jungle resort.",
+        "Afternoon": "Go for a jungle safari in the Dandeli Wildlife Sanctuary.",
+        "Evening": "Enjoy a bonfire and a nature presentation at the resort."
+      },
+      "2": {
+        "Morning": "Experience thrilling white-water rafting on the Kali River.",
+        "Afternoon": "Try other activities like kayaking, coracle ride, or zip-lining.",
+        "Evening": "Go for a night nature walk."
+      },
+      "3": {
+        "Morning": "Visit Syntheri Rocks and Kavala Caves.",
+        "Afternoon": "Natural Jacuzzi bath in the river.",
+        "Evening": "Departure."
+      }
+    }
+  },
+  "Bijapur (Vijayapura)": {
+    "BestFor": [
+      "History",
+      "Architecture"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the magnificent Gol Gumbaz and experience its whispering gallery.",
+        "Afternoon": "Explore Ibrahim Rauza, often called the 'Taj Mahal of the Deccan'.",
+        "Evening": "Visit other historical sites like Jama Masjid and Bara Kaman."
+      }
+    }
+  },
+  "Matheran": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Relaxation",
+      "Trekking"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive at Dasturi Naka and walk or take a horse ride into the automobile-free Matheran.",
+        "Afternoon": "Ride the heritage toy train (if operational).",
+        "Evening": "Walk to Porcupine Point (Sunset Point) to watch the sunset."
+      },
+      "2": {
+        "Morning": "Explore various viewpoints like Panorama Point, Louisa Point, and Echo Point.",
+        "Afternoon": "Walk through the forested paths and visit Charlotte Lake.",
+        "Evening": "Shop for local products like Chikki and honey."
+      }
+    }
+  },
+  "Ganpatipule": {
+    "BestFor": [
+      "Spiritual",
+      "Beach",
+      "Relaxation"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Ganpatipule and visit the Swayambhu Ganpati Temple on the beach.",
+        "Afternoon": "Relax and swim at Ganpatipule Beach.",
+        "Evening": "Walk around the temple base (Pradakshina)."
+      },
+      "2": {
+        "Morning": "Explore nearby beaches like Aare Ware Beach.",
+        "Afternoon": "Visit the Prachin Konkan Museum.",
+        "Evening": "Enjoy the peaceful coastal atmosphere."
+      }
+    }
+  },
+  "Igatpuri": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Spiritual"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Igatpuri. Visit the Dhammagiri (Vipassana International Academy).",
+        "Afternoon": "Trek to Tringalwadi Fort.",
+        "Evening": "Relax and enjoy the scenic beauty of the Sahyadris."
+      },
+      "2": {
+        "Morning": "Visit the Bhatsa River Valley and Camel Valley viewpoint.",
+        "Afternoon": "Explore the Amruteshwar Temple.",
+        "Evening": "Enjoy the sunset by the Vaitarna Dam."
+      }
+    }
+  },
+  "Bhandardara": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Adventure"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Bhandardara. Visit Wilson Dam and Arthur Lake.",
+        "Afternoon": "Enjoy a boat ride on Arthur Lake.",
+        "Evening": "Visit Umbrella Falls (seasonal) and relax."
+      },
+      "2": {
+        "Morning": "Visit Randha Falls.",
+        "Afternoon": "Trek to Ratangad Fort or visit Amruteshwar Temple.",
+        "Evening": "Watch the sunset and enjoy the serene environment."
+      }
+    }
+  },
+  "Saputara": {
+    "BestFor": [
+      "Nature",
+      "Culture",
+      "Relaxation"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Saputara. Take the ropeway to Sunset Point.",
+        "Afternoon": "Go boating in Saputara Lake.",
+        "Evening": "Visit the Artist Village to see tribal artifacts."
+      },
+      "2": {
+        "Morning": "Visit the Step Garden and Rose Garden.",
+        "Afternoon": "Explore Gira Waterfalls (seasonal) and the Hatgadh Fort.",
+        "Evening": "Enjoy the pleasant climate of Gujarat's only hill station."
+      }
+    }
+  },
+  "Palitana": {
+    "BestFor": [
+      "Spiritual",
+      "Photography",
+      "Adventure"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Palitana and rest for the early morning trek.",
+        "Afternoon": "Explore the local market and the base of Shatrunjaya Hills.",
+        "Evening": "Early dinner and rest."
+      },
+      "2": {
+        "Morning": "Start the early morning climb of over 3,500 steps to the top of Shatrunjaya Hill.",
+        "Afternoon": "Explore the complex of over 900 Jain temples.",
+        "Evening": "Descend before sunset and depart."
+      }
+    }
+  },
+  "Junagadh": {
+    "BestFor": [
+      "History",
+      "Spiritual",
+      "Architecture"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Uparkot Fort and see the Buddhist caves and step-wells inside.",
+        "Afternoon": "Explore the stunning Mahabat Maqbara and Bahauddin Maqbara.",
+        "Evening": "Walk through the old city."
+      },
+      "2": {
+        "Morning": "Begin the climb or take the ropeway up Girnar Hill, a major pilgrimage site for Hindus and Jains.",
+        "Afternoon": "Explore the temples on top of Girnar.",
+        "Evening": "Descend and visit the Damodar Kund at the foothills."
+      }
+    }
+  },
+  "Kalimpong": {
+    "BestFor": [
+      "Nature",
+      "Culture",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Kalimpong. Visit Deolo Hill for panoramic views.",
+        "Afternoon": "Explore Dr. Graham's Homes, a historic educational institution.",
+        "Evening": "Stroll through the main market."
+      },
+      "2": {
+        "Morning": "Visit Zang Dhok Palri Phodang monastery and a flower nursery.",
+        "Afternoon": "Explore the Pine View Nursery for its cactus collection.",
+        "Evening": "Enjoy the quiet ambiance of this hill station."
+      }
+    }
+  },
+  "Daman": {
+    "BestFor": [
+      "Beach",
+      "History",
+      "Nightlife"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Moti Daman. Explore the Moti Daman Fort and the Lighthouse.",
+        "Afternoon": "Visit the Church of Bom Jesus.",
+        "Evening": "Relax at Jampore Beach and enjoy the sunset."
+      },
+      "2": {
+        "Morning": "Explore Nani Daman, including St. Jerome Fort.",
+        "Afternoon": "Relax at Devka Beach.",
+        "Evening": "Enjoy the nightlife and affordable seafood and drinks."
+      }
+    }
+  },
+  "Mukteshwar": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Mukteshwar. Visit the 350-year-old Mukteshwar Dham Temple.",
+        "Afternoon": "Explore Chauli Ki Jali for rock climbing, rappelling and amazing valley views.",
+        "Evening": "Enjoy the stunning sunset over the Himalayan range."
+      },
+      "2": {
+        "Morning": "Take a nature walk through the fruit orchards and forests.",
+        "Afternoon": "Visit the Indian Veterinary Research Institute (IVRI).",
+        "Evening": "Relax and enjoy the peaceful mountain environment."
+      }
+    }
+  },
+  "Patnitop": {
+    "BestFor": [
+      "Nature",
+      "Relaxation",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Patnitop from Jammu/Katra. Check in and enjoy the views.",
+        "Afternoon": "Take a walk through the pine and deodar forests.",
+        "Evening": "Enjoy the sunset from a viewpoint."
+      },
+      "2": {
+        "Morning": "Visit Nathatop for panoramic views and seasonal snow activities.",
+        "Afternoon": "Explore the ancient Naag Mandir.",
+        "Evening": "Enjoy a picnic at Sanasar Lake (a short drive away)."
+      }
+    }
+  },
+  "Dhanaulti": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Relaxation"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Dhanaulti. Explore the Eco Park (Amber and Dhara).",
+        "Afternoon": "Walk through the deodar and rhododendron forests.",
+        "Evening": "Enjoy the quiet Himalayan evening."
+      },
+      "2": {
+        "Morning": "Visit the Surkanda Devi Temple (requires a short trek).",
+        "Afternoon": "Try adventure sports at a local adventure park (zip-lining, sky walking etc).",
+        "Evening": "Camping and bonfire."
+      }
+    }
+  },
+  "Kanatal": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Camping"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Kanatal and check into a campsite.",
+        "Afternoon": "Enjoy adventure activities like valley crossing and rappelling.",
+        "Evening": "Bonfire, music, and stargazing."
+      },
+      "2": {
+        "Morning": "Visit the Kodia Jungle for a nature walk or jungle safari.",
+        "Afternoon": "Explore the Tehri Dam, one of the tallest dams in the world.",
+        "Evening": "Relax and enjoy the mountain scenery."
+      }
+    }
+  },
+  "Lachen and Lachung": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 4.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Travel from Gangtok to Lachen. Stop at viewpoints along the way.",
+        "Afternoon": "Arrive in Lachen and acclimatize.",
+        "Evening": "Early dinner and rest."
+      },
+      "2": {
+        "Morning": "Early morning excursion to Gurudongmar Lake, one of the highest lakes in the world.",
+        "Afternoon": "Return to Lachen for lunch, then drive to Lachung.",
+        "Evening": "Check into your hotel in Lachung and relax."
+      },
+      "3": {
+        "Morning": "Visit the Yumthang Valley (Valley of Flowers).",
+        "Afternoon": "Optional trip to Zero Point (Yumesamdong) for snow (seasonal).",
+        "Evening": "Return to Lachung and explore the village."
+      },
+      "4": {
+        "Morning": "Begin the return journey from Lachung to Gangtok.",
+        "Afternoon": "Stop at viewpoints you missed on the way up.",
+        "Evening": "Arrive in Gangtok."
+      }
+    }
+  },
+  "Dirang": {
+    "BestFor": [
+      "Nature",
+      "Culture",
+      "Relaxation"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Dirang from Tezpur/Guwahati. Check in and relax.",
+        "Afternoon": "Visit the Dirang Dzong (a historic fort-village).",
+        "Evening": "Visit the hot water springs for a relaxing dip."
+      },
+      "2": {
+        "Morning": "Visit the National Research Centre on Yak.",
+        "Afternoon": "Explore the local monasteries and Kiwi/Apple orchards.",
+        "Evening": "Enjoy the serene valley and the Dirang River."
+      }
+    }
+  },
+  "Bomdila": {
+    "BestFor": [
+      "Nature",
+      "Culture",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Bomdila. Visit the Gontse Gaden Rabgyel Lling (GRL) Monastery.",
+        "Afternoon": "Explore the local market for handicrafts.",
+        "Evening": "Enjoy the views of the Himalayan peaks from a viewpoint."
+      },
+      "2": {
+        "Morning": "Visit the Bomdila View Point for panoramic views.",
+        "Afternoon": "Explore the Craft Centre and Ethnographic Museum.",
+        "Evening": "Take a leisurely walk around the town."
+      }
+    }
+  },
+  "Patna": {
+    "BestFor": [
+      "History",
+      "Culture",
+      "Spiritual"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Patna Museum.",
+        "Afternoon": "Explore Golghar, a massive granary with panoramic city views.",
+        "Evening": "Visit the Takht Sri Patna Sahib, the birthplace of Guru Gobind Singh."
+      },
+      "2": {
+        "Morning": "Explore the ruins of Pataliputra at Kumhrar.",
+        "Afternoon": "Visit the Bihar Museum.",
+        "Evening": "Take an evening cruise on the Ganges River."
+      }
+    }
+  },
+  "Digha": {
+    "BestFor": [
+      "Beach",
+      "Relaxation",
+      "Food"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Digha. Check into a hotel.",
+        "Afternoon": "Relax and enjoy the waves at Old Digha Beach.",
+        "Evening": "Explore the market and enjoy fresh fried seafood."
+      },
+      "2": {
+        "Morning": "Visit the less crowded New Digha Beach.",
+        "Afternoon": "Explore the Marine Aquarium and Regional Centre (MARC).",
+        "Evening": "Enjoy the sunset at Udaipur Beach on the Odisha-Bengal border."
+      }
+    }
+  },
+  "Gopalpur": {
+    "BestFor": [
+      "Beach",
+      "History",
+      "Relaxation"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Gopalpur-on-Sea. Relax at the beach.",
+        "Afternoon": "Explore the old lighthouse and the ruins of the ancient port.",
+        "Evening": "Enjoy a quiet sunset on the beach."
+      },
+      "2": {
+        "Morning": "Take a short trip to Chilika Lake at Barkul for bird watching and boating.",
+        "Afternoon": "Visit the Aryapalli Beach for a change of scenery.",
+        "Evening": "Enjoy local seafood delicacies."
+      }
+    }
+  },
+  "Vijayawada": {
+    "BestFor": [
+      "Spiritual",
+      "History",
+      "Food"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Kanaka Durga Temple atop Indrakeeladri Hill.",
+        "Afternoon": "Explore the Undavalli Caves, monolithic rock-cut temples.",
+        "Evening": "Walk across the Prakasam Barrage over the Krishna River."
+      },
+      "2": {
+        "Morning": "Visit the Kondapalli Fort.",
+        "Afternoon": "Explore the Rajiv Gandhi Park.",
+        "Evening": "Enjoy local Andhra cuisine."
+      }
+    }
+  },
+  "Kolli Hills": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive at the base and navigate the 70 hairpin bends to the top.",
+        "Afternoon": "Visit the Arapaleeswarar Temple.",
+        "Evening": "Trek down to the Agaya Gangai Waterfalls."
+      },
+      "2": {
+        "Morning": "Explore the Seekuparai and Selur Nadu viewpoints.",
+        "Afternoon": "Visit a local spice farm.",
+        "Evening": "Enjoy the cool climate and serene environment before departing."
+      }
+    }
+  },
+  "Valparai": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Wildlife"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Drive to Valparai through lush tea and coffee estates.",
+        "Afternoon": "Visit the Nallamudi Viewpoint for spectacular views.",
+        "Evening": "Look for the endemic Nilgiri Tahr."
+      },
+      "2": {
+        "Morning": "Explore Sholayar Dam, one of the largest in the region.",
+        "Afternoon": "Take a walk through a tea plantation and visit a tea factory.",
+        "Evening": "Relax at your resort amidst nature."
+      }
+    }
+  },
+  "Karwar": {
+    "BestFor": [
+      "Beach",
+      "Nature",
+      "Food"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive and check in. Relax at Rabindranath Tagore Beach.",
+        "Afternoon": "Visit the INS Chapal Warship Museum.",
+        "Evening": "Enjoy fresh Karwari seafood."
+      },
+      "2": {
+        "Morning": "Take a boat ride to Kurumgad Island for trekking and snorkeling.",
+        "Afternoon": "Explore the less-crowded Tilmati Beach.",
+        "Evening": "Visit the Sadashivgad Fort for sunset views."
+      }
+    }
+  },
+  "Chikhaldara": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "History"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Chikhaldara. Visit Bhimkund, where Bhima is said to have washed.",
+        "Afternoon": "Explore various viewpoints like Hurricane Point and Prospect Point.",
+        "Evening": "Enjoy the sunset from Gavilgad Fort."
+      },
+      "2": {
+        "Morning": "Go for a safari in the Melghat Tiger Reserve.",
+        "Afternoon": "Visit the Narnala Fort.",
+        "Evening": "Relax by the Shakkar Lake."
+      }
+    }
+  },
+  "Landour": {
+    "BestFor": [
+      "Relaxation",
+      "History",
+      "Food",
+      "Photography"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Landour. Walk to St. Paul's Church.",
+        "Afternoon": "Explore the quiet roads and colonial architecture.",
+        "Evening": "Enjoy baked goods at the famous Landour Bakehouse."
+      },
+      "2": {
+        "Morning": "Walk up to Lal Tibba, the highest point, for Himalayan views.",
+        "Afternoon": "Browse for books at the local bookshops. Try to spot Ruskin Bond's residence.",
+        "Evening": "Enjoy a peaceful evening with cheese toast at Char Dukan."
+      }
+    }
+  },
+  "Gaya": {
+    "BestFor": [
+      "Spiritual",
+      "History"
+    ],
+    "State": "N/A",
+    "Duration": 1.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the Vishnupad Temple, a major Hindu pilgrimage site.",
+        "Afternoon": "Perform 'Pind Daan' rituals on the banks of the Falgu River (for pilgrims).",
+        "Evening": "Explore other temples in the area like Mangla Gauri Temple."
+      }
+    }
+  },
+  "Tirunelveli": {
+    "BestFor": [
+      "Spiritual",
+      "Food",
+      "Nature"
+    ],
+    "State": "N/A",
+    "Duration": 2.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Visit the grand Nellaiappar Temple.",
+        "Afternoon": "Explore the city and its markets.",
+        "Evening": "Taste the world-famous Tirunelveli Halwa at a traditional shop."
+      },
+      "2": {
+        "Morning": "Day trip to Courtallam (Kutralam) to enjoy its waterfalls (seasonal).",
+        "Afternoon": "Visit the Papanasam Temple and Agasthiyar Falls.",
+        "Evening": "Return to Tirunelveli."
+      }
+    }
+  },
+  "Rajasthan Royal Circuit": {
+    "BestFor": [
+      "History",
+      "Culture",
+      "Photography",
+      "Shopping"
+    ],
+    "State": "Rajasthan",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Udaipur. Check-in and visit the City Palace.",
+        "Afternoon": "Enjoy a boat ride on Lake Pichola.",
+        "Evening": "Watch the Dharohar cultural show at Bagore Ki Haveli."
+      },
+      "2": {
+        "Morning": "Morning trip to Monsoon Palace (Sajjangarh) for panoramic views. Visit Saheliyon Ki Bari.",
+        "Afternoon": "Travel to Jodhpur (approx. 4-5 hours).",
+        "Evening": "Explore the Clock Tower market and enjoy dinner in the old city."
+      },
+      "3": {
+        "Morning": "Explore the majestic Mehrangarh Fort.",
+        "Afternoon": "Visit the serene Jaswant Thada.",
+        "Evening": "Explore the Blue City (Brahmapuri) lanes."
+      },
+      "4": {
+        "Morning": "Travel to Jaipur (approx. 5-6 hours).",
+        "Afternoon": "Check-in and visit the City Palace and Jantar Mantar.",
+        "Evening": "Shopping at Johari Bazaar and dinner at a traditional Rajasthani restaurant."
+      },
+      "5": {
+        "Morning": "Visit the magnificent Amer Fort. Enjoy an elephant ride (optional).",
+        "Afternoon": "Explore Jaigarh Fort and Nahargarh Fort for sunset views.",
+        "Evening": "Visit Hawa Mahal and walk through the Pink City market."
+      },
+      "6": {
+        "Morning": "Visit the Albert Hall Museum.",
+        "Afternoon": "Try a block-printing workshop or visit the Galtaji (Monkey) Temple.",
+        "Evening": "Departure from Jaipur."
+      }
+    }
+  },
+  "Kerala Backwaters & Hills": {
+    "BestFor": [
+      "Nature",
+      "Beach",
+      "Photography",
+      "Food",
+      "Culture"
+    ],
+    "State": "Kerala",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Kochi. Explore Fort Kochi: Chinese Fishing Nets, St. Francis Church.",
+        "Afternoon": "Visit Mattancherry: Dutch Palace and Jewish Synagogue.",
+        "Evening": "Watch a Kathakali performance."
+      },
+      "2": {
+        "Morning": "Travel to Munnar (approx. 4 hours).",
+        "Afternoon": "Check-in and visit a nearby tea plantation and the Tata Tea Museum.",
+        "Evening": "Relax and enjoy the cool mountain air."
+      },
+      "3": {
+        "Morning": "Visit Eravikulam National Park to see the Nilgiri Tahr.",
+        "Afternoon": "Explore Mattupetty Dam, Echo Point, and Kundala Lake.",
+        "Evening": "Stroll through Munnar town market."
+      },
+      "4": {
+        "Morning": "Travel to Alleppey (Alappuzha) (approx. 4-5 hours).",
+        "Afternoon": "Board a private houseboat for an overnight cruise through the backwaters.",
+        "Evening": "Enjoy a freshly cooked Keralan meal on the houseboat."
+      },
+      "5": {
+        "Morning": "After breakfast, disembark from the houseboat. Travel to Varkala or Marari beach.",
+        "Afternoon": "Relax on the beach. In Varkala, explore the cliff-top shops and cafes.",
+        "Evening": "Enjoy a seafood dinner watching the sunset over the Arabian Sea."
+      },
+      "6": {
+        "Morning": "Enjoy a final swim or an Ayurveda massage.",
+        "Afternoon": "Travel to Trivandrum (TRV) or Kochi (COK) airport for departure.",
+        "Evening": "Departure."
+      }
+    }
+  },
+  "Goa - North & South Explorer": {
+    "BestFor": [
+      "Beach",
+      "Nightlife",
+      "History",
+      "Food",
+      "Adventure"
+    ],
+    "State": "Goa",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in North Goa. Check into a hotel in Calangute/Baga.",
+        "Afternoon": "Relax at Calangute Beach and try some water sports.",
+        "Evening": "Explore the vibrant nightlife at Tito's Lane in Baga."
+      },
+      "2": {
+        "Morning": "Visit Fort Aguada for panoramic views.",
+        "Afternoon": "Explore the beaches of Candolim and Sinquerim.",
+        "Evening": "Enjoy a sunset dinner at a beach shack."
+      },
+      "3": {
+        "Morning": "Visit the bohemian Anjuna Beach and its famous Flea Market (Wednesday only).",
+        "Afternoon": "Explore the scenic Vagator Beach and climb up to Chapora Fort ('Dil Chahta Hai' Fort).",
+        "Evening": "Experience the party scene at a club in Vagator."
+      },
+      "4": {
+        "Morning": "Travel to South Goa. En route, explore the historical sites of Old Goa (UNESCO World Heritage).",
+        "Afternoon": "Visit the Basilica of Bom Jesus and Se Cathedral.",
+        "Evening": "Check into a resort in South Goa (e.g., Colva, Benaulim)."
+      },
+      "5": {
+        "Morning": "Relax on the pristine and quiet Colva or Benaulim Beach.",
+        "Afternoon": "Visit the beautiful Palolem Beach, known for its crescent shape.",
+        "Evening": "Try a silent disco in Palolem or enjoy a quiet dinner."
+      },
+      "6": {
+        "Morning": "Visit the secluded Butterfly Beach (by boat) or Agonda Beach, a turtle nesting site.",
+        "Afternoon": "Enjoy a final Goan meal.",
+        "Evening": "Departure from Goa (GOI) airport."
+      }
+    }
+  },
+  "Himachal - Mountains & Valleys": {
+    "BestFor": [
+      "Nature",
+      "Adventure",
+      "Photography",
+      "Culture"
+    ],
+    "State": "Himachal Pradesh",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Manali. Check-in and acclimatize.",
+        "Afternoon": "Visit Hadimba Devi Temple, a unique wooden temple.",
+        "Evening": "Explore the cafes and market of Old Manali."
+      },
+      "2": {
+        "Morning": "Day trip to Solang Valley for adventure sports.",
+        "Afternoon": "Enjoy paragliding, zorbing, or take the ropeway for stunning views.",
+        "Evening": "Walk along the Manali Mall Road."
+      },
+      "3": {
+        "Morning": "Excursion to Rohtang Pass (subject to permits and weather).",
+        "Afternoon": "Enjoy the snow and spectacular mountain scenery. Alternatively, visit the Atal Tunnel and Sissu.",
+        "Evening": "Relax by the Beas River."
+      },
+      "4": {
+        "Morning": "Travel to Kasol in Parvati Valley (approx. 2-3 hours).",
+        "Afternoon": "Check-in and explore the riverside town.",
+        "Evening": "Enjoy Israeli cuisine at a local cafe."
+      },
+      "5": {
+        "Morning": "Trek to the serene village of Chalal.",
+        "Afternoon": "Visit Manikaran Sahib Gurudwara and its hot springs.",
+        "Evening": "Relax in Kasol or explore the village of Tosh for breathtaking views."
+      },
+      "6": {
+        "Morning": "Enjoy a final breakfast in the mountains.",
+        "Afternoon": "Travel to Bhuntar (KUU) airport or begin the bus journey back.",
+        "Evening": "Departure."
+      }
+    }
+  },
+  "Jammu & Kashmir - Paradise on Earth": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Culture",
+      "Food"
+    ],
+    "State": "Jammu & Kashmir",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Srinagar. Transfer to a houseboat on Dal Lake.",
+        "Afternoon": "Enjoy a relaxing Shikara ride on the lake.",
+        "Evening": "Explore the floating markets and watch the sunset over the lake."
+      },
+      "2": {
+        "Morning": "Visit the Mughal Gardens: Nishat Bagh, Shalimar Bagh, and Chashme Shahi.",
+        "Afternoon": "Explore Shankaracharya Temple for a panoramic view of Srinagar.",
+        "Evening": "Walk around the old city and try some local Kashmiri snacks."
+      },
+      "3": {
+        "Morning": "Day trip to Gulmarg, the 'Meadow of Flowers' (approx. 2 hours).",
+        "Afternoon": "Take the Gulmarg Gondola ride (Phase 1 & 2) for breathtaking Himalayan views.",
+        "Evening": "Return to Srinagar."
+      },
+      "4": {
+        "Morning": "Travel to Pahalgam, the 'Valley of Shepherds' (approx. 3 hours).",
+        "Afternoon": "Check-in and explore the town. Visit the main Pahalgam valley.",
+        "Evening": "Relax by the Lidder River."
+      },
+      "5": {
+        "Morning": "Hire a local vehicle to visit Aru Valley and Betaab Valley.",
+        "Afternoon": "Explore Chandanwari, the starting point for the Amarnath Yatra.",
+        "Evening": "Return to Pahalgam and enjoy a peaceful evening."
+      },
+      "6": {
+        "Morning": "Enjoy a final Kashmiri breakfast.",
+        "Afternoon": "Travel back to Srinagar (SXR) airport for departure.",
+        "Evening": "Departure."
+      }
+    }
+  },
+  "Karnataka - Heritage Trail": {
+    "BestFor": [
+      "History",
+      "Architecture",
+      "Photography",
+      "Culture"
+    ],
+    "State": "Karnataka",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive at Hubli (HBX) airport or Hospet (HPT) railway station. Travel to Hampi.",
+        "Afternoon": "Check-in. Explore the Virupaksha Temple and Hemakuta Hill for sunset.",
+        "Evening": "Walk through Hampi Bazaar."
+      },
+      "2": {
+        "Morning": "Explore the Royal Centre: Lotus Mahal, Elephant Stables, and Stepped Tank.",
+        "Afternoon": "Visit the iconic Vittala Temple Complex with its Stone Chariot and musical pillars.",
+        "Evening": "Enjoy a coracle ride on the Tungabhadra River."
+      },
+      "3": {
+        "Morning": "Travel to Badami (approx. 3-4 hours).",
+        "Afternoon": "Explore the Badami Cave Temples and the Agastya Lake.",
+        "Evening": "Climb up to the Badami Fort for views of the town."
+      },
+      "4": {
+        "Morning": "Day trip to Pattadakal, a UNESCO World Heritage site with a stunning collection of temples.",
+        "Afternoon": "Explore Aihole, known as the 'Cradle of Indian Architecture', with over 100 temples.",
+        "Evening": "Return to Badami."
+      },
+      "5": {
+        "Morning": "Revisit any favorite spot or shop for local handicrafts.",
+        "Afternoon": "Travel back to Hubli (HBX) for departure.",
+        "Evening": "Departure."
+      }
+    }
+  },
+  "Tamil Nadu - Temple & Coastal Tour": {
+    "BestFor": [
+      "Spiritual",
+      "History",
+      "Culture",
+      "Food",
+      "Photography"
+    ],
+    "State": "Tamil Nadu",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Madurai. Check-in and visit the Thirumalai Nayakkar Palace.",
+        "Afternoon": "Explore the magnificent Meenakshi Amman Temple.",
+        "Evening": "Witness the night ceremony at the temple."
+      },
+      "2": {
+        "Morning": "Travel to Rameswaram (approx. 3-4 hours).",
+        "Afternoon": "Visit Ramanathaswamy Temple and take a dip in the 22 holy wells (tirthas).",
+        "Evening": "Walk on the Pamban Bridge and visit APJ Abdul Kalam's memorial."
+      },
+      "3": {
+        "Morning": "Visit the ghost town of Dhanushkodi and see the 'Ram Setu' point.",
+        "Afternoon": "Travel to Kanyakumari (approx. 5-6 hours), the southernmost tip of India.",
+        "Evening": "Witness the spectacular sunset over the confluence of three seas."
+      },
+      "4": {
+        "Morning": "Wake up early to see the sunrise. Visit the Vivekananda Rock Memorial and Thiruvalluvar Statue.",
+        "Afternoon": "Travel to Thanjavur (Tanjore) (long journey, approx. 7 hours).",
+        "Evening": "Check-in and rest in Thanjavur."
+      },
+      "5": {
+        "Morning": "Visit the Brihadeeswarar Temple (Big Temple), a UNESCO World Heritage site.",
+        "Afternoon": "Explore the Thanjavur Maratha Palace, art gallery, and Saraswathi Mahal Library.",
+        "Evening": "Shop for Tanjore paintings and bronze statues."
+      },
+      "6": {
+        "Morning": "Travel to Tiruchirappalli (Trichy) (approx. 1.5 hours). Visit Sri Ranganathaswamy Temple.",
+        "Afternoon": "Explore Rockfort Temple.",
+        "Evening": "Departure from Trichy (TRZ) airport."
+      }
+    }
+  },
+  "Uttar Pradesh - Heritage Arc": {
+    "BestFor": [
+      "History",
+      "Spiritual",
+      "Culture",
+      "Food",
+      "Architecture"
+    ],
+    "State": "Uttar Pradesh",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Agra. Visit the magnificent Taj Mahal.",
+        "Afternoon": "Explore the massive Agra Fort.",
+        "Evening": "Visit Mehtab Bagh for a sunset view of the Taj across the river."
+      },
+      "2": {
+        "Morning": "Day trip to Fatehpur Sikri, the abandoned Mughal capital.",
+        "Afternoon": "Return to Agra. Explore the Tomb of Itimad-ud-Daulah (Baby Taj).",
+        "Evening": "Enjoy Mughlai cuisine for dinner."
+      },
+      "3": {
+        "Morning": "Travel to Lucknow (approx. 4-5 hours).",
+        "Afternoon": "Check-in and visit Bara Imambara and its labyrinth (Bhulbhulaiya).",
+        "Evening": "Embark on a culinary walk in the old city for Tunday Kebabs and other delicacies."
+      },
+      "4": {
+        "Morning": "Visit the British Residency and Chota Imambara.",
+        "Afternoon": "Explore Hazratganj for shopping. Try the famous 'basket chaat'.",
+        "Evening": "Take an overnight train or an early morning flight to Varanasi."
+      },
+      "5": {
+        "Morning": "Arrive in Varanasi. Take a boat ride on the Ganges to see the ghats.",
+        "Afternoon": "Explore the narrow lanes of the old city and visit Kashi Vishwanath Temple.",
+        "Evening": "Witness the mesmerizing Ganga Aarti ceremony at Dashashwamedh Ghat."
+      },
+      "6": {
+        "Morning": "Morning trip to Sarnath, where Buddha gave his first sermon.",
+        "Afternoon": "Explore the Dhamek Stupa and the Sarnath Museum.",
+        "Evening": "Departure from Varanasi (VNS) airport."
+      }
+    }
+  },
+  "West Bengal - City & Mangroves": {
+    "BestFor": [
+      "Culture",
+      "History",
+      "Nature",
+      "Food",
+      "Wildlife"
+    ],
+    "State": "West Bengal",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Kolkata. Visit the iconic Victoria Memorial.",
+        "Afternoon": "Explore St. Paul's Cathedral and walk through the Maidan.",
+        "Evening": "Explore the bustling New Market and have dinner on Park Street."
+      },
+      "2": {
+        "Morning": "Explore North Kolkata's heritage: Kumortuli (potters' colony) and a tram ride.",
+        "Afternoon": "Visit Jorasanko Thakur Bari (Tagore's ancestral home) and the Marble Palace.",
+        "Evening": "Enjoy Bengali sweets and street food."
+      },
+      "3": {
+        "Morning": "Travel from Kolkata to Godkhali (approx. 3-4 hours), the gateway to the Sundarbans.",
+        "Afternoon": "Board a boat and cruise to your jungle resort, passing through mangrove creeks.",
+        "Evening": "Enjoy a presentation on the Sundarbans and a local cultural performance."
+      },
+      "4": {
+        "Morning": "Full day boat safari through the Sundarbans National Park.",
+        "Afternoon": "Visit various watchtowers like Sajnekhali and Sudhanyakhali to spot wildlife like crocodiles, deer, and the elusive Royal Bengal Tiger.",
+        "Evening": "Night stay at the jungle resort."
+      },
+      "5": {
+        "Morning": "Visit a village to experience the local way of life.",
+        "Afternoon": "Start your journey back to Kolkata.",
+        "Evening": "Departure from Kolkata (CCU) airport."
+      }
+    }
+  },
+  "Sikkim - Himalayan Kingdom Tour": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Culture",
+      "Spiritual"
+    ],
+    "State": "Sikkim",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive at Bagdogra (IXB) airport / NJP station. Travel to Gangtok (approx. 4-5 hours).",
+        "Afternoon": "Check-in and relax.",
+        "Evening": "Stroll along the pedestrian-only MG Marg."
+      },
+      "2": {
+        "Morning": "Excursion to Tsomgo Lake (Changu Lake).",
+        "Afternoon": "Visit Baba Mandir. Optional trip to Nathula Pass (requires permit, closed Mon/Tues).",
+        "Evening": "Return to Gangtok. Try some local Sikkimese food."
+      },
+      "3": {
+        "Morning": "Gangtok local sightseeing: Rumtek Monastery, Namgyal Institute of Tibetology.",
+        "Afternoon": "Visit Do-Drul Chorten, Enchey Monastery, and a flower exhibition centre.",
+        "Evening": "Take the ropeway for city views."
+      },
+      "4": {
+        "Morning": "Travel from Gangtok to Pelling (approx. 4-5 hours).",
+        "Afternoon": "Check-in and marvel at the stunning views of Mt. Kanchenjunga.",
+        "Evening": "Visit the Pemayangtse Monastery."
+      },
+      "5": {
+        "Morning": "Pelling sightseeing: Kanchenjunga Falls, Khecheopalri Lake.",
+        "Afternoon": "Visit the Rabdentse Ruins and the Pelling Skywalk.",
+        "Evening": "Relax and enjoy the mountain tranquility."
+      },
+      "6": {
+        "Morning": "Enjoy a final Sikkimese breakfast.",
+        "Afternoon": "Travel back to Bagdogra (IXB) / NJP for departure (approx. 5-6 hours).",
+        "Evening": "Departure."
+      }
+    }
+  },
+  "Gujarat - White Desert & Heritage": {
+    "BestFor": [
+      "Culture",
+      "Photography",
+      "Nature",
+      "History"
+    ],
+    "State": "Gujarat",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Ahmedabad. Visit the Sabarmati Ashram.",
+        "Afternoon": "Explore the Calico Museum of Textiles and the Adalaj Stepwell.",
+        "Evening": "Take a heritage walk through the old city's Pols. Overnight train/bus to Bhuj."
+      },
+      "2": {
+        "Morning": "Arrive in Bhuj. Check-in and visit Prag Mahal and Aina Mahal.",
+        "Afternoon": "Get permit for the Rann of Kutch. Travel to a resort/tent city near Dhordo.",
+        "Evening": "Witness the spectacular sunset over the white salt desert."
+      },
+      "3": {
+        "Morning": "Experience the sunrise at the Great Rann of Kutch.",
+        "Afternoon": "Visit Kalo Dungar (Black Hill) for a panoramic view of the Rann.",
+        "Evening": "Enjoy a local Kutchi cultural program."
+      },
+      "4": {
+        "Morning": "Explore the Banni grasslands and visit handicraft villages like Nirona (Rogan art) and Hodka.",
+        "Afternoon": "Learn about the rich craft traditions of the region.",
+        "Evening": "Travel back to Bhuj."
+      },
+      "5": {
+        "Morning": "Day trip to the coastal town of Mandvi.",
+        "Afternoon": "Visit the Vijay Vilas Palace and the historic shipbuilding yard.",
+        "Evening": "Relax at Mandvi Beach before departing from Bhuj (BHJ) airport."
+      }
+    }
+  },
+  "Madhya Pradesh - Temples & Forts": {
+    "BestFor": [
+      "History",
+      "Architecture",
+      "Spiritual",
+      "Photography"
+    ],
+    "State": "Madhya Pradesh",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Khajuraho. Explore the Western Group of Temples (UNESCO World Heritage).",
+        "Afternoon": "Admire the intricate and famous sculptures.",
+        "Evening": "Attend the spectacular Light and Sound Show."
+      },
+      "2": {
+        "Morning": "Visit the Eastern and Southern Groups of Temples.",
+        "Afternoon": "Travel to Orchha (approx. 3-4 hours).",
+        "Evening": "Witness the sunset over the cenotaphs (Chhatris) by the Betwa River."
+      },
+      "3": {
+        "Morning": "Explore the Orchha Fort complex: Jahangir Mahal, Raja Mahal.",
+        "Afternoon": "Visit the Ram Raja Temple and the Chaturbhuj Temple.",
+        "Evening": "Relax in the tranquil riverside town."
+      },
+      "4": {
+        "Morning": "Travel to Gwalior (approx. 2-3 hours).",
+        "Afternoon": "Explore the massive Gwalior Fort, including Man Singh Palace and the Saas Bahu Temples.",
+        "Evening": "Attend the Sound and Light show at the Man Mandir Palace in the fort."
+      },
+      "5": {
+        "Morning": "Visit the opulent Jai Vilas Palace Museum.",
+        "Afternoon": "Explore the Tomb of Tansen and Ghaus Mohammed.",
+        "Evening": "Departure from Gwalior (GWL) airport."
+      }
+    }
+  },
+  "Maharashtra - Caves, Forts & City": {
+    "BestFor": [
+      "History",
+      "Architecture",
+      "Spiritual",
+      "Photography"
+    ],
+    "State": "Maharashtra",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Aurangabad. Check-in and relax.",
+        "Afternoon": "Visit the Daulatabad Fort, a formidable hill fortress.",
+        "Evening": "Explore Bibi Ka Maqbara, the 'Taj of the Deccan'."
+      },
+      "2": {
+        "Morning": "Full day excursion to the Ajanta Caves (UNESCO World Heritage site).",
+        "Afternoon": "Explore the ancient rock-cut Buddhist cave monuments and admire the beautiful paintings.",
+        "Evening": "Return to Aurangabad."
+      },
+      "3": {
+        "Morning": "Excursion to the Ellora Caves (UNESCO World Heritage site).",
+        "Afternoon": "Marvel at the incredible Kailasa Temple (Cave 16), the world's largest monolithic sculpture.",
+        "Evening": "Visit Grishneshwar Jyotirlinga Temple, located near Ellora."
+      },
+      "4": {
+        "Morning": "Fly from Aurangabad (IXU) to Mumbai (BOM).",
+        "Afternoon": "Check-in. Visit the Gateway of India and take a ferry ride in the harbour.",
+        "Evening": "Walk along Marine Drive, the 'Queen's Necklace'."
+      },
+      "5": {
+        "Morning": "Explore colonial Mumbai: Chhatrapati Shivaji Maharaj Terminus (CST), the High Court.",
+        "Afternoon": "Visit Dhobi Ghat and Haji Ali Dargah.",
+        "Evening": "Explore the bustling markets of Colaba Causeway before departure from Mumbai."
+      }
+    }
+  },
+  "Odisha - The Golden Triangle": {
+    "BestFor": [
+      "Spiritual",
+      "History",
+      "Beach",
+      "Nature",
+      "Architecture"
+    ],
+    "State": "Odisha",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Bhubaneswar, the 'Temple City'. Visit the Lingaraj Temple.",
+        "Afternoon": "Explore other temples like Mukteshwar and Rajarani Temple.",
+        "Evening": "Visit the Udayagiri and Khandagiri Caves."
+      },
+      "2": {
+        "Morning": "Travel to Puri (approx. 1.5 hours). En route, visit the Dhauli Shanti Stupa.",
+        "Afternoon": "Check-in and visit the Jagannath Temple (non-Hindus can view from outside).",
+        "Evening": "Relax at Puri Beach and explore the bustling beach market."
+      },
+      "3": {
+        "Morning": "Travel to Konark (approx. 1 hour). Visit the magnificent Sun Temple (UNESCO World Heritage).",
+        "Afternoon": "Explore the Chandrabhaga Beach.",
+        "Evening": "Return to Puri. Enjoy the sunset."
+      },
+      "4": {
+        "Morning": "Day trip to Chilika Lake at Satapada.",
+        "Afternoon": "Take a boat cruise to see the Irrawaddy dolphins and the sea mouth.",
+        "Evening": "Return to Puri."
+      },
+      "5": {
+        "Morning": "Visit the artists' village of Raghurajpur, famous for Pattachitra paintings.",
+        "Afternoon": "Enjoy a final Odia meal.",
+        "Evening": "Travel back to Bhubaneswar (BBI) for departure."
+      }
+    }
+  },
+  "Punjab - Culture & Faith": {
+    "BestFor": [
+      "Spiritual",
+      "History",
+      "Food",
+      "Culture"
+    ],
+    "State": "Punjab",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Amritsar. Check-in and visit the Golden Temple.",
+        "Afternoon": "Spend time absorbing the peaceful atmosphere and partake in the Langar (community meal).",
+        "Evening": "Revisit the Golden Temple to see it beautifully illuminated at night."
+      },
+      "2": {
+        "Morning": "Visit Jallianwala Bagh, a memorial of national importance.",
+        "Afternoon": "Travel to the Wagah Border to witness the energetic Beating Retreat ceremony.",
+        "Evening": "Enjoy a hearty Punjabi dinner at a traditional dhaba."
+      },
+      "3": {
+        "Morning": "Visit the Partition Museum.",
+        "Afternoon": "Go on a food tour to taste Amritsari Kulcha, Lassi, and other local delicacies.",
+        "Evening": "Travel to Chandigarh (approx. 4 hours)."
+      },
+      "4": {
+        "Morning": "Explore Chandigarh, the planned city by Le Corbusier. Visit the Capitol Complex.",
+        "Afternoon": "Visit the unique Rock Garden created by Nek Chand.",
+        "Evening": "Enjoy boating at Sukhna Lake and watch the sunset."
+      },
+      "5": {
+        "Morning": "Visit the Rose Garden and explore the Sector 17 market.",
+        "Afternoon": "Relax and enjoy the city's green spaces.",
+        "Evening": "Departure from Chandigarh (IXC) airport."
+      }
+    }
+  },
+  "Uttarakhand - Spiritual & Mountain Retreat": {
+    "BestFor": [
+      "Spiritual",
+      "Adventure",
+      "Nature",
+      "Photography"
+    ],
+    "State": "Uttarakhand",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Haridwar. Take a holy dip in the Ganges at Har Ki Pauri.",
+        "Afternoon": "Visit Mansa Devi Temple via cable car.",
+        "Evening": "Witness the grand Ganga Aarti ceremony at Har Ki Pauri."
+      },
+      "2": {
+        "Morning": "Travel to Rishikesh (approx. 1 hour).",
+        "Afternoon": "Cross the iconic Ram Jhula and Lakshman Jhula bridges.",
+        "Evening": "Attend the Ganga Aarti at Parmarth Niketan and explore local cafes."
+      },
+      "3": {
+        "Morning": "Experience thrilling white-water rafting on the Ganges.",
+        "Afternoon": "Visit the Beatles Ashram (Chaurasi Kutia) for a dose of history and art.",
+        "Evening": "Relax by the river."
+      },
+      "4": {
+        "Morning": "Travel to Mussoorie, the 'Queen of Hills' (approx. 2-3 hours).",
+        "Afternoon": "Check-in and walk along the Mall Road.",
+        "Evening": "Take the cable car to Gun Hill for sunset views."
+      },
+      "5": {
+        "Morning": "Visit the beautiful Kempty Falls.",
+        "Afternoon": "Explore the charming town of Landour, visit St. Paul's Church and Char Dukan.",
+        "Evening": "Enjoy views from Lal Tibba."
+      },
+      "6": {
+        "Morning": "Enjoy a final breakfast in Mussoorie.",
+        "Afternoon": "Travel to Dehradun (DED) airport for departure.",
+        "Evening": "Departure."
+      }
+    }
+  },
+  "Andhra Pradesh - Coast, Hills & Canyon": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "History",
+      "Beach",
+      "Adventure"
+    ],
+    "State": "Andhra Pradesh",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Visakhapatnam (Vizag). Visit the Submarine Museum (INS Kursura) on RK Beach.",
+        "Afternoon": "Explore Kailasagiri hill park for panoramic city views.",
+        "Evening": "Relax at Rushikonda Beach."
+      },
+      "2": {
+        "Morning": "Take the scenic train journey from Vizag to Araku Valley.",
+        "Afternoon": "Arrive in Araku, check-in and visit the Tribal Museum.",
+        "Evening": "Enjoy the pleasant climate and visit a coffee plantation."
+      },
+      "3": {
+        "Morning": "Explore the magnificent Borra Caves.",
+        "Afternoon": "Visit Galikonda Viewpoint and the Katiki Waterfalls.",
+        "Evening": "Travel back to Visakhapatnam by road."
+      },
+      "4": {
+        "Morning": "Take a flight from Vizag (VTZ) to Kadapa (CDP) or travel by overnight train.",
+        "Afternoon": "Travel from Kadapa to Gandikota (approx. 2-3 hours).",
+        "Evening": "Witness the sunset at the Gandikota canyon ('Grand Canyon of India'). Camp overnight."
+      },
+      "5": {
+        "Morning": "Explore the Gandikota Fort, Juma Masjid, and Ranganatha Swamy Temple.",
+        "Afternoon": "Visit the stunning Belum Caves, the second-largest cave system in India.",
+        "Evening": "Return to Gandikota or stay near Belum."
+      },
+      "6": {
+        "Morning": "Enjoy the morning view at the canyon.",
+        "Afternoon": "Travel to Kadapa (CDP) or Bengaluru (BLR) for departure.",
+        "Evening": "Departure."
+      }
+    }
+  },
+  "Telangana - Of Nawabs & Kakatiyas": {
+    "BestFor": [
+      "History",
+      "Food",
+      "Culture",
+      "Architecture"
+    ],
+    "State": "Telangana",
+    "Duration": 5.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Hyderabad. Explore the Charminar and Laad Bazaar.",
+        "Afternoon": "Visit the grand Chowmahalla Palace.",
+        "Evening": "Enjoy authentic Hyderabadi Biryani for dinner."
+      },
+      "2": {
+        "Morning": "Visit the majestic Golconda Fort.",
+        "Afternoon": "Explore the nearby Qutb Shahi Tombs.",
+        "Evening": "Attend the Sound and Light Show at Golconda Fort."
+      },
+      "3": {
+        "Morning": "Visit the Salar Jung Museum, which has one of the world's largest one-man collections.",
+        "Afternoon": "Relax at Hussain Sagar Lake and see the Buddha statue.",
+        "Evening": "Explore the modern side of Hyderabad in Banjara Hills or Jubilee Hills."
+      },
+      "4": {
+        "Morning": "Day trip to Warangal (approx. 3 hours).",
+        "Afternoon": "Visit the Warangal Fort, Thousand Pillar Temple, and the Swayambhu Temple.",
+        "Evening": "Return to Hyderabad."
+      },
+      "5": {
+        "Morning": "Visit Ramoji Film City (requires a full day).",
+        "Afternoon": "Explore the film sets and attractions.",
+        "Evening": "Departure from Hyderabad (HYD) airport."
+      }
+    }
+  },
+  "Meghalaya & Assam - Clouds & Culture": {
+    "BestFor": [
+      "Nature",
+      "Photography",
+      "Adventure",
+      "Culture"
+    ],
+    "State": "Assam & Meghalaya",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Arrive in Guwahati, Assam. Visit the Kamakhya Temple.",
+        "Afternoon": "Take a cruise on the Brahmaputra River.",
+        "Evening": "Travel to Shillong, Meghalaya (approx. 3 hours). Check-in."
+      },
+      "2": {
+        "Morning": "Explore Shillong: Ward's Lake and Don Bosco Museum.",
+        "Afternoon": "Visit Shillong Peak for panoramic views and Elephant Falls.",
+        "Evening": "Explore the cafes and nightlife in Police Bazaar."
+      },
+      "3": {
+        "Morning": "Travel to Cherrapunji (Sohra).",
+        "Afternoon": "Visit Nohkalikai Falls, Seven Sisters Falls, and Mawsmai Cave.",
+        "Evening": "Check into a resort in Cherrapunji and enjoy the misty weather."
+      },
+      "4": {
+        "Morning": "Trek to the famous Double Decker Living Root Bridge in Nongriat village.",
+        "Afternoon": "Swim in the natural pools. The trek is strenuous and takes a full day.",
+        "Evening": "Return to your resort and relax."
+      },
+      "5": {
+        "Morning": "Travel to Mawlynnong, 'Asia's Cleanest Village'.",
+        "Afternoon": "Walk on the living root bridge in the nearby village of Riwai. Climb a bamboo watchtower for views of Bangladesh.",
+        "Evening": "Drive to Dawki and enjoy the view of the clear Umngot River."
+      },
+      "6": {
+        "Morning": "Enjoy an early morning boat ride on the Umngot river.",
+        "Afternoon": "Travel back to Guwahati (approx. 5-6 hours).",
+        "Evening": "Departure from Guwahati (GAU) airport."
+      }
+    }
+  },
+  "Ladakh - High Altitude Adventure": {
+    "BestFor": [
+      "Adventure",
+      "Nature",
+      "Photography",
+      "Culture"
+    ],
+    "State": "Ladakh",
+    "Duration": 6.0,
+    "Iternary": {
+      "1": {
+        "Morning": "Fly into Leh. Complete rest for acclimatization.",
+        "Afternoon": "Stay hydrated and take it easy. Do not exert yourself.",
+        "Evening": "Take a short walk to Leh Market."
+      },
+      "2": {
+        "Morning": "Leh local sightseeing: Visit Leh Palace, Shanti Stupa for panoramic views.",
+        "Afternoon": "Visit Hall of Fame museum and Spituk Monastery.",
+        "Evening": "Relax and further acclimatize."
+      },
+      "3": {
+        "Morning": "Travel to Nubra Valley via Khardung La, one of the world's highest motorable passes.",
+        "Afternoon": "Visit the Diskit Monastery and see the Maitreya Buddha statue.",
+        "Evening": "Enjoy a double-humped Bactrian camel safari in the Hunder sand dunes."
+      },
+      "4": {
+        "Morning": "Explore Nubra. Optional visit to Turtuk village.",
+        "Afternoon": "Travel back to Leh.",
+        "Evening": "Rest in Leh."
+      },
+      "5": {
+        "Morning": "Day trip to Pangong Tso (lake). The journey is long and scenic.",
+        "Afternoon": "Marvel at the stunning blue brackish lake. See the '3 Idiots' movie spot.",
+        "Evening": "Travel back to Leh. (Note: an overnight stay at Pangong is better but requires an extra day)."
+      },
+      "6": {
+        "Morning": "Visit the monasteries of the 'Indus Valley Circuit': Hemis, Thiksey, and Shey.",
+        "Afternoon": "Shop for souvenirs in Leh market.",
+        "Evening": "Departure from Leh (IXL) airport."
+      }
+    }
+  }
+}
