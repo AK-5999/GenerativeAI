@@ -1,6 +1,6 @@
 # 🚀 Ultimate RAG Pipeline Guide: From Concepts to Code
 
-Yeh document ek complete guide hai RAG (Retrieval-Augmented Generation) pipeline ko LangChain ke saath samajhne aur implement karne ke liye.
+
 
 ---
 
