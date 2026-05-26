@@ -1,5 +1,193 @@
+# 🚀 Ultimate RAG Pipeline Guide: From Concepts to Code
 
-# 1. RAG Component Deep-Dive & Implementation
+Yeh document ek complete guide hai RAG (Retrieval-Augmented Generation) pipeline ko LangChain ke saath samajhne aur implement karne ke liye.
+
+---
+
+## 1. RAG Core Pipeline (The 6 Pillars)
+
+RAG pipeline ka standard flow: **Load → Split → Embed → Store → Retrieve → Generate**.
+
+### Step 1: Ingestion (Data Extraction)
+**Theory:** Raw data (PDF, Web, Image) ko clean text mein badalna.
+**Options:**
+- **Standard PDF:** `PyPDFLoader` (Simple text).
+- **Complex Layout/OCR:** `UnstructuredPDFLoader` (Tables aur scanned docs).
+- **Web Pages:** `WebBaseLoader` ya `FireCrawl` (JavaScript heavy sites).
+
+```python
+from langchain_community.document_loaders import PyPDFLoader, UnstructuredPDFLoader
+
+# Implementation
+loader = PyPDFLoader("manual.pdf")
+raw_docs = loader.load()
+
+```
+
+### Step 2: Chunking (Text Splitting)
+
+**Theory:** Bade docs ko chote pieces mein todna taaki LLM ki context window mein fit ho sake.
+**Options:**
+
+* **Recursive Character:** Default aur best. Paragraphs aur sentences ko maintain karta hai.
+* **Semantic Chunking:** Meaning change hone par break karta hai.
+* **Token Splitting:** Exact word count ke hisab se.
+
+```python
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+# Implementation
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size=1000, 
+    chunk_overlap=150,
+    separators=["\n\n", "\n", " ", ""]
+)
+chunks = splitter.split_documents(raw_docs)
+
+```
+
+### Step 3: Embeddings (Vectorization)
+
+**Theory:** Text ko mathematical numbers (Vectors) mein badalna jo meaning capture karte hain.
+**Options:**
+
+* **OpenAI:** `text-embedding-3-small` (Top Accuracy).
+* **HuggingFace:** `bge-large-en` (Local & Privacy-friendly).
+
+```python
+from langchain_openai import OpenAIEmbeddings
+
+# Implementation
+embeddings = OpenAIEmbeddings()
+
+```
+
+### Step 4: Vector Storage & Indexing
+
+**Theory:** Vectors ko store karna aur search fast banane ke liye **K-Means Clustering** ya **IVF Indexing** ka use karna.
+**Options:**
+
+* **Local:** `Chroma`, `FAISS`.
+* **Cloud:** `Pinecone`, `Weaviate`.
+
+```python
+from langchain_community.vectorstores import Chroma
+
+# Implementation (K-Means backend indexing)
+vectorstore = Chroma.from_documents(
+    documents=chunks, 
+    embedding=embeddings,
+    persist_directory="./db_index"
+)
+
+```
+
+### Step 5: Advanced Retrieval Strategies
+
+**Theory:** Sahi context dhoondhne ke alag-alag tarike.
+
+| Strategy | Logic | Use Case |
+| --- | --- | --- |
+| **Similarity** | Semantic match | General Chat |
+| **Hybrid Search** | Vector + Keyword | Exact codes (e.g. "IPC-420") |
+| **MMR** | Diversity | Repetitive answers se bachne ke liye |
+| **Re-ranking** | Cross-Encoder Check | High Accuracy requirements |
+
+```python
+# Implementation: MMR & Re-ranking
+from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.document_compressors import FlashrankRerank
+
+base_retriever = vectorstore.as_retriever(search_type="mmr")
+reranker = FlashrankRerank()
+compression_retriever = ContextualCompressionRetriever(
+    base_compressor=reranker, base_retriever=base_retriever
+)
+
+```
+
+### Step 6: Generation (LLM & LCEL)
+
+**Theory:** Context aur Query ko milakar final answer banana.
+
+```python
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.runnables import RunnablePassthrough
+from langchain_openai import ChatOpenAI
+
+# Chain Setup
+prompt = ChatPromptTemplate.from_template("Answer based on context: {context}\n\nQuestion: {question}")
+llm = ChatOpenAI(model="gpt-4o")
+
+rag_chain = (
+    {"context": compression_retriever, "question": RunnablePassthrough()}
+    | prompt
+    | llm
+)
+
+```
+
+---
+
+## 2. Handling Diverse Input Formats
+
+| Data Type | Backend Process | Best Tool |
+| --- | --- | --- |
+| **Tables** | HTML/Markdown mein badalna | `Azure Doc Intelligence` |
+| **Photos/Logos** | Vision Model se text captioning | `GPT-4o Vision` |
+| **Videos/Audio** | Speech-to-Text Transcription | `OpenAI Whisper` |
+| **Links** | Boilerplate (Ads/Menu) cleaning | `FireCrawl` |
+
+---
+
+## 3. Real-World Challenges & Solutions
+
+### Q1: "Semantic Word" missing ho toh kya hoga?
+
+**Challenge:** Agar user sirf code search kare (e.g. "XYZ-123") jisme koi semantic meaning nahi hai, toh K-Means clustering galat cluster mein bhej degi.
+**Solution:** **Hybrid Search** use karein jo Keyword (BM25) aur Vector search ko combine karta hai.
+
+### Q2: Data Security kaise handle karein?
+
+**Challenge:** Har employee ko har document ka access nahi hona chahiye.
+**Solution:** **Metadata Filtering** use karein. Ingestion ke waqt role-based tags lagayein.
+
+### Q3: Tables/Layout kharab hona?
+
+**Challenge:** Normal parsers columns ko mix kar dete hain.
+**Solution:** Layout-aware parsers use karein jo table structure ko HTML format mein save karein.
+
+---
+
+## 4. Query Routing (The Traffic Cop)
+
+Bade systems mein, routing decide karti hai ki sawal kis database mein jayega.
+
+```python
+from typing import Literal
+from langchain_core.pydantic_v1 import BaseModel, Field
+
+class RouteQuery(BaseModel):
+    destination: Literal["technical_db", "billing_db"] = Field(..., description="Route to DB")
+
+router = llm.with_structured_output(RouteQuery)
+
+```
+
+---
+
+## 5. Summary Cheat Sheet
+
+* **Fastest Search:** Bi-Encoders + FAISS.
+* **Accurate Answer:** Cross-Encoders (Re-ranking).
+* **Big Dataset:** K-Means Clustering for indexing.
+* **Dirty Data:** Unstructured/Vision Parsers.
+
+
+
+---
+
+## 6. RAG Component Deep-Dive & Implementation
 
 ## A. Ingestion Methods (Data Extraction)
 Real-world data formats ke liye alag-alag loaders use hote hain.
@@ -23,7 +211,7 @@ docs = loader.load()
 loader_ocr = UnstructuredPDFLoader("scanned_data.pdf", mode="elements")
 docs_complex = loader_ocr.load()
 
-
+```
 
 ---
 
@@ -87,61 +275,4 @@ mq_retriever = MultiQueryRetriever.from_llm(
 ```
 
 ---
-
-# 2. Handling Complex Inputs (Multimedia)
-
-* **Tables:** Ingestion ke waqt `unstructured` use karke table ko HTML/Markdown mein badlein taaki structure save rahe.
-* **Photos/Logos:** `GPT-4o` (Vision) se image ka text description nikaal kar use vector store mein daalein.
-* **Videos/Audio:** `OpenAI Whisper` se transcription nikaalein aur timestamps ke saath chunking karein.
-
----
-
-# 3. Real-World Challenges Summary
-
-1. **Semantic Gap:** User ne query mein code dala (e.g., "IPC 302") par context nahi diya.
-* *Solution:* **Hybrid Search** ya **Query Expansion**.
-
-
-2. **K-Means Bottleneck:** Retrieval ke waqt data clusters mein hona fast hai par semantic matching weak ho sakti hai.
-* *Solution:* Retrieval ke baad **Cross-Encoder Re-ranking** karein.
-
-
-3. **Data Ingestion Mess:** Scanned tables ka data row/column mix ho jana.
-* *Solution:* Vision-based OCR engines (Azure/AWS/Unstructured).
-
-
-
----
-
-# 4. Final Advanced RAG Pipeline (LCEL)
-
-```python
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.runnables import RunnablePassthrough
-from langchain_openai import ChatOpenAI
-
-# Components setup
-llm = ChatOpenAI(model="gpt-4o")
-retriever = vectorstore.as_retriever(search_type="mmr") 
-
-# Prompt template
-template = """Answer the question based ONLY on the context. 
-If not in context, say 'I don't know'.
-Context: {context}
-Question: {question}"""
-
-prompt = ChatPromptTemplate.from_template(template)
-
-# Chain execution
-chain = (
-    {"context": retriever, "question": RunnablePassthrough()}
-    | prompt
-    | llm
-)
-
-# Usage
-result = chain.invoke("Explain Section 420 codes?")
-print(result.content)
-
-```
 
