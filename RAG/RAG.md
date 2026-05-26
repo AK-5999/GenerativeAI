@@ -1,169 +1,147 @@
 
-```markdown
-# 1. Introduction to RAG (Retrieval-Augmented Generation)
+# 1. RAG Component Deep-Dive & Implementation
 
-**Theory:** RAG ek aesa framework hai jo LLM (jaise GPT-4) ko external data se connect karta hai. LLM ki knowledge limited hoti hai, RAG use "Open Book Exam" dene ki taqat deta hai.
+## A. Ingestion Methods (Data Extraction)
+Real-world data formats ke liye alag-alag loaders use hote hain.
 
-**Layman Term:** Maan lijiye AI ek expert vakil hai, lekin use aapke personal case ki details nahi pata. RAG use case ki files la kar deta hai taaki wo sahi jawab de sake.
+| Method | Type | Tool/Class | Kab Use Karein? |
+| :--- | :--- | :--- | :--- |
+| **Standard PDF** | Text-based | `PyPDFLoader` | Simple structured PDFs ke liye. |
+| **OCR/Layout** | Image/Complex | `UnstructuredPDFLoader` | Scanned docs ya multi-column layout ke liye. |
+| **Web Scraping** | Live URLs | `FireCrawlLoader` | Clean web content extraction ke liye. |
+
+**Practical Code:**
+```python
+from langchain_community.document_loaders import PyPDFLoader, UnstructuredPDFLoader
+
+# 1. Standard PDF
+loader = PyPDFLoader("data.pdf")
+docs = loader.load()
+
+# 2. Complex/Scanned PDF (OCR)
+# requires: pip install unstructured
+loader_ocr = UnstructuredPDFLoader("scanned_data.pdf", mode="elements")
+docs_complex = loader_ocr.load()
+
+
 
 ---
 
-# 2. Crucial Components & Practical Implementation
+## B. Chunking Methods (Text Splitting)
 
-## Step 1: Ingestion (Data Extraction)
-**Options:** - `PyPDFLoader`: Simple text-based PDFs.
-- `Unstructured`: Complex layout, tables, aur images ke liye.
-- `WebBaseLoader`: Websites se data nikalne ke liye.
+Data ko todne ka tarika retrieval accuracy decide karta hai.
 
-```python
-from langchain_community.document_loaders import PyPDFLoader, WebBaseLoader
+| Method | Logic | Tool/Class |
+| --- | --- | --- |
+| **Recursive** | Characters & Separators (`\n\n`, `\n`) | `RecursiveCharacterTextSplitter` |
+| **Token-based** | LLM Token count (tiktoken) | `TokenTextSplitter` |
+| **Semantic** | Meaning/Embedding change | `SemanticChunker` |
 
-# PDF Loading
-pdf_loader = PyPDFLoader("manual.pdf")
-docs = pdf_loader.load()
-
-# Web Loading
-web_loader = WebBaseLoader("[https://example.com](https://example.com)")
-web_docs = web_loader.load()
-
-```
-
-## Step 2: Chunking (Text Splitting)
-
-**Options:**
-
-* `RecursiveCharacterTextSplitter`: Sabse best, paragraph/sentence structure maintain karta hai.
-* `SemanticChunking`: Meaning ke basis par tukde karta hai.
+**Practical Code:**
 
 ```python
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_experimental.text_splitter import SemanticChunker
+from langchain_openai.embeddings import OpenAIEmbeddings
 
-splitter = RecursiveCharacterTextSplitter(
-    chunk_size=1000, 
-    chunk_overlap=100,
-    separators=["\n\n", "\n", " ", ""]
-)
-chunks = splitter.split_documents(docs)
+# 1. Standard (Recursive)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+chunks = text_splitter.split_documents(docs)
 
-```
-
-## Step 3: Embeddings (Text to Vectors)
-
-**Options:**
-
-* `OpenAIEmbeddings`: Paid, high accuracy.
-* `HuggingFaceEmbeddings`: Free, local privacy ke liye.
-
-```python
-from langchain_openai import OpenAIEmbeddings
-
-embedding_model = OpenAIEmbeddings(model="text-embedding-3-small")
-
-```
-
-## Step 4: Vector Storage (Filing Cabinet)
-
-**Options:**
-
-* `Chroma` / `FAISS`: Local storage (K-Means clustering backend mein use karte hain).
-* `Pinecone`: Cloud-based scalable storage.
-
-```python
-from langchain_community.vectorstores import Chroma
-
-vectorstore = Chroma.from_documents(
-    documents=chunks, 
-    embedding=embedding_model,
-    persist_directory="./my_db"
-)
+# 2. Semantic (Advanced)
+semantic_splitter = SemanticChunker(OpenAIEmbeddings())
+semantic_chunks = semantic_splitter.create_documents([docs[0].page_content])
 
 ```
 
 ---
 
-# 3. Advanced Retrieval Techniques
+## C. Retrieval Methods (Search Strategies)
 
-## Query Routing
+Sirf simple search hamesha kaam nahi aati, isliye different retrieval types use hote hain.
 
-**Theory:** Jab multiple databases hon, toh router decide karta hai query kahan jayegi.
-
-```python
-# LLM based Router (Pydantic)
-from langchain_core.pydantic_v1 import BaseModel, Field
-from typing import Literal
-
-class RouteQuery(BaseModel):
-    datasource: Literal["finance_db", "hr_db"] = Field(..., description="Route query to specific DB")
-
-router_llm = llm.with_structured_output(RouteQuery)
-
-```
-
-## Re-ranking (Cross-Encoders)
-
-**Theory:** Bi-encoders (fast search) top results dete hain, Cross-encoders unhe refine karke best rank karte hain.
-
-```python
-from langchain.retrievers import ContextualCompressionRetriever
-from langchain.retrievers.document_compressors import FlashrankRerank
-
-reranker = FlashrankRerank()
-compression_retriever = ContextualCompressionRetriever(
-    base_compressor=reranker, 
-    base_retriever=vectorstore.as_retriever()
-)
-
-```
-
----
-
-# 4. Handling Different Data Types
-
-| Data Type | Processing Method | Tools |
+| Method | Backend Logic | Kab Use Karein? |
 | --- | --- | --- |
-| **Tables** | Markdown/HTML conversion | `Unstructured`, `Azure Doc Intelligence` |
-| **Photos/Logos** | Vision Captioning (GPT-4o) | `langchain_openai.ChatOpenAI` |
-| **Videos** | Audio Transcription (Whisper) | `openai-whisper`, `FFmpeg` |
-| **Web Links** | HTML Scraping & Cleaning | `FireCrawl`, `BeautifulSoup` |
+| **Similarity Search** | Distance between vectors | Default/General use-case. |
+| **Hybrid Search** | Vector + Keyword (BM25) | Jab exact numeric codes (e.g., ERR_404) dhoondne hon. |
+| **MMR Search** | Diversity + Relevance | Jab repetitive results se bachna ho. |
+| **Multi-Query** | User query ke variations bana kar | Jab user ki query clear na ho. |
+
+**Practical Code:**
+
+```python
+# 1. Maximum Marginal Relevance (MMR)
+retriever_mmr = vectorstore.as_retriever(search_type="mmr", search_kwargs={'k': 5})
+
+# 2. Metadata Filtering (Direct Hit)
+retriever_filter = vectorstore.as_retriever(
+    search_kwargs={'filter': {'category': 'legal'}}
+)
+
+# 3. Multi-Query Retrieval
+from langchain.retrievers.multi_query import MultiQueryRetriever
+mq_retriever = MultiQueryRetriever.from_llm(
+    retriever=vectorstore.as_retriever(), llm=llm
+)
+
+```
 
 ---
 
-# 5. Real-World Challenges (Production Issues)
+# 2. Handling Complex Inputs (Multimedia)
 
-1. **Messy Layouts:** Tables normal parser se read nahi ho pati (Solution: Layout-aware parsing).
-2. **Retrieval Failure:** Jab user numeric codes (e.g. "ERR_404") search kare bina semantic words ke.
-* **Solution:** **Hybrid Search** (Keyword + Vector).
-
-
-3. **Stale Data:** Database update nahi hota (Solution: Webhooks & Automated ETL).
-4. **Privacy:** Secret data leak hona (Solution: Metadata filtering by user role).
+* **Tables:** Ingestion ke waqt `unstructured` use karke table ko HTML/Markdown mein badlein taaki structure save rahe.
+* **Photos/Logos:** `GPT-4o` (Vision) se image ka text description nikaal kar use vector store mein daalein.
+* **Videos/Audio:** `OpenAI Whisper` se transcription nikaalein aur timestamps ke saath chunking karein.
 
 ---
 
-# 6. Complete Pipeline Construction (LCEL)
+# 3. Real-World Challenges Summary
+
+1. **Semantic Gap:** User ne query mein code dala (e.g., "IPC 302") par context nahi diya.
+* *Solution:* **Hybrid Search** ya **Query Expansion**.
+
+
+2. **K-Means Bottleneck:** Retrieval ke waqt data clusters mein hona fast hai par semantic matching weak ho sakti hai.
+* *Solution:* Retrieval ke baad **Cross-Encoder Re-ranking** karein.
+
+
+3. **Data Ingestion Mess:** Scanned tables ka data row/column mix ho jana.
+* *Solution:* Vision-based OCR engines (Azure/AWS/Unstructured).
+
+
+
+---
+
+# 4. Final Advanced RAG Pipeline (LCEL)
 
 ```python
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_openai import ChatOpenAI
 
-# 1. Prompt
-template = "Answer based on context: {context}\nQuestion: {question}"
+# Components setup
+llm = ChatOpenAI(model="gpt-4o")
+retriever = vectorstore.as_retriever(search_type="mmr") 
+
+# Prompt template
+template = """Answer the question based ONLY on the context. 
+If not in context, say 'I don't know'.
+Context: {context}
+Question: {question}"""
+
 prompt = ChatPromptTemplate.from_template(template)
 
-# 2. Model
-llm = ChatOpenAI(model="gpt-4o")
-
-# 3. Chain
-rag_chain = (
-    {"context": vectorstore.as_retriever(), "question": RunnablePassthrough()}
+# Chain execution
+chain = (
+    {"context": retriever, "question": RunnablePassthrough()}
     | prompt
     | llm
 )
 
-# 4. Execution
-response = rag_chain.invoke("What are the key findings?")
-print(response.content)
-
+# Usage
+result = chain.invoke("Explain Section 420 codes?")
+print(result.content)
 
 ```
+
