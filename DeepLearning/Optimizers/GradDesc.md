@@ -186,3 +186,169 @@ To overcome these five limitations, advanced optimization algorithms introduce s
 5. **Adam** (the most widely used optimizer in modern Deep Learning)
 
 *Note: To understand how these advanced optimizers function, the next foundational concept to learn is **Exponentially Weighted Moving Averages (EWMA)**, which dictates how past gradients influence current updates [[21:57](http://www.youtube.com/watch?v=iCTTnQJn50E&t=1317)].*
+
+---
+
+---
+
+# Exponentially Weighted Moving Average (EWMA) in Deep Learning
+Resource: https://youtu.be/jAqVuYJ8TP8?si=EHmmHVOiq0wmqCOT
+
+## 1. What is Exponentially Weighted Moving Average (EWMA)?
+
+Exponentially Weighted Moving Average (EWMA or EWA) is a statistical technique used primarily to identify trends and patterns in time-series data (e.g., daily temperatures, stock prices) by smoothing out short-term fluctuations [[01:45](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=105)].
+
+### Two Core Principles of EWMA:
+
+1. **Recency Weighting:** More recent data points are given significantly higher weight/importance than older data points [[03:23](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=203)].
+2. **Exponential Decay:** The impact or weight of any given data point decreases exponentially as time passes [[04:16](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=256)].
+
+### Common Applications:
+
+* Time-series and Financial Forecasting [[02:33](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=153)]
+* Digital Signal Processing [[02:43](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=163)]
+* **Deep Learning Optimizers:** Vital for algorithms like Momentum, RMSprop, and Adam to smooth out parameter updates [[02:53](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=173)].
+
+---
+
+## 2. The Mathematical Formula
+
+The EWMA at any given time step $t$ is calculated recursively using the following equation [[05:13](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=313)]:
+
+$$V_t = \beta V_{t-1} + (1 - \beta) \theta_t$$
+
+Where:
+
+* **$V_t$**: The moving average calculated at the current time step $t$ [[05:28](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=328)].
+* **$V_{t-1}$**: The moving average from the *previous* time step $t-1$ [[05:38](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=338)].
+* **$\theta_t$**: The actual data value observed at the current time step $t$ [[05:50](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=350)].
+* **$\beta$ (Beta)**: A constant weighting parameter bounded between $0$ and $1$ ($0 \le \beta < 1$) [[06:00](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=360)].
+
+*Note on Initialization ($V_0$): In practice, $V_0$ is typically initialized to $0$ or set equal to the first data point $\theta_1$ [[06:39](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=399)].*
+
+---
+
+## 3. Understanding the Impact of Beta ($\beta$)
+
+The value assigned to $\beta$ dictates how much memory the moving average retains.
+
+An intuitive rule of thumb is that the EWMA roughly calculates the average of the last **$\frac{1}{1 - \beta}$** days/steps of data [[08:45](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=525)].
+
+* **High Beta ($\beta = 0.9$):**
+* $\frac{1}{1 - 0.9} = 10$ days. The moving average represents the average over the past 10 days [[09:17](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=557)].
+* **Behavior:** It puts a lot of weight on past trends. The resulting curve is **very smooth** and slower to adapt to sudden current changes [[11:11](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=671)].
+
+
+* **Low Beta ($\beta = 0.5$):**
+* $\frac{1}{1 - 0.5} = 2$ days. The moving average represents only the past 2 days [[09:47](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=587)].
+* **Behavior:** It puts much more weight on the current data point ($\theta_t$). The curve becomes **highly volatile, erratic, and noisy** [[11:53](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=713)].
+
+
+
+### Deep Learning Sweet Spot:
+
+In deep learning optimization frameworks, **$\beta = 0.9$** is widely accepted as the standard default sweet spot [[12:48](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=768)].
+
+---
+
+## 4. Mathematical Proof of Recency Weighting
+
+To see why older data points matter less, we can expand the recursive equation step-by-step for $V_4$ [[14:45](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=885)]:
+
+$$V_4 = (1-\beta)\theta_4 + \beta(1-\beta)\theta_3 + \beta^2(1-\beta)\theta_2 + \beta^3(1-\beta)\theta_1 + \beta^4V_0$$
+
+Because $\beta$ is a fraction less than 1 (e.g., $0.9$), raising it to higher powers ($\beta^2, \beta^3, \beta^4$) results in smaller and smaller coefficients [[15:53](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=953)]. Consequently, the most recent data point ($\theta_4$) is multiplied by the largest multiplier, while the oldest data point ($\theta_1$) is multiplied by a heavily decayed multiplier [[16:17](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=977)].
+
+---
+
+## 5. Python Implementation (Pandas)
+
+In Python, the Pandas library provides a built-in method called `.ewm()` to calculate this automatically on a DataFrame Series [[17:20](https://www.youtube.com/watch?v=jAqVuYJ8TP8&t=1040)]:
+
+```python
+import pandas as pd
+
+# 'df' contains a 'temperature' time-series column
+# Note: Pandas uses 'alpha' parameter where alpha = 1 - beta
+beta = 0.9
+alpha = 1 - beta
+
+df['EWMA'] = df['temperature'].ewm(alpha=alpha, adjust=False).mean()
+
+```
+
+---
+
+# Optimizers in Deep Learning: SGD with Momentum
+
+Resources: https://youtu.be/vVS4csXRlcQ?si=uKexxK9AgxxFX_gE
+
+## 1. The Core Problem: Oscillation (Zig-Zagging)
+
+When training a neural network using standard Stochastic Gradient Descent (SGD) or Mini-Batch Gradient Descent, the loss landscape often resembles a long, narrow ravine or valley rather than a perfect bowl.
+
+* The slopes along the vertical axis (the sides of the ravine) are very steep.
+* The slope along the horizontal axis (the path leading down to the minimum) is very gentle.
+
+Because standard SGD only cares about the gradient at the current exact step, it gets trapped in violent **zig-zag oscillations**. It bounces back and forth rapidly between the steep walls while making agonizingly slow progress along the flat floor toward the global minimum.
+
+If you try to speed it up by increasing the learning rate ($\alpha$), the vertical oscillations become so massive that the model completely destabilizes and blows up.
+
+---
+
+## 2. The Solution: What is Momentum?
+
+**SGD with Momentum** solves this by mimicking physics. Imagine a heavy bowling ball rolling down a bumpy hill. Because of its mass and momentum, it doesn't instantly change its entire direction just because it hits a small side bump; its accumulated downward history carries it straight through.
+
+In deep learning, Momentum forces the optimizer to **remember the direction of past updates** and use them to smooth out the current update.
+
+* **In the vertical direction (oscillations):** The gradients keep changing signs (positive, then negative, then positive). When you average them over time, they cancel each other out, drastically reducing the bouncing.
+* **In the horizontal direction (towards the minimum):** The gradients always point in the exact same forward direction. When you average them, they reinforce each other, causing the optimizer to accelerate forward.
+
+---
+
+## 3. The Mathematical Formula
+
+Momentum replaces the standard gradient in the update rule with an **Exponentially Weighted Moving Average (EWMA)** of all past gradients.
+
+### Step 1: Compute the Velocity Vector ($V_t$)
+
+$$V_t = \beta V_{t-1} + (1 - \beta) \nabla W_t$$
+
+### Step 2: Update the Weights
+
+$$W_{\text{new}} = W_{\text{old}} - \alpha V_t$$
+
+Where:
+
+* **$\nabla W_t$**: The gradient of the loss function with respect to the weights at the current time step $t$.
+* **$V_t$**: The accumulated "velocity" (the smoothed gradient direction) used to actually update the weights.
+* **$\alpha$**: The learning rate.
+* **$\beta$ (Momentum Coefficient)**: A hyperparameter between $0$ and $1$ that controls how much "memory" of past velocity to retain.
+
+> **Standard Value:** Just like with EWMA, the industry standard sweet-spot value for **$\beta$ is 0.9**. This means it effectively averages the directions of the last $\frac{1}{1 - 0.9} = 10$ gradient updates.
+
+---
+
+## 4. Advantages of SGD with Momentum
+
+* **Dampens Oscillations:** It smooths out the chaotic bouncing in steep, irrelevant dimensions.
+* **Faster Convergence:** By accelerating along the correct directional path, it reaches the optimal minimum in far fewer steps/epochs than standard SGD.
+* **Escapes Local Minima & Saddles:** Because the optimizer accumulates momentum running down a slope, the built-in "velocity" gives it the physical push needed to roll right over flat saddle points or shallow local valleys where standard gradient descent would stall out out.
+* Momentum helps to reduce the noise.
+* Exponential Weighted Average is used to smoothen the curve.
+
+## 5. Disadvantage of SGD with momentum
+* Extra hyperparameter is added.
+* Due to momentum, the convergence becomes after becoming very close to global minima, as it requires to cancel the past avergae momentum.
+
+---
+
+## 6. Summary of the Evolution So Far
+
+1. **Standard SGD:** Updates purely based on *current* gradient. High noise, violent zig-zagging in ravines, easily stuck.
+2. **EWMA (Math foundation):** A formula that averages past historical data while exponentially decaying the oldest entries.
+3. **SGD with Momentum:** Applies EWMA directly to the gradients. Cancels out orthogonal noise, compounds directional steps, and behaves like a ball rolling down a slope.
+
+---
+
