@@ -146,105 +146,8 @@ Therefore activation functions must be:
 
 ---
 
-# 5.1 Binary Step Function
 
-## Equation
-
-f(x)=\begin{cases}1 & x\geq0\0 & x<0\end{cases}
-
-## Output Range
-
-[
-[0,1]
-]
-
-## Derivative Range
-
-Derivative is:
-
-[
-0
-]
-
-Undefined at (x=0)
-
----
-
-## Graph Behavior
-
-* Outputs only 0 or 1
-* Sharp transition
-
----
-
-## Advantages
-
-* Simple
-* Used in early perceptrons
-
----
-
-## Disadvantages
-
-* Not differentiable
-* No gradient learning
-* Cannot use backpropagation
-
----
-
-## Use Cases
-
-Rarely used in modern deep learning.
-
----
-
-# 5.2 Linear Activation Function
-
-## Equation
-
-genui{"math_block_widget_always_prefetch_v2":{"content":"f(x)=x"}}
-
-## Output Range
-
-[
-(-\infty,\infty)
-]
-
-## Derivative Range
-
-[
-1
-]
-
----
-
-## Graph Behavior
-
-Straight line through origin.
-
----
-
-## Advantages
-
-* Simple
-* Useful for regression outputs
-
----
-
-## Disadvantages
-
-* No non-linearity
-* Deep network collapses to linear model
-
----
-
-## Use Cases
-
-* Output layer in regression
-
----
-
-# 5.3 Sigmoid Function
+# 5.1 Sigmoid Function
 
 * Resource: https://machinelearningmastery.com/a-gentle-introduction-to-sigmoid-function/
 
@@ -309,7 +212,7 @@ Contains exponential calculation.
 
 ---
 
-# 5.4 Tanh Function
+# 5.2 Tanh Function
 
 ![alt text](image-5.png)
 ![alt text](image-4.png)
@@ -363,7 +266,7 @@ Centered S-shaped curve.
 
 ---
 
-# 5.5 ReLU (Rectified Linear Unit)
+# 5.3 ReLU (Rectified Linear Unit)
 
 * Resource: https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/
 
@@ -432,11 +335,11 @@ Neuron stops learning.
 
 ---
 
-# 5.6 Leaky ReLU
+# 5.4 Leaky ReLU
 
 ## Equation
 
-f(x)=\begin{cases}x & x>0\0.01x & x\leq0\end{cases}
+![alt text](image-6.png)
 
 ## Output Range
 
@@ -445,6 +348,8 @@ f(x)=\begin{cases}x & x>0\0.01x & x\leq0\end{cases}
 ]
 
 ## Derivative Range
+
+![alt text](image-7.png)
 
 [
 0.01 \text{ or } 1
@@ -471,13 +376,12 @@ f(x)=\begin{cases}x & x>0\0.01x & x\leq0\end{cases}
 
 ---
 
-# 5.7 PReLU (Parametric ReLU)
+# 5.5 PReLU (Parametric ReLU)
 
 ## Equation
 
-f(x)=\begin{cases}x & x>0\ax & x\leq0\end{cases}
-
-Where (a) is learnable.
+![alt text](image-8.png)
+![alt text](image-9.png)
 
 ---
 
@@ -494,11 +398,11 @@ Where (a) is learnable.
 
 ---
 
-# 5.8 ELU (Exponential Linear Unit)
+# 5.6 ELU (Exponential Linear Unit)
 
 ## Equation
 
-f(x)=\begin{cases}x & x>0\\alpha(e^x-1) & x\leq0\end{cases}
+![alt text](image-10.png)
 
 ## Output Range
 
@@ -517,50 +421,20 @@ f(x)=\begin{cases}x & x>0\\alpha(e^x-1) & x\leq0\end{cases}
 
 ## Disadvantages
 
-* More expensive than ReLU
+* More computational expensive than ReLU
 
 ---
 
-# 5.9 SELU (Scaled ELU)
+# 5.7 GELU (Gaussian Error Linear Unit)
 
 ## Equation
 
-[
-f(x)=\lambda
-\begin{cases}
-x & x>0 \
-\alpha(e^x-1) & x \leq 0
-\end{cases}
-]
-
----
-
-## Advantages
-
-* Self-normalizing
-* Maintains stable activations
-
----
-
-## Disadvantages
-
-* Requires careful initialization
-
----
-
-# 5.10 GELU (Gaussian Error Linear Unit)
-
-## Equation
-
-[
-f(x)=x\Phi(x)
-]
+![alt text](image-15.png)
+![alt text](image-16.png)
 
 Approximation:
 
-[
-0.5x\left(1+\tanh\left[\sqrt{\frac{2}{\pi}}(x+0.044715x^3)\right]\right)
-]
+![alt text](image-17.png)
 
 ---
 
@@ -585,13 +459,18 @@ Approximation:
 
 ---
 
-# 5.11 Swish Function
+# 5.8 Swish Function
 
 ## Equation
+![alt text](image-11.png)
 
-[
-f(x)=x \cdot \sigma(x)
-]
+f(x) =  x * sigmoid(x)
+
+---
+
+## Derivative
+
+![alt text](image-12.png)
 
 ---
 
@@ -614,31 +493,16 @@ f(x)=x \cdot \sigma(x)
 
 * More computation
 
+
 ---
 
-# 5.12 Softplus
+# 5.9 Softmax Function
 
 ## Equation
 
-genui{"math_block_widget_always_prefetch_v2":{"content":"f(x)=\ln(1+e^x)"}}
+![alt text](image-14.png)
 
-## Advantages
 
-* Smooth ReLU alternative
-
----
-
-## Disadvantages
-
-* Slower than ReLU
-
----
-
-# 5.13 Softmax Function
-
-## Equation
-
-\text{Softmax}(x_i)=\frac{e^{x_i}}{\sum_{j=1}^{n}e^{x_j}}
 
 ## Output Range
 
@@ -648,9 +512,7 @@ f(x)=x \cdot \sigma(x)
 
 Sum of outputs:
 
-[
-\sum p_i = 1
-]
+sum of all outputs = 1
 
 ---
 
@@ -676,15 +538,12 @@ Sum of outputs:
 
 | Function    | Range  | Derivative Range | Main Problem          | Best Use              |
 | ----------- | ------ | ---------------- | --------------------- | --------------------- |
-| Binary Step | [0,1]  | 0                | Not differentiable    | Old perceptrons       |
-| Linear      | (-∞,∞) | 1                | No non-linearity      | Regression            |
 | Sigmoid     | (0,1)  | (0,0.25]         | Vanishing gradient    | Binary output         |
 | Tanh        | (-1,1) | (0,1]            | Vanishing gradient    | RNN                   |
 | ReLU        | [0,∞)  | 0 or 1           | Dying ReLU            | Hidden layers         |
 | Leaky ReLU  | (-∞,∞) | 0.01 or 1        | Manual slope          | CNNs                  |
 | PReLU       | (-∞,∞) | Learnable        | Overfitting           | Deep nets             |
 | ELU         | (-α,∞) | Positive         | Expensive             | Faster learning       |
-| SELU        | Scaled | Stable           | Specialized setup     | Self-normalizing nets |
 | GELU        | Smooth | Smooth           | Heavy compute         | Transformers          |
 | Swish       | Smooth | Smooth           | Expensive             | Advanced CNNs         |
 | Softmax     | (0,1)  | Complex          | Numerical instability | Multi-class output    |
