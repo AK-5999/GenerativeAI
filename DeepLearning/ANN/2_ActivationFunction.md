@@ -2,6 +2,9 @@ Here is a complete Markdown (`.md`) guide on **Activation Functions in Neural Ne
 
 # Activation Functions in Neural Networks — Complete Guide
 
+* https://youtu.be/SXrXUqDjICA?si=iEi8kNAdCXM4MuQA
+* 
+
 # Table of Contents
 
 1. Introduction
@@ -241,6 +244,8 @@ Straight line through origin.
 ---
 
 # 5.3 Sigmoid Function
+
+![alt text](image.png)
 
 ## Equation
 
