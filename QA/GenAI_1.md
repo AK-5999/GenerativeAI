@@ -1,11 +1,3 @@
-The reason your text looks cut off or "goes out" of the code block is due to a formatting rule in Markdown called **Horizontal Scrolling**.
-
-When I wrapped the entire guide inside a code block (using triple backticks ````markdown`), it forced the text to preserve its exact spacing. If a line of text is very long, Markdown viewers (like Github, Notion, or Obsidian) won't wrap the text to the next line automatically. Instead, they keep it on a single line that stretches far to the right, requiring you to scroll horizontally to read it.
-
-Here is the exact same comprehensive reference guide, but this time **completely unboxed** out of the code block. Now, the text will naturally wrap to your screen size so you can read, copy, or print it effortlessly!
-
----
-
 # Comprehensive Deep-Dive Reference Notes: Generative AI & LLMs
 
 A structured reference guide covering foundations, architectures, optimizations, and deployment strategies of modern AI systems.
