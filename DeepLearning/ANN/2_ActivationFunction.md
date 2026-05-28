@@ -4,7 +4,7 @@ Here is a complete Markdown (`.md`) guide on **Activation Functions in Neural Ne
 
 * https://youtu.be/SXrXUqDjICA?si=iEi8kNAdCXM4MuQA
 * https://youtu.be/DDBk3ZFNtJc?si=oWqvjV8fRWKDCbYW
-* 
+* https://youtu.be/qVLQ9Cqm-ec?si=PWaXRCZPgfRKHSMn
 
 # Table of Contents
 
@@ -314,9 +314,7 @@ Contains exponential calculation.
 ![alt text](image-5.png)
 ![alt text](image-4.png)
 
-## Equation
 
-\tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}
 
 ## Output Range
 
