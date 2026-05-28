@@ -3,6 +3,7 @@ Here is a complete Markdown (`.md`) guide on **Activation Functions in Neural Ne
 # Activation Functions in Neural Networks — Complete Guide
 
 * https://youtu.be/SXrXUqDjICA?si=iEi8kNAdCXM4MuQA
+* https://youtu.be/DDBk3ZFNtJc?si=oWqvjV8fRWKDCbYW
 * 
 
 # Table of Contents
@@ -245,11 +246,9 @@ Straight line through origin.
 
 # 5.3 Sigmoid Function
 
+* Resource: https://machinelearningmastery.com/a-gentle-introduction-to-sigmoid-function/
+
 ![alt text](image.png)
-
-## Equation
-
-\sigma(x)=\frac{1}{1+e^{-x}}
 
 ## Output Range
 
@@ -259,9 +258,7 @@ Straight line through origin.
 
 ## Derivative
 
-[
-\sigma(x)(1-\sigma(x))
-]
+![alt text](image-1.png)
 
 ## Derivative Range
 
@@ -313,6 +310,9 @@ Contains exponential calculation.
 ---
 
 # 5.4 Tanh Function
+
+![alt text](image-5.png)
+![alt text](image-4.png)
 
 ## Equation
 
@@ -367,15 +367,21 @@ Centered S-shaped curve.
 
 # 5.5 ReLU (Rectified Linear Unit)
 
+* Resource: https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/
+
+
 ## Equation
 
 f(x)=\max(0,x)
 
+![alt text](image-3.png)
 ## Output Range
 
 [
 [0,\infty)
 ]
+
+![alt text](image-2.png)
 
 ## Derivative Range
 
