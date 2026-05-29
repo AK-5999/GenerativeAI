@@ -179,17 +179,17 @@ The behavior of a Dropout layer completely changes depending on the mode of the 
 
 1. **Dropout is turned OFF completely.** Every single neuron remains active ($100\%$ capacity) to provide stable, deterministic predictions.
 2. **The Scaling Issue:** If all neurons are turned on at test time, the total signal entering the next layer will be much larger than what it experienced during training.
-3. **Inverted Dropout Solution:** Modern frameworks use *Inverted Dropout* during the training phase. Active neurons are scaled up by a factor of $\frac{1}{1-p}$ while training.
+3. **Inverted Dropout Solution:** Modern frameworks use *Inverted Dropout* during the training phase. Active neurons are scaled up by a factor of ${1-p}$ while testing.
 
-$$\text{Scaled Activation} = \frac{\text{Activation}}{1-p}$$
+
 
 > **Note:** By scaling *up* during training, the network requires absolutely zero scaling adjustments during testing, allowing the inference phase to run at maximum efficiency.
 
 ---
 
-## F. Practical Implementation & Heuristics
+### F. Practical Implementation & Heuristics
 
-### Code Example (PyTorch)
+#### Code Example (PyTorch)
 
 ```python
 import torch
@@ -233,6 +233,124 @@ model.eval()   # Deactivates Dropout for validation/testing
 * **Use Larger Networks:** Because dropout limits the capacity of the network during training, you should use a slightly larger architecture (more neurons) than you normally would without dropout.
 * **Pair with Weight Constraints:** Because dropout can handle high learning rates, pairing it with a Max-Norm weight constraint (e.g., capping the norm of weights at 4 or 5) prevents weights from exploding during aggressive training updates.
 * **Scale Up Learning Rate / Momentum:** You will often achieve faster, cleaner convergence with dropout if you slightly boost your learning rate or increase momentum (e.g., to $0.9$ or $0.99$).
+
+## 3. Regularization in Deep Learning
+
+### 1. The Core Problem: Overfitting
+
+Before understanding regularization, you must understand the problem it solves: **Overfitting**.
+
+* **What it looks like:** The model achieves $99\%$ accuracy on training data but drops to $60\%$ accuracy on validation/test data (a high **generalization gap**).
+* **The Cause:** The neural network has too much capacity (too many layers/neurons) relative to the dataset. Instead of finding general trends, it memorizes individual data points, including the random noise and outliers.
+
+---
+
+### 2. What is Regularization?
+
+**Regularization** is a set of techniques used to force a neural network to stay simple. It discourages the network from learning overly complex patterns, ensuring it can generalize well to brand-new, unseen data.
+
+#### The Mechanism: Modifying the Loss Function
+
+Normally, a network only minimizes **Data Loss** (how wrong its predictions are). Regularization alters the goalpost by adding a **Penalty Term** based on the size of the network's weights:
+
+$$\text{Total Cost} = \text{Data Loss (Error)} + \lambda \times \text{Weight Penalty}$$
+
+* **$\lambda$ (Lambda / Regularization Rate):** A hyperparameter you control.
+* **Too small:** The penalty is ignored; the model still overfits.
+* **Too large:** The penalty dominates; the model aggressively shrinks all weights, leading to **underfitting** (the model becomes too simple to learn anything).
+
+
+
+---
+
+### 3. L1 vs. L2 Regularization
+
+The two most common ways to calculate the "Weight Penalty" are L1 and L2 regularization.
+
+#### A. L2 Regularization (Ridge / Weight Decay)
+
+* **How it works:** It penalizes the **squared values** of the weights ($\sum w^2$).
+* **The Math Effect:** During backpropagation, the gradient update subtracts a fraction of the weight itself ($2\lambda w$).
+* **The Behavior:** It shrinks large weights aggressively but slows down as the weights get closer to zero.
+* **Result:** Weights become uniformly small but **never exactly zero**. This creates a smooth, stable network where no single neuron dominates decisions.
+
+#### B. L1 Regularization (Lasso)
+
+* **How it works:** It penalizes the **absolute values** of the weights ($\sum |w|$).
+* **The Math Effect:** During backpropagation, it subtracts a constant force ($\lambda \cdot \text{sign}(w)$) from the weights, regardless of how large or small they are.
+* **The Behavior:** Because the force is constant, it pushes weights completely to **exactly $0.0$**.
+* **Result:** It creates **Sparsity**. It acts as an automatic feature selector by completely turning off neurons/inputs it deems useless.
+
+---
+
+### 4. Multi-Layer Customization (Per-Layer Regularization)
+
+A neural network **does not** have to use the same regularization across the entire architecture. You can configure completely different strategies for different layers.
+
+#### Why do this?
+
+* **Early Layers (Feature Extraction):** You might want no regularization here so the network can freely learn basic building blocks (like edges or lines in an image).
+* **Deep Layers (Decision Making):** These layers have the most parameters and are prone to overfitting. You might apply strong L2 regularization here.
+* **Bottleneck Layers:** You might apply L1 regularization to a specific layer to force it to compress information and pass along only the most critical features.
+
+---
+
+### 5. Under the Hood: The Cost Accumulation
+
+A common point of confusion is: *If the cost function is calculated at the very end of a forward pass, how does it penalize individual layers differently?*
+
+1. **The Forward Accumulation:** As data passes through the network, the framework looks at each regularized layer, calculates its specific penalty, and stores it in memory.
+2. **The Total Sum:** At the final layer, the network computes the prediction error (Data Loss) and sums it with *all* the layer penalties collected along the way:
+
+$$\text{Total Cost} = \text{Data Loss} + \text{L2\_Penalty}_{\text{Layer 2}} + \text{L1\_Penalty}_{\text{Layer 3}}$$
+
+
+3. **Targeted Backpropagation:** When calculus (the Chain Rule) is applied to calculate gradients, the derivative of a layer's specific penalty is injected *only* into the weight updates for that specific layer. Layer 2's weights are shrunk by L2 rules; Layer 3's weights are zeroed out by L1 rules.
+
+---
+
+### 6. Computational Efficiency
+
+Does adding regularization slow down your training? **Practically, no.**
+
+* **The Math Overhead:** Regularization requires a few extra matrix operations (squaring weights or taking absolute values, and adding them to the gradients).
+* **Why it's negligible ($1\% - 3\%$ impact):** * The real bottleneck in deep learning is **Matrix Multiplication** (multiplying thousands of inputs by thousands of weights) and moving data in/out of memory.
+* Modern **GPUs** excel at parallel, element-wise operations. Squaring a matrix of 10 million weights takes a GPU a fraction of a millisecond.
+
+
+* **The Verdict:** The tiny computational cost is vastly outweighed by the massive benefit of preventing model overfitting.
+
+### 7. Pyhton Implementation
+```python
+import tensorflow as tf
+from tensorflow.keras import layers, models, regularizers
+
+model = models.Sequential([
+    layers.Input(shape=(100,)),
+    
+    # Layer 1: No regularization (allows the network to freely learn basic features)
+    layers.Dense(128, activation='relu'),
+    
+    # Layer 2: Strict L2 Regularization (keeps weights small and smooth)
+    layers.Dense(64, 
+                 activation='relu', 
+                 kernel_regularizer=regularizers.l2(0.01)),
+    
+    # Layer 3: Strict L1 Regularization (forces feature sparsity)
+    layers.Dense(32, 
+                 activation='relu', 
+                 kernel_regularizer=regularizers.l1(0.005)),
+    
+    # Layer 4: Mix of L1 and L2 (Elastic Net approach)
+    layers.Dense(16, 
+                 activation='relu', 
+                 kernel_regularizer=regularizers.l1_l2(l1=0.001, l2=0.001)),
+    
+    # Output Layer: Usually has no regularization
+    layers.Dense(1, activation='sigmoid')
+])
+```
+
 
 ---
 # UnderFitting
