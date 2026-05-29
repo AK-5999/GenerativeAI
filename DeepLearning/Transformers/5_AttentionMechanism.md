@@ -75,6 +75,7 @@ Finally, the attention probabilities are multiplied by the corresponding **Value
 * **Parallelization:** Unlike RNNs which process word-by-word, Self-Attention allows the entire sentence to be processed simultaneously, making training significantly faster on modern hardware (GPUs).
 * **Long-Range Connections:** A word at the very beginning of a long paragraph can easily "attend" to a word at the very end without information leaking or degrading over time.
 
+
 ---
 
 # Multi head attention
