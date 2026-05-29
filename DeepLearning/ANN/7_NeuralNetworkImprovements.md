@@ -302,7 +302,7 @@ A common point of confusion is: *If the cost function is calculated at the very 
 1. **The Forward Accumulation:** As data passes through the network, the framework looks at each regularized layer, calculates its specific penalty, and stores it in memory.
 2. **The Total Sum:** At the final layer, the network computes the prediction error (Data Loss) and sums it with *all* the layer penalties collected along the way:
 
-$$Total Cost = Data Loss + L2_Penalty+Layer 2 + L1_Penalty_text_Layer 3
+$$Total Cost = Data Loss + L2_Penalty+Layer 2 + L1_Penalty_text_Layer 3$$
 
 
 3. **Targeted Backpropagation:** When calculus (the Chain Rule) is applied to calculate gradients, the derivative of a layer's specific penalty is injected *only* into the weight updates for that specific layer. Layer 2's weights are shrunk by L2 rules; Layer 3's weights are zeroed out by L1 rules.
@@ -408,4 +408,71 @@ If you are using older activation functions like `sigmoid` or `tanh` in deep net
 | **Decrease Dropout/L2** | When the restrictions are suffocating the model's learning. |
 | **Increase Epochs** | When the loss curve is still steadily going down. |
 | **Adjust Learning Rate** | When the loss is completely flatlined or bouncing wildly. |
+---
+# Residual Connections (Skip Connections)
 
+## 1. What is a Residual Connection?
+
+A **Residual Connection** (or Skip Connection) is a structural shortcut in a deep neural network that allows the input of a layer to skip one or more layers and be added directly to the output.
+
+* **Standard Network Path:** $\text{Input} \rightarrow \text{Layer 1} \rightarrow \text{Layer 2} \rightarrow \text{Output}$
+* **Residual Network Path:** $\text{Input} \rightarrow \text{Layer 1} \rightarrow \text{Layer 2} \rightarrow (\text{Output} + \text{Input})$
+
+---
+
+## 2. Why Do We Need Them? (The Core Problems Solved)
+
+Before 2015, making neural networks deeper (adding more layers) actually made them perform **worse** because of two mathematical bottlenecks:
+
+* **The Vanishing Gradient Problem:** During training, error signals (gradients) are passed backward through the network. In very deep networks, these signals get multiplied repeatedly and shrink to zero. The earliest layers stop learning entirely.
+* **The Degradation Problem:** As networks get deeper, accuracy saturates and then degrades. Intuitively, it should be easy for a new layer to just "do nothing" (copy the input), but standard layers struggle to learn a perfect identity function ($f(x) = x$) from scratch.
+
+### The Fix
+
+The skip connection creates a "highway" for the gradient to flow backward completely unaltered. Even if the layers in between fail to learn anything, the network can still pass the original data forward and the gradients backward.
+
+---
+
+## 3. The Math Made Simple
+
+In a standard network layer, the model tries to learn the true ideal output mapping, let's call it $H(x)$.
+
+In a Residual Network, we force the layers to only learn the **difference** (the residue) between the input and output.
+
+* Let the layers be $F(x)$.
+* We set $F(x) = H(x) - x$
+* Therefore, the final output is:
+
+$$H(x) = F(x) + x$$
+
+If a layer is useless, the network simply shrinks the weights of $F(x)$ to $0$, leaving $H(x) = x$. The network defaults to doing no harm.
+
+---
+
+## 4. Advantages & Disadvantages
+
+| Feature | Advantage | Why? |
+| --- | --- | --- |
+| **Network Depth** | Allows for ultra-deep networks (100+ layers). | Gradients don't vanish anymore. |
+| **Training Speed** | Models converge much faster. | The optimization landscape is smoother and easier to navigate. |
+| **Robustness** | Act like an ensemble of networks. | If you drop a layer during testing, the shortcut ensures the network doesn't completely break. |
+
+| Feature | Disadvantage | Why? |
+| --- | --- | --- |
+| **Memory (VRAM)** | Higher RAM/VRAM usage during training. | The system must keep the original input $x$ in memory while computing $F(x)$ to add them later. |
+| **Shape Constraints** | Requires strict dimension matching. | You can't mathematically add two matrices together unless they have the exact same shape (height, width, channels). |
+
+---
+
+## 5. How to Handle Shape Mismatches
+
+When a network downsamples an image (e.g., shrinking a $32 \times 32$ matrix to a $16 \times 16$ matrix), you cannot add the original input to the output because their sizes don't match.
+
+**The Solution:** Apply a **Linear Projection** (usually a $1 \times 1$ Convolution) to the skip connection path to resize the input $x$ so it matches the shape of $F(x)$ before adding them together.
+
+---
+
+## 6. Golden Rules of Best Practices
+
+* **With Dropout:** Never put a dropout layer directly on the skip connection path. It destroys the identity highway. Keep dropout *inside* the processing block $F(x)$.
+* **With Batch Normalization:** The standard order of operations in a ResNet block is: `Conv` $\rightarrow$ `BatchNorm` $\rightarrow$ `ReLU` $\rightarrow$ `Conv` $\rightarrow$ `BatchNorm` $\rightarrow$ `Add Skip Connection` $\rightarrow$ `Final ReLU`.
