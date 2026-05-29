@@ -80,6 +80,8 @@ Finally, the attention probabilities are multiplied by the corresponding **Value
 
 # Multi head attention
 
+![alt text](images/image-2.png)
+
 ## Core Concept: Why Multi-Head Attention?
 
 While standard **Self-Attention** allows a model to look at other words in a sentence to understand the context of a specific word, it has a major limitation: it only focuses on **one relationship or perspective at a time** (a single attention distribution).
