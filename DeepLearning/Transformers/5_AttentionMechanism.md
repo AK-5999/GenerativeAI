@@ -44,7 +44,7 @@ For every input vector $x_i$, the model projects it into three distinct spaces b
 To see how much focus word $A$ should place on word $B$, the model takes the Dot Product of the Query of word $A$ ($q_A$) and the Key of word $B$ ($k_B$).
 
 
-![alt text](images\image-0.png)
+![alt text](images/image-0.png)
 
 ### Step 4: Scaling and Softmax
 
@@ -55,7 +55,7 @@ To see how much focus word $A$ should place on word $B$, the model takes the Dot
 
 Finally, the attention probabilities are multiplied by the corresponding **Value ($V$)** vectors. Summing these up gives the final, context-aware vector representation for that specific word.
 
-![alt text](images\image-1.png)
+![alt text](images/image-1.png)
 
 ---
 
