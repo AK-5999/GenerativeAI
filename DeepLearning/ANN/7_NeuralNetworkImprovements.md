@@ -302,7 +302,7 @@ A common point of confusion is: *If the cost function is calculated at the very 
 1. **The Forward Accumulation:** As data passes through the network, the framework looks at each regularized layer, calculates its specific penalty, and stores it in memory.
 2. **The Total Sum:** At the final layer, the network computes the prediction error (Data Loss) and sums it with *all* the layer penalties collected along the way:
 
-$$\text{Total Cost} = \text{Data Loss} + \text{L2\_Penalty}_{\text{Layer 2}} + \text{L1\_Penalty}_{\text{Layer 3}}$$
+$$Total Cost = Data Loss + L2_Penalty+Layer 2 + L1_Penalty_text_Layer 3
 
 
 3. **Targeted Backpropagation:** When calculus (the Chain Rule) is applied to calculate gradients, the derivative of a layer's specific penalty is injected *only* into the weight updates for that specific layer. Layer 2's weights are shrunk by L2 rules; Layer 3's weights are zeroed out by L1 rules.
